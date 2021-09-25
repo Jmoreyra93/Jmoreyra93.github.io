@@ -4,7 +4,9 @@
 *********************************/
 .main-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
 }
 
 #menu {
@@ -16,7 +18,7 @@
 }
 
 #menu:checked ~ .search-bar .menu-toggle__label {
-    background-color: yellow;
+    background-color: #0d1b2a;
 }
 
 
@@ -27,78 +29,84 @@
             NAV BAR
 *********************************/
 .nav-bar {
-    background-color: #0466c8;
+    background-color: #d7e3fc;
+
+    &__nav-list {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+
+    &__nav-item {
+        text-align: center;
+        background-color: pink;
+    }
+
+    &__nav-link {
+        display: block;
+        background-color: #abc4ff;
+        color: #fff;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
 }
 
-.nav-bar__nav-list {
-    display: flex;
-    list-style-type: none;
-    justify-content: left;
-}
-
-.nav-bar__nav-item {
-    text-align: center;
-    background-color: pink;
-}
-
-.nav-bar__nav-link {
-    display: block;
-    background-color: #ff0000;
-    color: #fff;
-    padding: 1em 2em;
-    text-decoration: none;
-}
 
 /******************************
             SEARCH BAR
 *******************************/
 .search-bar {
-    background-color: #be0aff;
+    background-color: #d7e3fc;
     display: flex;
     justify-content: space-between;
+    flex-basis: 50%;
+
+    &__logo-container {
+        padding: 1em;
+        background-color: #abc4ff;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__form-container {
+        padding: 1em;
+        background-color: #d7e3fc;
+        flex-basis: 60%;
+        display: flex;
+        justify-content: center    
+    }
+    
+    &__form-search {
+        background-color: #ccdbfd;
+        width: 70%;
+    }
+
+    &__form-submit {
+        background-color: #abc4ff;
+        color: #edf2fb;
+    }
+
+    &__carrito-container {
+        flex: 0 0 3em;
+        padding-top: 10px;
+        text-align: center;
+        background-color: #abc4ff;
+    }
 }
 
-.search-bar__logo-container,
-.search-bar__form-container {
-    padding: 1em;
-} 
 
-.search-bar__logo-container {
-    background-color: #deff0a;
-}
+/* .search-bar__form-label {
+    background-color: #abc4ff;
+}*/
 
-.search-bar__form-container {
-    background-color: gold;
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center
 
-}
-
-.search-bar__form-label {
-    background-color: greenyellow;
-}
-
-.search-bar__form-search {
-    background-color: deeppink;
-    width: 70%;
-}
-
-.search-bar__form-submit {
-    background-color: darkslategray;
-}
-
-.search-bar__carrito-container {
-    flex: 0 0 3em;
-    background-color: goldenrod;
-}
 
 /******************************
             MENU TOGGLE
 *******************************/
 .menu-toggle__container {   
     display: none;
-    background-color: red;
+    background-color: #0d1b2a;
     flex: 0 0 3em;
     position: relative;
     cursor: pointer;
