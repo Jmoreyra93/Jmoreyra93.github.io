@@ -56,7 +56,7 @@ body {
   border-radius: 5px;
   transition: all ease 0.5s;
   display: block;
-  /*background: #000;*/
+  background: #000;
   /* Podemos ocultar la imagen al da la vuelta si lo queremos */
   /*backface-visibility: hidden;*/
 }
@@ -94,7 +94,7 @@ body {
       Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
       ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
   */
-  transform: perspective(80px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
 }
 .card__article .card__image {
   width: 100%;
@@ -220,7 +220,7 @@ body {
 *********************************/
 .main-header {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -241,7 +241,9 @@ body {
 *********************************/
 .nav-bar {
   background-color: #d7e3fc;
-  box-shadow: 5px 5px 10px -4px inset rgba(0, 0, 0, 0.3);
+  box-shadow: 32px -23px 93px -23px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 32px -23px 93px -23px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 32px -23px 93px -23px rgba(0, 0, 0, 0.83);
 }
 .nav-bar__nav-list {
   display: flex;
@@ -250,13 +252,17 @@ body {
 }
 .nav-bar__nav-item {
   text-align: center;
-  background-color: pink;
+  background-color: #d7e3fc;
 }
 .nav-bar__nav-link {
   display: block;
   background-color: #abc4ff;
   color: #fff;
-  padding: 1em 2em;
+  box-shadow: 50px 50px 100px -4px inset rgba(0, 0, 0, 0.3);
+  border-radius: 1%;
+  font-family: Verdana, Geneva, Tahoma, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  padding: 1em 5em;
   text-decoration: none;
 }
 
@@ -264,10 +270,14 @@ body {
             SEARCH BAR
 *******************************/
 .search-bar {
+  box-shadow: -38px 38px 93px -23px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: -38px 38px 93px -23px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: -38px 38px 93px -23px rgba(0, 0, 0, 0.83);
   background-color: #d7e3fc;
   display: flex;
+  flex-direction: flex-start;
   justify-content: space-between;
-  flex-basis: 50%;
+  /*flex-basis: 100%;*/
 }
 .search-bar__logo-container {
   padding: 1em;
@@ -286,13 +296,13 @@ body {
 .search-bar__form-container {
   padding: 1em;
   background-color: #d7e3fc;
-  flex-basis: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  flex-basis: 90%;
 }
 .search-bar__form-search {
   background-color: #ccdbfd;
-  width: 70%;
+  width: 10%;
 }
 .search-bar__form-submit {
   background-color: #abc4ff;
@@ -300,9 +310,14 @@ body {
 }
 .search-bar__carrito-container {
   flex: 0 0 3em;
-  padding-top: 10px;
+  padding-top: 3px;
+  padding-right: 14px;
   text-align: center;
   background-color: #abc4ff;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-basis: 4%;
 }
 
 /* .search-bar__form-label {
@@ -369,7 +384,7 @@ body {
   }
 }
 .section-cards {
-  background-color: #f1f2f3;
+  background-color: #fcfdfe;
   padding: 1em;
 }
 

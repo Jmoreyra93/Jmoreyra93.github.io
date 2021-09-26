@@ -36,7 +36,7 @@
         transition: all ease .5s;
 
         display: block;
-        /*background: #000;*/
+        background: #000;
 
         /* Podemos ocultar la imagen al da la vuelta si lo queremos */
         /*backface-visibility: hidden;*/
@@ -92,7 +92,7 @@
             Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
             ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
         */
-        transform: perspective(80px) rotateY(0deg);
+        transform: perspective(600px) rotateY(0deg);
     }
 
 
