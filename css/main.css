@@ -273,7 +273,15 @@ body {
   padding: 1em;
   background-color: #abc4ff;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: flex-end;
+  justify-content: left;
+  align-self: left;
+  flex-basis: 5%;
+  background-image: url(../../img/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
 }
 .search-bar__form-container {
   padding: 1em;
