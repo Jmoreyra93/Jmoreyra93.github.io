@@ -15,7 +15,136 @@
     -moz-transition: all .2s;
     -webkit-transition: all .2s;
     transition: all .2s;
+
+
+
+    transform-style: preserve-3d;
+        /* Nota:
+            Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+            ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+        */
+    transform: perspective(600px) rotateY(0deg);
+
+
+
+
+    &__article {
+        width: 220px;
+        max-width: 300px;
+        height: 400px;
+        border-radius: 5px;
+        transition: all ease .5s;
+
+        display: block;
+        /*background: #000;*/
+
+        /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+        /*backface-visibility: hidden;*/
+    }
+
+    &__article &__content  {
+        width: 220px;
+        max-width: 300px;
+        height: 400px;
+        border-radius: 5px;
+        transition: all ease .5s;
+        position: absolute;
+        top: 0;
+        padding: 20px;
+        color: #fff;
+        transform: perspective(600px) rotateY(180deg);
+        backface-visibility: hidden;
+        overflow: auto;
+    } 
     
+
+
+
+
+
+
+
+
+
+
+
+
+    &:hover &__article {
+        transform: perspective(600px) rotateY(180deg);
+        -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+        box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+    }
+
+    &:hover &__article &__image {
+       /* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */ 
+        filter:blur(2px);
+    }
+
+    &__article {
+        width: 100%;
+        height: 100%;
+        margin:0;
+        position: relative;
+        transition: all ease .5s;
+        transform-style: preserve-3d;
+        /* Nota:
+            Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+            ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+        */
+        transform: perspective(80px) rotateY(0deg);
+    }
+
+
+
+
+
+    &__article &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        transition: all ease .5s;
+    }
+    
+    &__article &__content {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        transition: all ease .5s;
+    }
+
+    &__article &__image l {
+        display: block;
+        background: #000;
+
+        /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+        backface-visibility: hidden;
+    }
+
+    &__article &__content {
+        position: absolute;
+        top: 0;
+        padding: 20px;
+        color: #012a4a;
+        transform: perspective(600px) rotateY(180deg);
+        backface-visibility: hidden;
+        overflow: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     &:hover,
     &:focus {
         -moz-transform: scale(1.03);
@@ -30,8 +159,10 @@
     &__image {
         background-size: cover;
         height: 200px;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
-        clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
+
+        -webkit-clip-path: polygon(100% 0, 0 79%, 100% 14%, 100% 24%, 100% 38%, 0 86%, 100% 44%, 100% 80%, 0 95%, 0 0);
+        clip-path: polygon(100% 0, 0 79%, 100% 14%, 100% 24%, 100% 38%, 0 86%, 100% 44%, 100% 80%, 0 95%, 0 0);
+        
         background-position: center;
         transition: all .2s;
     }
@@ -90,7 +221,7 @@
     }
 
     &:nth-child(10n + 9) &__content {
-        background-image: linear-gradient(to top, #034a66, #ced11a);    
+        background-image: linear-gradient(to top, #edf2fb,#abc4ff);    
     }
 
     &:nth-child(10n + 10) &__content {

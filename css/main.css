@@ -42,6 +42,88 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   transition: all 0.2s;
+  transform-style: preserve-3d;
+  /* Nota:
+      Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+      ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+  */
+  transform: perspective(600px) rotateY(0deg);
+}
+.card__article {
+  width: 220px;
+  max-width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+  display: block;
+  /*background: #000;*/
+  /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+  /*backface-visibility: hidden;*/
+}
+.card__article .card__content {
+  width: 220px;
+  max-width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #fff;
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto;
+}
+.card:hover .card__article {
+  transform: perspective(600px) rotateY(180deg);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+.card:hover .card__article .card__image {
+  /* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */
+  filter: blur(2px);
+}
+.card__article {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  /* Nota:
+      Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+      ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+  */
+  transform: perspective(80px) rotateY(0deg);
+}
+.card__article .card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+.card__article .card__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+.card__article .card__image l {
+  display: block;
+  background: #000;
+  /* Podemos ocultar la imagen al da la vuelta si lo queremos */
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card__article .card__content {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #012a4a;
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto;
 }
 .card:hover, .card:focus {
   transform: scale(1.03);
@@ -51,8 +133,8 @@ body {
 .card__image {
   background-size: cover;
   height: 200px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 170px, 0 200px);
+  -webkit-clip-path: polygon(100% 0, 0 79%, 100% 14%, 100% 24%, 100% 38%, 0 86%, 100% 44%, 100% 80%, 0 95%, 0 0);
+  clip-path: polygon(100% 0, 0 79%, 100% 14%, 100% 24%, 100% 38%, 0 86%, 100% 44%, 100% 80%, 0 95%, 0 0);
   background-position: center;
   transition: all 0.2s;
 }
@@ -99,7 +181,7 @@ body {
   background-image: linear-gradient(to bottom, #edf2fb, #abc4ff);
 }
 .card:nth-child(10n+9) .card__content {
-  background-image: linear-gradient(to top, #034a66, #ced11a);
+  background-image: linear-gradient(to top, #edf2fb, #abc4ff);
 }
 .card:nth-child(10n+10) .card__content {
   background-image: linear-gradient(to bottom, #edf2fb, #abc4ff);
@@ -159,6 +241,7 @@ body {
 *********************************/
 .nav-bar {
   background-color: #d7e3fc;
+  box-shadow: 5px 5px 10px -4px inset rgba(0, 0, 0, 0.3);
 }
 .nav-bar__nav-list {
   display: flex;
