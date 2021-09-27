@@ -105,10 +105,10 @@
     
 
     &:hover &__image {
-        clip-path: none;
+        /*clip-path: none;*/
         height: 100%;
         width: 100%;
-        transform: scale(1.6) rotate(0deg);
+        transform: scale(1.6) rotate(-6deg);
         transition-delay: .5s;
         filter:blur(2px);
     }
@@ -181,8 +181,8 @@
             display: flex;
         }
         &__image {
-            width: 40%;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+            width: 80%;
+            clip-path: polygon(0 0, 0% 20%, 0 52%, 0 100%, 53% 100%, 78% 100%, 93% 100%, 94% 28%, 86% 19%, 93% 11%, 94% 0, 51% 0);
         }
         &__content {
             top: 0;

@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    box-shadow: -1px 1px 35px 8px rgba(0,0,0,0.66) inset;
+    -webkit-box-shadow: -1px 1px 35px 8px rgba(0,0,0,0.66) inset;   
 
 
 }
@@ -32,9 +33,9 @@
 *********************************/
 .nav-bar {
     background-color: #d7e3fc;
-    box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
+    /*box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
     -webkit-box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
-    -moz-box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
+    -moz-box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);*/
 
     &__nav-list {
         display: flex;
@@ -52,10 +53,12 @@
         display: block;
         background-color: #abc4ff;
         color: #fff;
-        box-shadow: 50px 50px 100px -4px inset rgba(0, 0, 0, 0.3);
+        /*box-shadow: 50px 50px 100px -4px inset rgba(0, 0, 0, 0.3);*/
         border-radius: 1%;
         font-family: Verdana, Geneva, Tahoma, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: bold;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+
         padding: 1em 5em;
         text-decoration: none;
     }
@@ -66,9 +69,9 @@
             SEARCH BAR
 *******************************/
 .search-bar {
-    box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
+    /*box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
     -webkit-box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
-    -moz-box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
+    -moz-box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);*/
     background-color: #d7e3fc;
     display: flex;
     flex-direction: flex-start;
@@ -115,13 +118,13 @@
     &__carrito-container {
         flex: 0 0 3em;
         padding-top: 3px;
-        padding-right: 14px;
+        margin-left: 20px;
         text-align: center;
         background-color: #abc4ff;
         display: flex;
-        justify-content: right;
+        justify-content: center;
         align-items: center;
-        flex-basis: 4%;
+        flex-basis: 4em;
         
     }
 }
@@ -194,6 +197,15 @@
 
     .nav-bar__nav-list {
         flex-direction: column;
+
+    }
+
+    .search-bar {
+    flex-direction: row;
+    justify-content: center;
+    }
+    .search-bar__form-search {
+        width: 100%;
     }
 
 }
