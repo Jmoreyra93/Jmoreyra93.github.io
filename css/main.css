@@ -124,19 +124,19 @@ body {
   padding-top: 4em;
 }
 .card:nth-child(10n+1) .card__content {
-  background-image: linear-gradient(to top, #edf2fb, #abc4ff);
+  background-image: linear-gradient(to top, #0d1b2a, #f8f9fa);
 }
 .card:nth-child(10n+2) .card__content {
-  background-image: linear-gradient(to bottom, #edf2fb, #abc4ff);
+  background-image: linear-gradient(to bottom, #0d1b2a, #f8f9fa);
 }
 .card:nth-child(10n+3) .card__content {
-  background-image: linear-gradient(to top, #edf2fb, #abc4ff);
+  background-image: linear-gradient(to top, #0d1b2a, #f8f9fa);
 }
 .card:nth-child(10n+4) .card__content {
-  background-image: linear-gradient(to bottom, #edf2fb, #abc4ff);
+  background-image: linear-gradient(to bottom, #0d1b2a, #f8f9fa);
 }
 .card:nth-child(10n+5) .card__content {
-  background-image: linear-gradient(to top, #edf2fb, #abc4ff);
+  background-image: linear-gradient(to top, #0d1b2a, #f8f9fa);
 }
 .card:nth-child(10n+6) .card__content {
   background-image: linear-gradient(to bottom, #edf2fb, #abc4ff);
@@ -191,6 +191,8 @@ body {
   justify-content: center;
   box-shadow: -1px 1px 35px 8px rgba(0, 0, 0, 0.66) inset;
   -webkit-box-shadow: -1px 1px 35px 8px rgba(0, 0, 0, 0.66) inset;
+  padding: 1em 0.5em;
+  background-color: #1d2d44;
 }
 
 #menu {
@@ -209,96 +211,117 @@ body {
             NAV BAR
 *********************************/
 .nav-bar {
-  background-color: #d7e3fc;
+  padding-bottom: 1em;
+  /*background-color: #d7e3fc;*/
   /*box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
   -webkit-box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);
   -moz-box-shadow: 32px -23px 93px -23px rgba(0,0,0,0.83);*/
+  /*&__nav-item {
+      text-align: center;
+      background-color: #d7e3fc;
+  }*/
 }
 .nav-bar__nav-list {
   display: flex;
   list-style-type: none;
   justify-content: center;
 }
-.nav-bar__nav-item {
-  text-align: center;
-  background-color: #d7e3fc;
-}
 .nav-bar__nav-link {
-  display: block;
-  background-color: #abc4ff;
-  color: #fff;
-  /*box-shadow: 50px 50px 100px -4px inset rgba(0, 0, 0, 0.3);*/
-  border-radius: 1%;
-  font-family: Verdana, Geneva, Tahoma, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
-  padding: 1em 5em;
   text-decoration: none;
+  display: block;
+  padding: 0.5rem 2.5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+  transition: all 0.4s linear;
+  border-radius: 3px;
+  color: #edfafb;
+}
+.nav-bar__nav-link:hover {
+  background: #717e8b;
 }
 
 /******************************
             SEARCH BAR
 *******************************/
 .search-bar {
-  /*box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
-  -webkit-box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);
-  -moz-box-shadow: -38px 38px 93px -23px rgba(0,0,0,0.83);*/
-  background-color: #d7e3fc;
+  /*background-color: #d7e3fc;*/
   display: flex;
   flex-direction: flex-start;
   justify-content: space-between;
-  /*flex-basis: 100%;*/
 }
 .search-bar__logo-container {
-  padding: 1em;
-  background-color: #abc4ff;
-  display: flex;
-  flex-direction: flex-end;
-  justify-content: left;
-  align-self: left;
-  flex-basis: 5%;
-  background-image: url(../../img/logo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: center;
+  letter-spacing: 15px;
+  font-size: 1.3em;
+  color: aliceblue;
+  cursor: default;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+  /*    padding: 1em;
+      background-color: #abc4ff;
+      display: flex;
+      flex-direction: flex-end;
+      justify-content: left;
+      align-self: left;
+      flex-basis: 5%;
+      background-image: url(../../img/logo.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: center;
+  */
 }
 .search-bar__form-container {
-  padding: 1em;
-  background-color: #d7e3fc;
+  padding: 0 1em;
+  /*background-color: #d7e3fc;*/
   display: flex;
-  justify-content: right;
-  flex-basis: 90%;
+  justify-content: flex-end;
+  flex-grow: 8;
 }
 .search-bar__form-search {
-  background-color: #ccdbfd;
-  width: 10%;
+  color: #333;
+  background-color: aliceblue;
+  border: 1.5px solid #212529;
+  border-radius: 3px;
+  padding: 0 2em;
+  margin: 0 1em;
 }
 .search-bar__form-submit {
-  background-color: #abc4ff;
-  color: #edf2fb;
+  background-color: #748cab;
+  color: #edfafb;
+  border: 1.5px solid #212529;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+  transition: all 0.4s linear;
+  border-radius: 3px;
+  width: 5em;
+  height: 2em;
+  cursor: pointer;
+}
+.search-bar__form-submit:hover {
+  background-color: #f0ebd8a8;
+  color: #edfafb;
 }
 .search-bar__carrito-container {
   flex: 0 0 3em;
   padding-top: 3px;
-  margin-left: 20px;
   text-align: center;
-  background-color: #abc4ff;
   display: flex;
+  cursor: pointer;
   justify-content: center;
-  align-items: center;
-  flex-basis: 4em;
+}
+.search-bar__carrito-container:hover {
+  transition: all 0.4s linear;
+  background: #717e8b9d;
+  border-radius: 5px;
 }
 
-/* .search-bar__form-label {
-    background-color: #abc4ff;
-}*/
+.search-bar__form-label {
+  background-color: #edfafb;
+}
+
 /******************************
             MENU TOGGLE
 *******************************/
 .menu-toggle__container {
   display: none;
-  background-color: #0d1b2a;
+  background-color: #1d2d44;
   flex: 0 0 3em;
   position: relative;
   cursor: pointer;
@@ -347,6 +370,8 @@ body {
 
   .nav-bar {
     display: none;
+    padding-top: 2.2em;
+    padding-bottom: 1em;
   }
 
   .nav-bar__nav-list {
@@ -362,9 +387,36 @@ body {
     width: 100%;
   }
 }
+@media (max-width: 540px) {
+  .search-bar {
+    justify-content: space-between;
+  }
+
+  .search-bar__form-container {
+    display: none;
+  }
+
+  .menu-toggle__container {
+    order: -1;
+  }
+
+  .search-bar__carrito-container {
+    justify-content: flex-end;
+  }
+}
+.footer-class {
+  background: #0d1321;
+  color: #f0ebd8;
+  padding: 10rem 0;
+  text-align: center;
+  box-shadow: 1px 15px 5px -10px white inset;
+  -webkit-box-shadow: 1px 15px 5px -10px white inset;
+  -moz-box-shadow: 1px 15px 5px -10px white inset;
+}
+
 .section-cards {
   background-color: #fcfdfe;
-  padding: 1em;
+  padding: 2.5em;
 }
 
 .cards-container {
