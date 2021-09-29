@@ -204,7 +204,8 @@ body {
 }
 
 #menu:checked ~ .search-bar .menu-toggle__label {
-  background-color: #0d1b2a;
+  /*background-color: #0d1b2a;*/
+  color: rgba(240, 248, 255, 0.582);
 }
 
 /********************************
@@ -325,7 +326,6 @@ body {
 *******************************/
 .menu-toggle__container {
   display: none;
-  background-color: #1d2d44;
   flex: 0 0 3em;
   position: relative;
   cursor: pointer;
@@ -333,34 +333,19 @@ body {
 
 .menu-toggle__label {
   display: block;
-  background-color: black;
+  /*background-color: black;*/
   width: 100%;
   height: 100%;
 }
 
-.menu-toggle__pan-arriba,
-.menu-toggle__medallon,
-.menu-toggle__pan-abajo {
-  display: block;
-  background-color: #333;
-  height: 0.2em;
-  position: absolute;
-  left: 0.5em;
-  right: 0.5em;
-  margin: 0 auto;
-}
-
-.menu-toggle__pan-arriba {
-  top: 0.8em;
-}
-
-.menu-toggle__medallon {
-  top: 50%;
-  margin-top: -0.15em;
-}
-
-.menu-toggle__pan-abajo {
-  bottom: 0.8em;
+.icon-menu-icono {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 13px;
+  height: 29px;
+  font-size: 53px;
+  /*color: rgba(51, 51, 51, 0.904);*/
 }
 
 @media (max-width: 768px) {
