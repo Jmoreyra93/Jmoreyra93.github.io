@@ -238,6 +238,9 @@ body {
 .nav-bar__nav-link:hover {
   background: #717e8b;
 }
+.nav-bar__nav-link span {
+  display: none;
+}
 
 /******************************
             SEARCH BAR
@@ -281,26 +284,27 @@ body {
   border: 1.5px solid #212529;
   border-radius: 3px;
   padding: 0 2em;
-  margin: 0 1em;
 }
 .search-bar__form-submit {
-  background-color: #748cab;
-  color: #edfafb;
-  border: 1.5px solid #212529;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+  background-color: #1d2d44;
+  /* color: #edfafb;*/
+  border: 1px solid #1d2d44;
   transition: all 0.4s linear;
   border-radius: 3px;
-  width: 5em;
+  width: 4.2em;
   height: 2em;
   cursor: pointer;
+  font-size: 18px;
 }
 .search-bar__form-submit:hover {
-  background-color: #f0ebd8a8;
+  background-color: #717e8b9d;
   color: #edfafb;
+  border: 1px solid #1d2d44;
 }
 .search-bar__carrito-container {
-  flex: 0 0 3em;
-  padding-top: 3px;
+  flex: 0 0 4em;
+  color: aliceblue;
+  padding-top: 10px;
   text-align: center;
   display: flex;
   cursor: pointer;
@@ -373,6 +377,10 @@ body {
     padding-top: 2.2em;
     padding-bottom: 1em;
   }
+  .nav-bar__nav-link span {
+    display: inline-block;
+    padding-right: 1em;
+  }
 
   .nav-bar__nav-list {
     flex-direction: column;
@@ -401,7 +409,7 @@ body {
   }
 
   .search-bar__carrito-container {
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
 .footer-class {
@@ -425,6 +433,11 @@ body {
   gap: 1em;
   /*espaciado entre las tarjetas */
   justify-content: center;
+}
+
+.header-cards {
+  text-align: center;
+  padding: 0 2em 3.5em 2em;
 }
 
 @media (min-width: 1200px) {
