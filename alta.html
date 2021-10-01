@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="icons/style.css">
+</head>
+<body>
+    <header class="main-header">
+
+        <input type="checkbox" id="menu">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="index.html"><span class="icon-home3"></span> Inicio</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href=""><span class="icon-upload3"></span> Alta</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="contacto.html"><span class="icon-address-book"></span> Contacto</a>
+                </li>
+                <li class="nav-bar__nav-item">
+                    <a class="nav-bar__nav-link" href="nosotros.html"><span class="icon-accessibility"></span> Nosotros</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <div class="search-bar__logo-container">
+                Connecticus
+            </div>
+            <form class="search-bar__form-container">
+                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar su producto aquí...">
+                <input class="search-bar__form-submit" type="submit" value="🔍">
+            </form>
+            <div class="search-bar__carrito-container">
+                <span class="icon-cart"></span>
+            </div>
+            <div class="menu-toggle__container">
+                <label class="menu-toggle__label" for="menu">
+                    <span class="icon-menu-icono"></span>
+                
+                </label>
+            </div>
+        </div>
+    </header>
+    <main class="main-form">
+        <header class="header-alta">
+            <h1>Alta</h1>
+        </header>
+
+        <form action="formulario.php" class="formulario" method="POST">
+            <!-- formulario alta -->
+            <div class="formulario__datos-personales">
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend"><span class="formulario__legend-span"></span> COMPLETA</legend>
+
+                    <div class="formulario__nombre">
+                        <label for="nombre">Nombre:<sup>*</sup></label>
+                        <input id="nombre" class="formulario__input-nombre" name="nom" required autofocus>
+                    </div>
+
+                    <div class="formulario__precio"> 
+                        <label for="precio">Precio:<sup>*</sup>$</label>  
+                        <input id="precio"  class="formulario__input-precio" name="price" required>
+                    </div>
+
+                    
+                    <div class="formulario__categoria">
+                        <label for="categoria">Catergoria:</label>
+                        <select id="categoria" name="category" class="formulario__categoria-select">
+                            <option value=""> -Seleccionar- </option>
+                            <option value="15">Linea blanca</option>
+                            <option value="35">Tecnologia</option>
+                            <option value="13">Otra</option>
+                        </select>
+                    </div>
+                    <div class="formulario__marca">
+                        <label for="marca">Marca:</label>
+                        <select id="marca" name="brand" class="formulario__marca-select">
+                            <option value=""> -Seleccionar- </option>
+                            <option value="15">Sony</option>
+                            <option value="35">Samsung</option>
+                            <option value="69">Phillips</option>
+                            <option value="13">HP</option>
+                            <option value="13">Asus</option>
+                            <option value="13">LG</option>
+                            <option value="13">Electrolux</option>
+                            <option value="13">HP</option>
+                            <option value="13">HP</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="formulario__detalle">
+                        <label for="contanos-detalle" class="formulario__detalle-label">Detalle</label>
+                        <textarea id="contanos-detalle" name="detail" class="formulario__detalle-textarea"></textarea>
+                    </div>
+                    <div class="formulario__stock">
+                        <p>Stock:<sup>*</sup></p>    
+                        <input type="radio" id="stock-si" name="stock" value="Femenino" required checked>
+                        <label for="stock-si">Si</label>
+                        
+                        <input type="radio" id="stock-no" name="stock" value="Masculino">
+                        <label for="stock-no">No</label>
+                        
+                    </div> 
+
+                    <div class="formulario__envio">
+                        <p>Envio sin cargo:<sup>*</sup></p>    
+                        <input type="radio" id="envio-si" name="envio" value="true" required checked>
+                        <label for="envio-si">Si</label>
+                        
+                        <input type="radio" id="envio-no" name="envio" value="false">
+                        <label for="envio-no">No</label>
+                        
+                    </div> 
+                </fieldset>
+            </div>
+
+            <div class="formulario__novedades">
+                <input type="checkbox" id="acepto-novedades" name="acep-nov" value="si" checked>
+                <label for="acepto-novedades">Deseo recibir novedades</label>
+            </div>  
+
+            <p class="campo-obligatorio"><sup>*</sup>:campo obligatorio.</p>
+            
+            <div class="formulario__botones">
+                <input type="submit" value="Dar alta" class="formulario__botones-submit">
+                <input type="reset" value="Restablecer" class="formulario__botones-reset">
+            </div>
+        </form>        
+    </main>
+    <div>
+        <p><a href="index.html" class="volver-incio">Volver al Inicio</a></p><span class="undo2"></span>
+    </div>
+
+    <footer class="footer-class">
+        ESTE ES EL PIE DE PAGINA &copy;
+    </footer>
+</body>
+</html>

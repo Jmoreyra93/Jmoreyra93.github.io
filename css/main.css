@@ -429,4 +429,227 @@ body {
   .cards-container {
     gap: 2em;
   }
+}
+.header-alta {
+  text-align: center;
+  padding: 0 2em 3.5em 2em;
+}
+
+.main-form {
+  margin: 0 auto;
+  padding: 2em;
+  background-image: url(../../img/fondos/fondo-alta.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 70%;
+}
+
+.formulario:hover {
+  background-color: #748cabea;
+}
+
+.formulario {
+  padding: 20px 0 50px 0;
+  max-width: 800px;
+  background-color: #748cabbb;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+  /******************************
+          MEDIA CELULAR
+  ******************************/
+}
+.formulario__fieldset {
+  padding: 40px 5px 5px 10px;
+  margin: 0 15px;
+  text-align: left;
+  border: 2px solid rgba(51, 51, 51, 0.534);
+  background-color: #748cabcc;
+  border-radius: 5px;
+  box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
+}
+.formulario__fieldset:hover {
+  background-color: #748cabef;
+}
+.formulario__legend {
+  padding: 4px;
+  border-radius: 5px;
+  border: 2px solid rgba(51, 51, 51, 0.774);
+  background-color: rgba(51, 51, 51, 0.856);
+  color: aliceblue;
+}
+.formulario__nombre {
+  text-align: left;
+  display: block;
+  margin: 15px 0 15px 8px;
+}
+.formulario__input-nombre {
+  width: 50%;
+  height: 2em;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__input-nombre:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__precio {
+  margin: 15px 0 15px 8px;
+  text-align: left;
+}
+.formulario__input-precio {
+  width: 50%;
+  height: 2em;
+  margin-left: 5px;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__input-precio:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__marca {
+  text-align: left;
+  margin: 15px 0 15px 8px;
+}
+.formulario__marca-select {
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 15%;
+  height: 2em;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__marca-select:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__categoria {
+  text-align: left;
+  margin: 15px 0 15px 8px;
+}
+.formulario__categoria-select {
+  width: 15%;
+  height: 2em;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__categoria-select:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__detalle {
+  display: block;
+  margin: 15px 0 15px 8px;
+}
+.formulario__detalle-label {
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+.formulario__detalle-textarea {
+  display: block;
+  height: 120px;
+  width: 60%;
+  border-radius: 5px;
+  resize: vertical;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__detalle-textarea:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__stock {
+  text-align: center;
+  margin: 15px 0 15px 8px;
+}
+.formulario__envio {
+  margin: 45px 0 15px 0;
+  text-align: center;
+}
+.formulario__novedades {
+  margin: 15px 0 15px 0;
+}
+.formulario__botones {
+  display: block;
+  padding: 80px 45px 10px 45px;
+  border-radius: 4px;
+}
+.formulario__botones-submit {
+  width: 8em;
+  height: 2.5em;
+  border: #1d2d44 1px solid;
+  border-radius: 3px;
+  background-color: #3e5c76;
+}
+.formulario__botones-submit:hover {
+  background-color: #1d2d44;
+}
+.formulario__botones-submit:focus {
+  background-color: #ef8752;
+}
+.formulario__botones-reset {
+  width: 8em;
+  border: #1d2d44 1px solid;
+  height: 2.5em;
+  border-radius: 3px;
+  background-color: #3e5c76;
+}
+.formulario__botones-reset:hover {
+  background-color: #1d2d44;
+}
+@media (max-width: 768px) {
+  .formulario {
+    /*& {
+        min-width: 100%;
+        height: 200px;
+    }*/
+  }
+  .formulario__nombre {
+    margin-right: 8px;
+  }
+  .formulario__input-nombre {
+    margin: 5px 0;
+    width: 100%;
+  }
+  .formulario__precio {
+    margin-right: 8px;
+  }
+  .formulario__input-precio {
+    margin: 5px 0;
+    width: 100%;
+  }
+  .formulario__detalle {
+    margin-right: 8px;
+  }
+  .formulario__detalle-textarea {
+    width: 100%;
+    height: 7em;
+    margin: 5px 0;
+  }
+  .formulario__marca {
+    margin-right: 8px;
+  }
+  .formulario__marca-select {
+    width: 100%;
+    height: 2.5em;
+    margin: 5px 0;
+  }
+  .formulario__categoria {
+    margin-right: 8px;
+  }
+  .formulario__categoria-select {
+    width: 100%;
+    height: 2.5em;
+    margin: 5px 0;
+  }
+  .formulario__stock {
+    text-align: center;
+  }
+}
+
+.volver-incio {
+  padding: 3em 0;
+  text-decoration: none;
+  text-align: right;
 }/*# sourceMappingURL=main.css.map */

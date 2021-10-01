@@ -1,0 +1,231 @@
+.header-alta {
+        text-align: center;
+        padding: 0 2em 3.5em 2em;
+}
+
+.main-form {
+    margin: 0 auto;
+    padding: 2em;
+    background-image: url(../../img/fondos/fondo-alta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 70%;
+}
+
+.formulario:hover {
+    background-color: #748cabea;
+
+}
+.formulario {
+        padding: 20px 0 50px 0;
+        max-width: 800px;
+        background-color: #748cabbb;
+        border-radius: 5px;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+        
+        &__fieldset {
+            padding: 40px 5px 5px 10px;
+            margin: 0 15px;    
+            text-align: left;
+            border: 2px solid rgba(51, 51, 51, 0.534);
+            background-color: #748cabcc;
+            border-radius: 5px;
+            box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
+        }
+            &__fieldset:hover {
+                background-color: #748cabef;
+            }
+
+        &__legend {
+            padding: 4px;
+            border-radius: 5px;
+            border: 2px solid rgba(51, 51, 51, 0.774);
+            background-color: rgba(51, 51, 51, 0.856);
+            color: aliceblue;
+        }
+
+        &__nombre {
+            text-align: left;
+            display: block;
+            margin: 15px 0 15px 8px;
+        } 
+            &__input-nombre {
+                width: 50%;
+                height: 2em;
+                border-radius: 5px;
+                background-color: rgba(240, 248, 255, 0.52);
+            }
+            &__input-nombre:focus {
+                background-color: rgba(240, 248, 255, 0.815);
+            }
+            
+        &__precio {
+            margin: 15px 0 15px 8px;
+            text-align: left;
+        }
+            &__input-precio {
+                width: 50%;
+                height: 2em;
+                margin-left: 5px;
+                border-radius: 5px;
+                background-color: rgba(240, 248, 255, 0.52);
+            }
+            &__input-precio:focus {
+                background-color: rgba(240, 248, 255, 0.815);
+            }
+            &__marca {
+                text-align: left;
+                margin: 15px 0 15px 8px;
+            }
+            &__marca-select {
+                margin-left: 30px;
+                border-radius: 5px;
+                width: 15%;
+                height: 2em;
+                background-color: rgba(240, 248, 255, 0.52);
+                
+            }
+            &__marca-select:focus {
+                background-color: rgba(240, 248, 255, 0.815);
+            }
+            &__categoria {
+                text-align: left;
+                margin: 15px 0 15px 8px;
+            }
+            &__categoria-select{
+                width: 15%;
+                height: 2em;
+                border-radius: 5px;
+                background-color: rgba(240, 248, 255, 0.52);
+            }
+            &__categoria-select:focus {
+                background-color: rgba(240, 248, 255, 0.815);
+            }
+            &__detalle {
+                display: block;
+                margin: 15px 0 15px 8px;
+                
+            }
+            &__detalle-label {
+                text-align: left;
+                display: block;
+                margin-bottom: 10px;
+            }
+            &__detalle-textarea {
+                display: block;
+                height: 120px;
+                width: 60%;
+                border-radius: 5px;
+                resize: vertical; 
+                background-color: rgba(240, 248, 255, 0.52);
+            }
+            &__detalle-textarea:focus {
+                background-color: rgba(240, 248, 255, 0.815);
+            }
+        &__stock {
+            text-align: center;
+            margin: 15px 0 15px 8px;
+            }
+        &__envio {
+            margin: 45px 0 15px 0;
+            text-align: center;
+
+        }
+        &__novedades {
+            margin: 15px 0 15px 0;
+        }
+        &__botones {
+            display: block;
+            padding: 80px 45px 10px 45px;
+            border-radius: 4px;
+        }
+        &__botones-submit {
+            width: 8em;
+            height: 2.5em;
+            border: #1d2d44 1px solid;
+            border-radius: 3px;
+            background-color: #3e5c76;
+        }
+            &__botones-submit:hover {
+                background-color: #1d2d44;
+            }
+            &__botones-submit:focus {
+                background-color: hsl(20, 83%, 63%);
+            }
+
+        &__botones-reset {
+            width: 8em;
+            border: #1d2d44 1px solid;
+            height: 2.5em;
+            border-radius: 3px;
+            background-color: #3e5c76;
+        }
+            &__botones-reset:hover {
+                background-color: #1d2d44;
+            }
+        /******************************
+                MEDIA CELULAR
+        ******************************/
+
+        @media (max-width: 768px) {
+            /*& {
+                min-width: 100%;
+                height: 200px;
+            }*/
+            &__nombre {
+                margin-right: 8px;
+            }
+            &__input-nombre {
+                margin: 5px 0;
+                width: 100%;
+            }
+            &__precio {
+                margin-right: 8px;
+            }
+            &__input-precio {
+                margin: 5px 0;
+                width: 100%;
+            }
+            &__detalle {
+                margin-right: 8px;
+            }
+            &__detalle-textarea {
+                width: 100%;
+                height: 7em;
+                margin: 5px 0;
+            }
+            &__marca {
+                margin-right: 8px;
+            }
+            &__marca-select {
+                width: 100%;
+                height: 2.5em;
+                margin: 5px 0;
+            }
+            &__categoria {
+                margin-right: 8px;
+            }
+            &__categoria-select {
+                width: 100%;
+                height: 2.5em;
+                margin: 5px 0;
+            }
+            &__stock {
+                text-align: center;
+            }
+        }
+    }
+.volver-incio {
+    padding: 3em 0;
+    text-decoration: none;
+    text-align: right;
+}
+    
+
