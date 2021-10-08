@@ -14,13 +14,13 @@
 }
 
 .formulario:hover {
-    background-color: #00bdd6c9;
+    background-color: #748cabea;
 
 }
 .formulario {
         padding: 20px 0 50px 0;
         max-width: 800px;
-        background-color: #00bdd652;
+        background-color: #748cabbb;
         border-radius: 5px;
         margin: 0 auto;
         text-align: center;
@@ -37,14 +37,14 @@
             margin: 0 15px;    
             text-align: left;
             border: 2px solid rgba(51, 51, 51, 0.534);
-            background-color: #fe91434b;
+            background-color: #748cabcc;
             border-radius: 5px;
             box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
             -webkit-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
             -moz-box-shadow: 1px 0px 29px 4px rgba(0,0,0,0.75);
         }
             &__fieldset:hover {
-                background-color: #00bdd6ec;
+                background-color: #748cabef;
             }
 
         &__legend {
@@ -54,21 +54,6 @@
             background-color: rgba(51, 51, 51, 0.856);
             color: aliceblue;
         }
-
-        &__email {
-            text-align: left;
-            display: block;
-            margin: 15px 0 15px 8px;
-        } 
-            &__email-input {
-                width: 50%;
-                height: 2em;
-                border-radius: 5px;
-                background-color: rgba(240, 248, 255, 0.52);
-            }
-            &__email-input:focus {
-                background-color: rgba(240, 248, 255, 0.815);
-            }
 
         &__nombre {
             text-align: left;
@@ -182,14 +167,13 @@
         &__botones-submit {
             width: 8em;
             height: 2.5em;
-            border: #fe9143d0 1px solid;
-            border-radius: 5px;
-            background-color: #edfafb;
+            border: #1d2d44 1px solid;
+            border-radius: 3px;
+            background-color: #3e5c76;
             margin-right: 1.5em;
         }
             &__botones-submit:hover {
-                background-color: #fe9143;
-                cursor: pointer;
+                background-color: #1d2d44;
             }
             &__botones-submit:focus {
                 background-color: hsl(20, 83%, 63%);
@@ -199,13 +183,12 @@
             width: 8em;
             border: #1d2d44 1px solid;
             height: 2.5em;
-            border-radius: 5px;
-            background-color: #edfafb;
+            border-radius: 3px;
+            background-color: #3e5c76;
             margin-left: 1.5em;
         }
             &__botones-reset:hover {
-                background-color: #fe9143;
-                cursor: pointer;
+                background-color: #1d2d44;
             }
         /******************************
                 MEDIA CELULAR
