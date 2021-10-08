@@ -5,6 +5,11 @@
 @import 'base/utilities';
 
 @import 'components/card';
+@import 'components/card-destacado';
+@import 'components/_container-medios';
+@import 'components/carousel';
+@import 'components/carousel-ofertas';
+
 
 @import 'layout/header';
 @import 'layout/footer';
@@ -13,3 +18,5 @@
 @import 'pages/nosotros';
 @import 'pages/contacto';
 @import 'pages/alta';
+
+
