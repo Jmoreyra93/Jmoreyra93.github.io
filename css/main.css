@@ -132,6 +132,156 @@ body {
   }
 }
 
+.section-destacados {
+  background-color: #fcfdfe;
+  padding: 2.5em;
+}
+
+.cards-destacados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  /*espaciado entre las tarjetas */
+  justify-content: center;
+}
+
+.header-destacados {
+  text-align: center;
+  padding: 0 2em 3.5em 2em;
+}
+
+.card-destacados {
+  outline: none;
+  flex-grow: 1;
+  width: 270px;
+  max-width: 300px;
+  height: 315px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  isolation: isolate;
+  color: #fcfdfe;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  transition: all 0.2s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  -webkit-clip-path: circle(47.1% at 50% 50%);
+          clip-path: circle(47.1% at 50% 50%);
+  /***************************
+          IMAGEN
+  ***************************/
+  /***************************
+          ARTICLE
+  ***************************/
+  /********************************
+          CONTENT
+  *******************************/
+  /********************************
+      ARTICLE Y CONTENT
+  ********************************/
+  /******************************
+          FOCUS
+  *******************************/
+  /******************************
+          color fondo
+  ******************************/
+}
+.card-destacados:hover {
+  -webkit-clip-path: none;
+          clip-path: none;
+}
+.card-destacados__image {
+  position: relative;
+  background-size: cover;
+  height: 280px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-clip-path: circle(47.1% at 50% 50%);
+          clip-path: circle(47.1% at 50% 50%);
+  background-position: center;
+  transition: all 0.2s;
+  transform: scale(1) rotate(-0.5deg);
+  transition-delay: 0.5s;
+}
+.card-destacados__article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-destacados__content {
+  position: absolute;
+  bottom: 0;
+  padding: 3em 1em 1em;
+  /*height: 230px;*/
+  width: 100%;
+  z-index: -1;
+  transition: all 0.2s;
+  transform: rotateY(0deg);
+}
+.card-destacados__article .card-destacados__content {
+  /*width: 100%;*/
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: perspective(1000px) rotateY(180deg);
+  /* backface-visibility: hidden;*/
+  overflow: auto;
+}
+.card-destacados:hover .card-destacados__article {
+  transform: perspective(1000px) rotateY(180deg);
+  /*-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+  box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);*/
+}
+.card-destacados:hover {
+  transform: scale(1.03);
+  transform-origin: bottom;
+  /*box-shadow: 0px 7px 8px 4px rgba(0, 0, 0, .05), 0 3px 3px rgba(0, 0, 0, .01);*/
+}
+.card-destacados:hover .card-destacados__image {
+  /*clip-path: none;*/
+  height: 100%;
+  width: 100%;
+  transform: scale(1.6) rotate(-6deg);
+  transition-delay: 0.5s;
+  filter: blur(2px);
+}
+.card-destacados:hover .card-destacados__content {
+  padding-top: 4em;
+}
+@media (min-width: 1024px) {
+  .card-destacados {
+    min-width: 230px;
+  }
+}
+@media (min-width: 1280px) {
+  .card-destacados {
+    min-width: 240px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .card-destacados {
+    min-width: 100%;
+    height: 200px;
+  }
+  .card-destacados__article {
+    display: flex;
+  }
+  .card-destacados__image {
+    width: 80%;
+    -webkit-clip-path: polygon(0 0, 0% 20%, 0 52%, 0 100%, 53% 100%, 78% 100%, 93% 100%, 94% 28%, 86% 19%, 93% 11%, 94% 0, 51% 0);
+            clip-path: polygon(0 0, 0% 20%, 0 52%, 0 100%, 53% 100%, 78% 100%, 93% 100%, 94% 28%, 86% 19%, 93% 11%, 94% 0, 51% 0);
+  }
+  .card-destacados__content {
+    top: 0;
+    padding-left: 45%;
+  }
+}
+
 .container-medios {
   display: flex;
   justify-content: row;
@@ -162,7 +312,6 @@ body {
 .carousel__text {
   text-align: center;
   margin: 1em;
-  color: coral;
 }
 
 @-webkit-keyframes scroll {
