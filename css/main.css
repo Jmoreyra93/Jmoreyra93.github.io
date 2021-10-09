@@ -71,6 +71,7 @@ body {
   width: 100%;
   z-index: -1;
   transition: all 0.2s;
+  color: #333;
 }
 .card:hover .card__content {
   padding-top: 4em;
@@ -710,6 +711,110 @@ ul.slider li:target {
     gap: 2em;
   }
 }
+.main-nosotros {
+  height: 3000px;
+}
+
+.container-nosotros-somos {
+  height: 400px;
+  background: url(../../img/nosotros-imagenes/Quienes-somos.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.container-nosotros-somos__titulo {
+  color: #FFF;
+  background: rgba(51, 51, 51, 0.925);
+  padding: 4px 20px;
+  font-size: 58px;
+  line-height: 1.2;
+}
+.container-nosotros-somos__descripcion-texto {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  font-size: 20px;
+  text-align: center;
+  padding: 1.5em 3em;
+}
+
+.container-nosotros-lider {
+  height: 400px;
+  background: url(../../img/nosotros-imagenes/juegos.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.container-nosotros-lider__titulo {
+  color: #FFF;
+  background: rgba(51, 51, 51, 0.925);
+  padding: 4px 20px;
+  font-size: 58px;
+  line-height: 1.2;
+}
+.container-nosotros-lider__descripcion-texto {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  font-size: 20px;
+  text-align: center;
+  padding: 1.5em 3em;
+}
+
+.container-nosotros-tecnologia {
+  height: 400px;
+  background: url(../../img/nosotros-imagenes/lider-en-tecnologia.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.container-nosotros-tecnologia__titulo {
+  color: #FFF;
+  background: rgba(51, 51, 51, 0.925);
+  padding: 4px 20px;
+  font-size: 58px;
+  line-height: 1.2;
+}
+.container-nosotros-tecnologia__descripcion-texto {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  font-size: 20px;
+  text-align: center;
+  padding: 1.5em 3em;
+}
+
+.container-nosotros-garantia {
+  height: 400px;
+  background: url(../../img/nosotros-imagenes/garantia-img.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.container-nosotros-garantia__titulo {
+  color: #FFF;
+  background: rgba(51, 51, 51, 0.925);
+  padding: 4px 20px;
+  font-size: 58px;
+  line-height: 1.2;
+}
+.container-nosotros-garantia__descripcion-texto {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  font-size: 20px;
+  text-align: center;
+  padding: 1.5em 3em;
+}
+
+.main-contacto {
+  height: 3000px;
+  background-image: url(../../img/fondos/fondo-contacto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 5em;
+}
+
 .header-alta {
   text-align: center;
   padding: 0 2em 3.5em 2em;
@@ -732,7 +837,7 @@ ul.slider li:target {
 .formulario {
   padding: 20px 0 50px 0;
   max-width: 800px;
-  background-color: #00bdd652;
+  background-color: #00bdd61e;
   border-radius: 5px;
   margin: 0 auto;
   text-align: center;
@@ -751,7 +856,7 @@ ul.slider li:target {
   margin: 0 15px;
   text-align: left;
   border: 2px solid rgba(51, 51, 51, 0.534);
-  background-color: #fe91434b;
+  background-color: #1d2d44b2;
   border-radius: 5px;
   box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 0px 29px 4px rgba(0, 0, 0, 0.75);
@@ -773,7 +878,7 @@ ul.slider li:target {
   margin: 15px 0 15px 8px;
 }
 .formulario__email-input {
-  width: 50%;
+  width: 100%;
   height: 2em;
   border-radius: 5px;
   background-color: rgba(240, 248, 255, 0.52);
@@ -793,6 +898,20 @@ ul.slider li:target {
   background-color: rgba(240, 248, 255, 0.52);
 }
 .formulario__input-nombre:focus {
+  background-color: rgba(240, 248, 255, 0.815);
+}
+.formulario__nombre-alta {
+  text-align: left;
+  display: block;
+  margin: 15px 0 15px 8px;
+}
+.formulario__input-nombre-alta {
+  width: 100%;
+  height: 2em;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.52);
+}
+.formulario__input-nombre-alta:focus {
   background-color: rgba(240, 248, 255, 0.815);
 }
 .formulario__precio {
