@@ -1,0 +1,36 @@
+.volver-inicio {
+    cursor: pointer;
+    text-decoration: none;
+    color: aqua;
+    
+
+}
+.volver-inicio a{
+    text-decoration: none;
+    color: lightblue;
+}
+.volver-inicio p{
+    text-decoration: none;
+    color: #e1e4e5;
+}
+.buttom-volver {
+    background-color: #e1e4e5;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.3em;
+
+}
+.buttom-volver p{
+    text-decoration: none;
+    color: #e1e4e5;
+
+
+
+}
+
+button {
+    background-color: #00bdd6;
+    border-radius: 10px;
+    border: solid #e1e4e5 2px;
+    padding: 0.8em;
+}

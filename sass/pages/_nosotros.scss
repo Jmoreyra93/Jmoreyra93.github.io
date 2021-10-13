@@ -1,5 +1,6 @@
 .main-nosotros {
     height: 3000px;
+    background-color: #e1e4e5;
 }
 
 .container-nosotros-somos {
@@ -19,7 +20,7 @@
     }
     &__descripcion-texto {
         display: flex;
-        background-color: #fff;
+        background-color: #e1e4e5;
         justify-content: center;
         align-items: center;
         height: 280px;
@@ -44,9 +45,12 @@
         font-size: 58px;
         line-height: 1.2;
     }
+    &__descripion {
+        background-color: #e1e4e5;
+    }
+
     &__descripcion-texto {
         display: flex;
-        background-color: #fff;
         justify-content: center;
         align-items: center;
         height: 280px;

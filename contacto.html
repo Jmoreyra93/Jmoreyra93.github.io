@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Connecticus</title>
+    <link rel="shortcut icon" href="logo.png">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="icons/style.css">
+    <link rel="stylesheet" href="icons-footer/style.css">
 </head>
 <body>
     <header class="main-header">
@@ -44,7 +46,7 @@
 
         <div class="search-bar">
             <div class="search-bar__logo-container">
-                Connecticus
+                <img src="img/logos/logo.gif.gif" alt="">
             </div>
             <form class="search-bar__form-container">
                 <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar su producto aquí...">
@@ -63,7 +65,7 @@
             </div>
         </div>
     </header>
-    <h1>Contacto</h1>
+    <h1 class="formulario-titulo">Contacto</h1>
     <main class="main-contacto">
         <form action="formulario.php" class="formulario" method="POST">
             <!-- FORMULARIO DE CONTACO -->
@@ -100,12 +102,54 @@
                 <input type="submit" value="Enviar" class="formulario__botones-submit">
                 <input type="reset" value="Restablecer" class="formulario__botones-reset">
             </div>
-        </form>        
-        <p><a href="index.html">Volver al Inicio</a></p><span class="undo2"></span>
-    </main>
+        </form>      
 
-    <footer class="footer-class">
-        ESTE ES EL PIE DE PAGINA &copy;
+        
+        
+        
+    </main>
+    
+    <div class="buttom-volver">
+        <button>
+            <a href="index.html" class="volver-incio"><p>Volver al Inicio</p></a><span class="undo2"></span>
+        </button>
+    </div>
+
+    <footer class="footer-container">
+        <section class="section-footer">
+            <div class="footer-container__mas-de-nosotros">
+                <h1 class="footer-header">
+                    Mas de nosotros
+                </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti</p>
+            </div>
+            
+            <div class="footer-container__informacion-de-contacto">
+                <h1>Informacion de Contacto</h1>
+                <p>Av. 12 de Octubre y Gran Canaria</p>
+                <p>Quilmes</p>
+                <p>Buenos Aires - Argentina -</p>
+                <p>Tel: 4349-1700</p>
+                <p>www.connecticus</p>
+
+            </div>
+
+            <div class="footer-container__redes-sociales">
+                <h1>Seguinos en redes</h1>
+                <a class="footer-redes" href=""><span class="icon-instagram"></span><p>Instagram</p></a>
+                <a class="footer-redes" href=""><span class="icon-facebook"></span><p>Facebook</p></a>
+                <a class="footer-redes" href=""><span class="icon-google3"></span><p>Gmail</p></a>
+                <a class="footer-redes" href=""><span class="icon-twitter"></span><p>Twitter</p></a>
+            </div>
+
+        </section>    
+        <div class="footer-logo">
+            <img class="footer-logo__img" src="logo.png" alt="">
+        </div>
+        <hr>
+        <div class="footer-container__derechos-terminos">
+            2021 Todos los derechos reservados. &copy;
+        </div>
     </footer>
 
 </body>
