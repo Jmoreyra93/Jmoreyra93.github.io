@@ -14,557 +14,59 @@
     <header class="main-header">
 
         <input type="checkbox" id="menu">
-        
+        <div class="logo-container">
+            <img src="img/logos/ConnecticuS.png" alt="">
+        </div>
         <nav class="nav-bar">
             <ul class="nav-bar__nav-list">
-                
+
                 <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="#"><span class="icon-home3"></span> Inicio</a>
+                    <a class="nav-bar__nav-link" href="" id="inicio" ><span class="icon-home3"></span> Inicio</a>
                 </li>
                 <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="alta.html"><span class="icon-upload3"></span> Alta</a>
+                    <a class="nav-bar__nav-link" href="" id="alta" ><span class="icon-upload3"></span> Alta</a>
                 </li>
                 <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="contacto.html"><span class="icon-address-book"></span> Contacto</a>
+                    <a class="nav-bar__nav-link" href="" id="contacto" ><span class="icon-address-book"></span>
+                        Contacto</a>
                 </li>
                 <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="nosotros.html"><span class="icon-accessibility"></span> Nosotros</a>
-                    <ul class="nav-bar__nav-list2">
-                        <li class="nav-bar__nav-item2">
-                            <a class="nav-bar__nav-link2" href="nosotros.html"> Objetivo</a>
-                        </li>
-                        <li class="nav-bar__nav-item2">
-                            <a class="nav-bar__nav-link2" href="nosotros.html"> Quienes somos?</a>
-                        </li>
-                        <li class="nav-bar__nav-item2">
-                            <a class="nav-bar__nav-link2" href="nosotros.html"> Preguntas frecuentes</a>
-                        </li>
-                    </ul>
+                    <a class="nav-bar__nav-link" href="" id="nosotros" ><span class="icon-accessibility"></span>
+                        Nosotros</a>
+
                 </li>
             </ul>
         </nav>
-        
+
         <div class="search-bar">
-            <div class="search-bar__logo-container">
-                <img src="img/logos/logo.gif.gif" alt="">
-            </div>
             <form class="search-bar__form-container">
-                <input class="search-bar__form-search" id="busqueda" type="search" placeholder="Buscar su producto aquí...">
-                <input class="search-bar__form-submit" type="submit" value="🔍">
+                <input class="search-bar__form-search" id="busqueda" type="search"
+                    placeholder="Buscar su producto aquí...">
+                <button id="boton-buscar" type="submit"><span class="icon-search"></span></button>
             </form>
             <div class="search-bar__carrito-container">
-                <a class="search-bar__carrito-link" href="carrito.html"><span class="icon-cart"></span></a>
+                <button id="boton-carrito"><span class="icon-cart"></span></button>
             </div>
+
             <div class="menu-toggle__container">
                 <label class="menu-toggle__label" for="menu">
                     <span class="icon-menu-icono"></span>
-                    
                 </label>
             </div>
         </div>
-        
+
     </header>
+
     
-    
-    
+    <!-- <section class="section-cart" id="section-cart"></section> -->
+
+
+    <!-- --------- VISTA DEL CARRITO ----------- -->
+    <div class="section-carrito"></div>
+    <!-- --------------------------------------- -->
     
     <main>
-        
 
-
-
-        <header class="header-cards">
-            <h1 class="cards-titulo">Productos</h1>
-        </header>
-        <section class="section-cards">
-            <div class="cards-container">
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/notebook_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>    
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/notebook_02.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/notebook_03.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/smart_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/smart_02.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/smart_03.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/heladera_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/heladera_02.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/heladera_03.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/lavarropa_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/lavarropa_02.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/lavarropa_03.png');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/smartphone_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/smartphone_02.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/drone_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-                <a class="card" href="#">
-                    <article class="card__article">
-                        <div class="card__image" 
-                            style="background-image: url('img/productos/aire_01.jpg');"
-                        >
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Titulos</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-
-                        <div class="card__content">
-                            <h3 class="card__heading">Notebook Lenovo Ultrabook</h3>
-                            <div class="card__description">
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="card__precio">
-                                <p>$120.000-.</p>
-                                <p>Envio gratis</p>
-                                <p>Cuotas sin interes <sup>(*)</sup></p>
-                            </div>
-                        </div>
-                    </article>
-                </a>
-
-
-            </div>
-        </section>
-
-        <section class="container-medios">
-
-            <div class="container-medios__pago">
-                <div class="container-medios__imagen">
-                    <img src="img/pago-envio/img-pago.png" alt="Elegi como pagar" class="container-medios__imagen">
-                </div>
-                <h2>Elegi como pagar</h2>
-                <p>
-                    <span>
-                        Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Bancos seleccionados.
-                    </span>
-                </p>
-            </div>
-
-            <div class="container-medios__envio">
-                <div class="container-medios__imagen">
-                    <img src="img/pago-envio/img-envio.png" alt="Envío gratis desde $ 3.500" class="container-medios__imagen">
-                </div>
-                <h2>Envío gratis desde $ 4.000.-</h2>
-                <p>
-                    <span>
-                            Solo por estar registrado en Connecticus tenés envíos gratis en productos seleccionados.
-                    </span>
-                </p>
-            </div>
-
-            <div class="container-medios__seguridad">
-                <div class="container-medios__imagen">
-                    <img src="img/pago-envio/img-seguridad.png" alt="Seguridad, de principio a fin" class="container-medios__imagen">
-                </div>
-                <h2>Seguridad, de principio a fin</h2>
-                <p>
-                    <span>
-                        Paga de forma virtual sin exponer tus datos personales. Seguridad garantizada.        
-                    </span>
-                </p>
-            </div>
-        </section>
 
     </main>
 
@@ -576,7 +78,7 @@
                 </h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti</p>
             </div>
-            
+
             <div class="footer-container__informacion-de-contacto">
                 <h1>Informacion de Contacto</h1>
                 <p>Av. 12 de Octubre y Gran Canaria</p>
@@ -589,13 +91,31 @@
 
             <div class="footer-container__redes-sociales">
                 <h1>Seguinos en redes</h1>
-                <a class="footer-redes" href=""><span class="icon-instagram"></span><p>Instagram</p></a>
-                <a class="footer-redes" href=""><span class="icon-facebook"></span><p>Facebook</p></a>
-                <a class="footer-redes" href=""><span class="icon-google3"></span><p>Gmail</p></a>
-                <a class="footer-redes" href=""><span class="icon-twitter"></span><p>Twitter</p></a>
+
+                <ul>
+                    <li> 
+                        <a class="footer-redes" href=""><span class="icon-instagram"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-redes" href=""><span class="icon-facebook"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-redes" href=""><span class="icon-google3"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-redes" href=""><span class="icon-twitter"></span>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
 
-        </section>    
+        </section>
         <div class="footer-logo">
             <img class="footer-logo__img" src="logo.png" alt="">
         </div>
@@ -604,6 +124,38 @@
             2021 Todos los derechos reservados. &copy;
         </div>
     </footer>
+
+
+
+
+    <!-- Código de librerías -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+
+    <!-- clientes http -->
+    <script src="js/clientes/http.client.js"></script>
+
+    <!-- servicios -->
+    <script src="js/servicios/producto.js"></script>
+    <script src="js/servicios/carrito.js"></script>
+
+    <!-- modelos -->
+    <script src="js/modelos/producto.js"></script>
+    <script src="js/modelos/carrito.js"></script>
+
+    <!-- controladores -->
+    <script src="js/controladores/productos.js"></script>
+    <script src="js/controladores/carrito.js"></script>
+
+    <!-- menúes -->
+    <script src="js/menu/alta.js"></script>
+    <script src="js/menu/nosotros.js"></script>
+    <script src="js/menu/contacto.js"></script>
+    <script src="js/menu/inicio.js"></script>
+    <script src="js/menu/carrito.js"></script>
+    <script src="js/menu/slideshow.js"></script>
+
+    <!-- Código de arranque -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

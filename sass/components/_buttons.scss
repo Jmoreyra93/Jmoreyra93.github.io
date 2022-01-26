@@ -29,8 +29,82 @@
 }
 
 button {
-    background-color: #00bdd6;
+    background-color: #59BFF6;
     border-radius: 10px;
-    border: solid #e1e4e5 2px;
-    padding: 0.8em;
+    border: solid #e1e4e5 1px;
+    padding: 1.2em;
+    cursor: pointer;
+
+
+}
+
+#boton-buscar {
+    border-top: 2.5px solid #59BFF6;
+    border-right: 2.5px solid #59BFF6;
+    border-bottom: 2.5px solid #59BFF6;
+    border-left: 2.5px solid #fff;
+    background-color: #fff;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 17px;
+
+    color: #59BFF6;
+
+}
+
+#boton-buscar:hover {
+    color: #F66F58;
+}
+
+#boton-carrito {
+    background-color: #59BFF6;
+    width: 70px;
+    font-size: 17px;
+    color: #fff;
+}
+
+#boton-carrito:hover {
+    background-color: #F66F58;
+
+}
+
+#boton-megusta {
+    background-color: #fff;
+    color: red;
+    border: none;
+}
+#boton-megusta:hover {
+    background-color: #59BFF6;
+    color: #fff;
+}
+
+#boton-fav {
+    background-color: #fff;
+    color: yellowgreen;
+    border: none;
+}
+#boton-fav:hover {
+    background-color: #59BFF6;
+    color: #fff;
+    border: none;
+}
+
+#boton-mas , #boton-menos , #boton-carr {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bolder;
+    
+}
+#boton-mas:hover , #boton-menos:hover{
+    background-color: #F66F58;
+    
+}
+#boton-carr:hover {
+    background-color: yellowgreen;
+}
+
+button:hover {
+    background-color: #184e77;
+    color: #e1e4e5;
 }

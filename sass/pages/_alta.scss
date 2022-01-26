@@ -1,23 +1,138 @@
-.formulario-titulo {
-    color: #FFF;
-    background: rgba(51, 51, 51, 0.925);
-    padding: 4px 20px;
-    font-size: 58px;
-    line-height: 1.2;
-}
+// .formulario-titulo {
+//     color: #FFF;
+//     background: rgba(51, 51, 51, 0.925);
+//     padding: 4px 20px;
+//     font-size: 58px;
+//     line-height: 1.2;
+// }
 
-.main-form {
-    background-color: #e1e4e5;
+.container-alta {
+    background-color: #f5f5f5;
+    display: flex;
+    //justify-content: space-evenly;
+    padding-top: 4.5em;
+    gap: 1em;
+    margin: 0 4em 8em 4em;
+
+    &__handlebars {
+        table, th, td {
+            background-color: #f5f5f5;
+            border: 2.3px solid #fe9143;
+            border-radius: 5px;
+            border-collapse: collapse;
+            color: #333;
+            padding: 5px;
+            height: 80px;
+            text-align: center;
+        }
+        td:nth-last-child(1n) {
+            width: 30px;
+        }
+        
+        td:nth-last-child(3n) {
+            width: 150px;
+        }
+        th {
+            //font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        #listado-productos {
+            width: 100%;
+        }
+
+        img {
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+        }   
+        table, th, td {
+            background-color: #f5f5f5;
+            border: 2.3px solid #59BFF6;//#fe9143;
+            border-radius: 5px;
+            border-collapse: collapse;
+
+            padding: 5px;
+            
+            color: #333;
+            font-weight: bold;
+            //font-size: 20px;
+        }
+        th {
+            font-size: 24px;
+            color: #f5f5f5;
+            background-color: #333;
+            border: 1.2px solid #59BFF6;//#fe9143;
+            margin-bottom: 2em;
+
+        }
+
+        table {
+            width: 100%;
+        }
+
+        #listado-productos {
+            width: 100%;
+        }
+
+        img {
+            width: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
 }
 
 
 .formulario {
-        padding: 20px 0 50px 0;
-        max-width: 800px;
-        background-color: #c0c6c9;
+        color: #333;
+        font-weight: bold;
+        font-size: 20px;
+        //padding: 20px 0 50px 0;
+        //max-width: 950px;
+        background-color: #f5f5f5;
+        width: 420px;
         
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
+
+        label {
+            text-align: left;
+            display: block;
+            margin: 15px 0px 15px 0px;
+            
+        }
+
+        &__boton-actualizar {
+            width: 100px;
+            height: 50px;
+            background-color: #59BFF6;
+            border-radius: 10px;
+            border: solid #e1e4e5 1px;
+            padding: 1.2em;
+            cursor: pointer;
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+        
+
+        &__boton-borrar {
+            margin-top: .5em;
+            height: 50px;
+            width: 100px;
+            background-color: #333;
+            border-radius: 10px;
+            border: solid #e1e4e5 1px;
+            padding: 1.2em;
+            cursor: pointer;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        
+        
 
 
         &__datos-personales {
@@ -25,26 +140,49 @@
         }
         
         &__fieldset {
-            padding: 40px 5px 5px 10px;
-            margin: 0 0;    
             text-align: left;
             border: none;
+            text-align: left;
+            display: block;
+            font-size: 18px;
+        }
 
+        &__campo-obligatorio {
+            border: 3px solid red;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            width: 420px;
+            color: red;
+            background-color: #fff;
+            display: none;
+            text-align: center;
+            font-size: 18px;
         }
 
 
         &__legend {
-            padding: 4px;
-            border-radius: 5px;
-            border: 2px solid rgba(51, 51, 51, 0.774);
-            background-color: rgba(51, 51, 51, 0.856);
-            color: aliceblue;
+            padding: 5px;
+            //border: 2px solid rgba(51, 51, 51, 0.774);
+            background-color: #333;
+            color: #f5f5f5;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 24px;
+            height: 80px;
+            width: 420px;
+            
+        border: 2.3px solid #59BFF6;//#fe9143;
+        border-radius: 5px;
+        border-collapse: collapse;
+
         }
 
         &__email {
             text-align: left;
             display: block;
-            margin: 15px 0 15px 8px;
+            margin: 15px 0 15px 0px;
         } 
             &__email-input {
                 width: 100%;
@@ -59,35 +197,37 @@
         &__nombre {
             text-align: left;
             display: block;
-            margin: 15px 0 15px 8px;
+            margin: 0px 0 0px 0px;
         } 
             &__input-nombre {
-                width: 50%;
-                height: 2em;
+                margin: 0px 0px 0px 0px;
+                //padding: 15px 10px 15px 10px;
+                width: 420px;
+                height: 3.5em;
                 border-radius: 5px;
                 background-color: rgba(240, 248, 255, 0.52);
             }
             &__input-nombre:focus {
-                background-color: rgba(240, 248, 255, 0.815);
+                background-color: #59BFF6;
             }
 
             &__nombre-alta {
                 text-align: left;
                 display: block;
-                margin: 15px 0 15px 8px;
+                margin: 15px 0 15px 0px;
             } 
                 &__input-nombre-alta {
-                    width: 100%;
+                    width: 420px;
                     height: 2em;
                     border-radius: 5px;
                     background-color: rgba(240, 248, 255, 0.52);
                 }
                 &__input-nombre-alta:focus {
-                    background-color: rgba(240, 248, 255, 0.815);
+                    background-color: #59BFF6;
                 }
             
         &__precio {
-            margin: 15px 0 15px 8px;
+            margin: 15px 0 15px 0px;
             text-align: left;
         }
             &__input-precio {
@@ -98,11 +238,11 @@
                 background-color: rgba(240, 248, 255, 0.52);
             }
             &__input-precio:focus {
-                background-color: rgba(240, 248, 255, 0.815);
+                background-color: #59BFF6;
             }
             &__marca {
                 text-align: left;
-                margin: 15px 0 15px 8px;
+                margin: 15px 0 15px 0px;
             }
             &__marca-select {
                 margin-left: 30px;
@@ -113,7 +253,7 @@
                 
             }
             &__marca-select:focus {
-                background-color: rgba(240, 248, 255, 0.815);
+                background-color: #59BFF6;
             }
             &__foto {
                 display: block;
@@ -122,7 +262,7 @@
             }
             &__foto-label {
                 text-align: left;
-                margin: 15px 0 15px 8px;
+                margin: 15px 0 15px 0px;
             }
             &__foto-input {
                 margin-left: 40px;
@@ -131,7 +271,7 @@
 
             &__categoria {
                 text-align: left;
-                margin: 15px 0 15px 8px;
+                margin: 15px 0 15px 0px;
             }
             &__categoria-select{
                 width: 15%;
@@ -140,11 +280,11 @@
                 background-color: rgba(240, 248, 255, 0.52);
             }
             &__categoria-select:focus {
-                background-color: rgba(240, 248, 255, 0.815);
+                background-color: #59BFF6;
             }
             &__detalle {
                 display: block;
-                margin: 15px 0 15px 8px;
+                margin: 15px 0 15px 0px;
                 
             }
             &__detalle-label {
@@ -161,16 +301,30 @@
                 background-color: rgba(240, 248, 255, 0.52);
             }
             &__detalle-textarea:focus {
-                background-color: rgba(240, 248, 255, 0.815);
+                background-color: #59BFF6;
             }
         &__stock {
             text-align: center;
-            margin: 15px 0 15px 8px;
-            }
-        &__envio {
-            margin: 45px 0 15px 0;
-            text-align: center;
+            margin: 15px 0 15px 0px;
+        
 
+
+
+
+
+            }
+        #formulario__envio {
+            text-align: center;
+            display: inline;
+            margin-left: 9.5em;
+            margin-top: 2.5em;
+            // display: f; hace
+            // text-align: center;
+            // display: block;
+            // margin: 15px 15px 15px 15px;
+        }
+        #foto {
+            margin-bottom: 2.5em;
         }
         &__novedades {
             margin: 15px 0 15px 0;
@@ -179,6 +333,16 @@
             display: block;
             padding: 80px 45px 10px 45px;
             border-radius: 4px;
+
+        }
+        #boton-agregarAlta{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            padding-left: 20px;
+            margin-left: 12.5em;
+            margin-top: 4em;
         }
         &__botones-submit {
             width: 8em;
@@ -200,7 +364,7 @@
             width: 8em;
             border: #1d2d44 1px solid;
             height: 2.5em;
-            border-radius: 5px;
+            border-radius: 10px;
             background-color: #edfafb;
             margin-left: 1.5em;
         }
@@ -208,6 +372,10 @@
                 background-color: #fe9143;
                 cursor: pointer;
             }
+
+
+
+     
         /******************************
                 MEDIA CELULAR
         ******************************/
@@ -261,10 +429,15 @@
 
         }
     }
-.volver-incio {
-    padding: 3em 0;
-    text-decoration: none;
-    text-align: right;
+    
+@media (max-width: 1434px) {
+    .container-alta {
+        flex-direction: column;
+    }
 }
     
-
+// @media (max-width: 1047px) {
+//     .container-alta {
+//         flex-direction: column;
+//     }
+// }
