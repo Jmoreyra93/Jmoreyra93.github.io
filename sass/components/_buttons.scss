@@ -60,6 +60,7 @@ button {
     width: 70px;
     font-size: 17px;
     color: #fff;
+    height: 65.59px;
 }
 
 #boton-carrito:hover {
@@ -67,20 +68,16 @@ button {
 
 }
 
-#boton-megusta {
-    background-color: #fff;
-    color: red;
-    border: none;
-}
-#boton-megusta:hover {
-    background-color: #59BFF6;
-    color: #fff;
-}
+
 
 #boton-fav {
     background-color: #fff;
     color: yellowgreen;
     border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 8px;
+
 }
 #boton-fav:hover {
     background-color: #59BFF6;
@@ -90,9 +87,9 @@ button {
 
 #boton-mas , #boton-menos , #boton-carr {
     color: #fff;
-    width: 50px;
-    height: 50px;
-    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    font-size: 8px;
     font-weight: bolder;
     
 }

@@ -17,16 +17,16 @@
 }
 
 #menu:checked + .nav-bar {
-    display: block;    
-}
-
-#menu:checked ~ .search-bar .menu-toggle__label {
-    /*color: #fe9143d7;*/
-    //border-bottom: #fe9143 solid 1px; //tengo cque cambiar de color
-    //border-radius: 10px;
     display: block;
 }
 
+#menu:checked ~ .search-bar .menu-toggle__label {
+    background-color: #59BFF6;
+    width: 70px;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 8px;
+}
 
 
 
@@ -38,25 +38,37 @@
     padding-top: 1.5em;
     padding-bottom: 1em;
 
+    img {
+        width: 10em;
+        height: 2em;
+    }
+
+    &__logo {
+        margin-right: auto;
+        padding-left: 2em;
+    }
+
     &__nav-list {
         display: flex;
         list-style-type: none;
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 2.5em;
+        margin-right: 8em;
     }
 
     &__nav-link {
         width: 10em;
-        margin-left: 3em;
         text-decoration: none; 
         display: block;
         padding: 0.8rem 2.5rem;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
         transition: all 0.4s linear;
-        border-radius: 3px;
+        border-radius: 6px;
         color: #59BFF6;
         font-size: 20px;
         font-weight: bold; 
         font-family: 'Bangers', cursive;
+        letter-spacing: 4px;
     }
     
     &__nav-item {
@@ -85,11 +97,11 @@
 
 
 .logo-container {
-    display: flex;
-    position: absolute;
-    height: 242px;
-    top: 43px;
-    left: 59px;
+    // display: flex;
+    // position: absolute;
+    // height: 242px;
+    // top: 43px;
+    // left: 59px;
 } 
 
 
@@ -166,34 +178,49 @@
 
 
 
-/******************************
+/*********************************
             MENU TOGGLE
-*******************************/
-.menu-toggle__container {   
+*********************************/
+.menu-toggle {
     display: none;
+    background-color: #f5f5f5;
     flex: 0 0 3em;
     position: relative;
     cursor: pointer;
-
+    margin-left: 2px;
 }
 
 .menu-toggle__label {
     display: block;
-    /*background-color: black;*/
-    width: 100%;
+    background-color: #f5f5f5;
+    width: 70px;
     height: 100%;
+    border: #59BFF6 solid 2.5px;
+    border-radius: 8px;
 }
 
-.icon-menu-icono {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 13px;
-    height: 29px;
-    font-size: 53px;
-    color: rgba(51, 51, 51, 0.904);
+.menu-toggle__pan-arriba,
+.menu-toggle__medallon,
+.menu-toggle__pan-abajo {
+    display: block;
+    background-color: #333;
+    height: .2em;
+    position: absolute;
+    left: .5em;
+    right: .5em;
+    margin: 0 auto;
 }
 
+.menu-toggle__pan-arriba {
+    top: .8em;
+}
+.menu-toggle__medallon {
+    top: 50%;
+    margin-top: -.15em;
+}
+.menu-toggle__pan-abajo {
+    bottom: .8em;
+}   
 
 
 @media (max-width: 1667px) {
@@ -207,9 +234,7 @@
             width: 95em;
         }
     .logo-container{
-        height: 242px;
-        top: 43px;
-        left: 59px;
+
     }
 }
 @media (max-width: 1400px) {
@@ -241,10 +266,10 @@
             width: 76em;
         }
     .logo-container {
-        height: 214px;
-        top: 101px;
-        left: 482px;
     }        
+    .nav-bar__nav-list {
+        margin-right: auto;
+    }
 }
 @media (max-width: 1155px) {
     .search-bar__form-search {
@@ -271,60 +296,51 @@
     width: 6em;
     padding: 0.8rem 0.5rem;
     }
-    .logo-container {
-        height: 214px;
-        top: 52px;
-        left: 60px;
-    }
+
 }
-//
-@media (max-width: 820px) {
+
+
+@media (max-width: 855px) {
 
     .main-header {
         flex-direction: column-reverse;
     }
 
-    .menu-toggle__container {
+    .menu-toggle {
         display: block;
-        flex: 1 0 3em;
-        //color: #00bdd8
-
-    }
-    .menu-toggle__container span {
-        color: #59BFF6;
-        margin-top: 0.30em;
     }
 
     .logo-container {
-        display: none;
+        display: flex;
+        height: 214px;
+        top: 52px;
+        left: 60px;
     }
 
     .nav-bar {
         display: none;
-        padding-top: 2.2em;
-        padding-bottom: 1em;
-
-
-        &__nav-link span {
-            display: inline-block;
-            padding-right: 1em;
-        }
-        &__nav-list {
-            flex-direction: column;
-        }
+    }
+    .nav-bar__nav-list a{
+        width: 43em;
     }
 
+    .nav-bar__nav-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
 
-    .search-bar {
-    flex-direction: row;
-    justify-content: flex-start;
     }
+
     .search-bar__form-search {
         width: 40em;
-        margin-left: 1em;
     }
-    .search-bar__form-container {
-        //width: 100px;
+
+    #logo {
+        display: none;
+    }
+    .main-header {
+        padding: 3em 0 .5 0 ;
     }
 
 }
