@@ -103,3 +103,71 @@
   background-position: center center;
   background-size: cover;
 }
+
+
+/********************
+
+    CAROUSEL 
+
+*******************/
+
+
+
+/********************
+
+    PROYECTOS 
+
+*******************/
+.container-proyectos {
+  box-sizing: content-box;
+
+}
+
+.proyecto {
+  color: #212529;
+  margin: -24px -12px 0px;
+  padding: 48px 0;
+}
+
+.container-proyectos h2{
+  padding-bottom: 0.5rem!important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+
+/********************
+
+      SKILLS 
+
+*******************/
+.skillcountainer {
+  text-align: center;
+}
+.skillcountainer:hover {
+  transition: .3s;
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+/* 
+.skillcountainer h4:hover {
+  transition: 2s;
+  background-color: beige;
+}
+*/
+.skillcountainer img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+} 
+.skillcountainer img:hover {
+  transition: .5s;
+  filter: blur(1px);
+} 
