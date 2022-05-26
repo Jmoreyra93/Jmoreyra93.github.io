@@ -10,7 +10,20 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scroll/smooth-scroll.min.js"></script>
+    <!-- Scroll -->
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+        smoothScroll.init({
+            selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+            selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+            speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInOutCubic', // Easing pattern to use
+            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+            callback: function (anchor, toggle) { } // Function to run after scrolling
+        });
+    </script>
 </head>
 
 <body>
@@ -19,7 +32,7 @@
     <header>
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Julián Moreyra</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -33,36 +46,30 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de mí</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Proyectos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">E-commerce</a></li>
-                                <li><a class="dropdown-item" href="#">Web scraping</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Github</a></li>
-                            </ul>
+                            <a data-scroll class="nav-link" href="#sec-1" role="button" aria-pressed="true">Acerca de mí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                            <a data-scroll class="nav-link" href="#sec-2" role="button" aria-pressed="true">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#sec-3" role="button" aria-pressed="true">Proyectos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-scroll class="nav-link" href="#sec-4" role="button" aria-pressed="true">Contactame</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
     <main>
         <!-- CAROUSEL DE IMÁGENES -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <img src="img/grovemade-RvPDe41lYBA-unsplash.jpg" class="d-block w-100" height="670px" alt="...">
+        <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/grovemade-RvPDe41lYBA-unsplash.jpg" class="d-block w-100" height="670px" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="img/jefferson-santos-9SoCnyQmkzI-unsplash.jpg" class="d-block w-100" height="670px"
@@ -83,164 +90,203 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> -->
 
         <div class="b-example-divider"></div>
 
         <!--  ACERCA DE MI -->
-
-        <div class="container px-4 py-5" id="hanging-icons">
-            <h2 class="pb-2 border-bottom">Acerca de mí</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="col d-flex align-items-start">
-                    <div
-                        class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg class="bi" width="1em" height="1em">
-                            <use xlink:href="#toggles2" />
-                        </svg>
+        <section id="sec-1">
+            <div class="container px-4 py-5" id="hanging-icons">
+                <h2 class="pb-2 border-bottom">Acerca de mí</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#toggles2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Web developer</h2>
+                            <p>Desarollador full stack MERN.</p>
+                            <a href="#" class="btn btn-secondary">
+                                Leer más ...
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <h2>Web developer</h2>
-                        <p>Desarollador full stack MERN.</p>
-                        <a href="#" class="btn btn-secondary">
-                            Leer más ...
-                        </a>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#cpu-fill" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>UX/UI</h2>
+                            <p>Diseñador UX/UI.</p>
+                            <a href="#" class="btn btn-secondary">
+                                Leer más ...
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div
-                        class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg class="bi" width="1em" height="1em">
-                            <use xlink:href="#cpu-fill" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h2>UX/UI</h2>
-                        <p>Diseñador UX/UI.</p>
-                        <a href="#" class="btn btn-secondary">
-                            Leer más ...
-                        </a>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div
-                        class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg class="bi" width="1em" height="1em">
-                            <use xlink:href="#tools" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h2>Data Scraping</h2>
-                        <p>Automatización de extracción de datos.</p>
-                        <a href="#" class="btn btn-secondary">
-                            Leer más ...
-                        </a>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#tools" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Data Scraping</h2>
+                            <p>Automatización de extracción de datos.</p>
+                            <a href="#" class="btn btn-secondary">
+                                Leer más ...
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
 
         <div class="b-example-divider"></div>
+
+
         <!-- SKILLS -->
 
         <div class="container px-4 py-5" id="icon-grid">
-            <h2 class="pb-2 border-bottom">Skills</h2>
+            <h2 class="pb-2 border-bottom" id="sec-2">Skills</h2>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <div class="col d-flex align-items-start skillcountainer">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 ">
 
-                    <div>
-                        <h4 class="fw-bold mb-0">HTML5</h4>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                    data-tilt-max-glare="0.2" data-tilt-scale="1.1">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0 tilt">HTML5</h4>
                         <img src="img/skills/html.svg" alt="">
-                        <p>Conocimiento amplio con uso de librerías como Boostrapt</p>
+                        <p></p>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
-                        <h4 class="fw-bold mb-0">CSS3</h4>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                    data-tilt-max-glare="0.8">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0 text-paralax">CSS3</h4>
                         <img src="img/skills/css.svg" alt="">
-                        <p>Diseño responsivo, con conocimientos de procesadores como SASS y LESS</p>
+                        <p></p>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
-                        <h4 class="fw-bold mb-0">JavaScript</h4>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare=""
+                    data-tilt-max-glare="0.5">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0 text-paralax">JavaScript</h4>
                         <img src="img/skills/js.svg" alt="">
-                        <p>Por parte del fron end tengo conocimiento en utilizar JavaSctipt vanilla</p>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
-                        <h4 class="fw-bold mb-0">Node JS</h4>
-                        <img src="img/skills/skills.svg" alt="">
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0 tilt">Node JS</h4>
+                        <img src="img/skills/skills.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
-                
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
                         <h4 class="fw-bold mb-0">Boostrap</h4>
-                        <img src="img/skills/bootstrap.svg" alt="">
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                        <img src="img/skills/bootstrap.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
-                
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
                         <h4 class="fw-bold mb-0">SASS</h4>
-                        <img src="img/skills/sass.svg" alt="">
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                        <img src="img/skills/sass.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
-                
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
                         <h4 class="fw-bold mb-0">MongoDB</h4>
-                        <img src="img/skills/mongo.svg" alt="">
-                        <p>Consultas y creación de base de datos no relacionales</p>
+                        <img src="img/skills/mongo.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
                         <h4 class="fw-bold mb-0">React</h4>
-                        <img src="img/skills/react.svg" alt="">
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                        <img src="img/skills/react.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
 
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
                         <h4 class="fw-bold mb-0">Python</h4>
-                        <img src="img/skills/" alt="">
-                        <p>Web Scrapping con Selenium y Scrapy . Programación web con librerias : Flask y Django .</p>
-                    </div>
-                </div>
-
- 
-
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
-                        <h4 class="fw-bold mb-0">MySQL - SQLite</h4>
-                        <p>Básico conocimiento en realizar consultar .</p>
+                        <img src="img/skills/" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     </div>
                 </div>
 
 
-
-                <div class="col d-flex align-items-start skillcountainer">
-                    <div>
-                        <h4 class="fw-bold mb-0">Featured title</h4>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">MySQL</h4>
                     </div>
                 </div>
+
+
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">DJango</h4>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">Flask</h4>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">npm</h4>
+                        <img src="img/skills/npm.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">git</h4>
+                        <img src="img/skills/git.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
+                    data-tilt-speed="300" data-tilt-perspective="500">
+                    <div class="text-paralax">
+                        <h4 class="fw-bold mb-0">Jquery</h4>
+                        <img src="img/skills/jquery.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                    </div>
+                </div>
+
+
+
 
             </div>
         </div>
@@ -248,14 +294,15 @@
         <div class="b-example-divider"></div>
 
         <!-- PROYECTOS -->
-        <div class="album py-5 container container-proyectos">
+        <div class="album py-5 container container-proyectos" id="sec-3">
             <h2 pb-2 border-bottom>Proyectos</h2>
             <div class="proyecto">
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                                <img src="img/ecommerce.gif" alt="">
+                            <h4 class="titulo-card">E-commerce</h4>
+                            <img src="img/ecommerce.gif" alt="">
 
                             <div class="card-body">
                                 <p class="card-text">Proyecto e-commerce echo con JavaScript Vanilla, HTML5 y SASS en la
@@ -263,16 +310,16 @@
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Repositorio</button>
+                                        <button type="button" class="btn btn-sm btn-outline-dark">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-dark">Repositorio</button>
                                     </div>
-                                    <small class="text-muted">2022</small>
+                                    <small class="text-muted d-flex justify-content-end align-items-center">2022</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col ">
                         <div class="card shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
@@ -295,7 +342,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col ">
                         <div class="card shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
@@ -341,7 +389,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+
+                    <div class="col ">
                         <div class="card shadow-sm">
                             <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
@@ -365,25 +414,58 @@
                         </div>
                     </div>
 
+
+
+
                 </div>
             </div>
         </div>
 
-        <div class="b-example-divider"></div>
-
-        <!-- DESCARGAR CV -->
-
-        <section class="py-5 text-center container">
+        <!-- CONTAINER DE CV Y CONTACTO -->
+        <section class="py-5 p-3 text-center text-bg-dark">
             <div class="row py-lg-5">
+                <!-- FORMULARIO DE CONTACTO -->
+
+                <div class="formulario-de-contacto py-5 p-3 text-center text-bg-dark" id="sec-4">
+
+                    <h1 class="fw-lighter">Envía tu comentario 😁</h1>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label">Nombre</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="Thomasito">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Escribe tu comentario</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Enviar</button>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- DESCARGAR CV -->
+
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Descargá mi CV</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents,
+                    <p class="lead text-bg-dark">Something short and leading about the collection below—its contents,
                         the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over
                         it entirely.</p>
                     <p>
-                        <a href="img/CV-Julian_Moreyra.pdf" class="btn btn-secondary my-2" download="Curriculum Vitae Julian Moreyra">Descargar</a>
+                        <a href="img/CV-Julian_Moreyra.pdf" class="btn btn-secondary my-2"
+                            download="Curriculum Vitae Julian Moreyra">Descargar</a>
                     </p>
                 </div>
+
             </div>
         </section>
 
@@ -506,16 +588,14 @@
 
 
         <div class="b-example-divider"></div>
-
-        <div class="container">
+        <!-- FOOTER -->
+        <div class="container ">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-4 d-flex align-items-center">
                     <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24">
-                            <use xlink:href="#bootstrap" />
-                        </svg>
+
                     </a>
-                    <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Company, Inc</span>
+                    <span class="mb-3 mb-md-0 text-muted">Portafolio Julián Moreyra 2022&copy; </span>
                 </div>
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
@@ -523,10 +603,12 @@
                                 class="bi" width="24" height="24">
                                 <use xlink:href="#twitter" />
                             </svg></a></li>
-                    <li class="ms-3"><a class="text-muted" href="https://github.com/Jmoreyra93" target="_blank"><svg class="bi" width="24" height="24">
+                    <li class="ms-3"><a class="text-muted" href="https://github.com/Jmoreyra93" target="_blank"><svg
+                                class="bi" width="24" height="24">
                                 <use xlink:href="#instagram" />
                             </svg></a></li>
-                    <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/" target="_blank"><svg class="bi" width="24" height="24">
+                    <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/"
+                            target="_blank"><svg class="bi" width="24" height="24">
                                 <use xlink:href="#facebook" />
                             </svg></a></li>
                 </ul>
@@ -537,11 +619,30 @@
     </footer>
 
 
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"
+        integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8"
+        crossorigin="anonymous"></script>
     <!-- script Boostrapt -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script card proyectos -->
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".skillcountainer"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            reverse: true,
+            "max-glare": 0.5
+        });
+
+    </script>
 
 
 </body>

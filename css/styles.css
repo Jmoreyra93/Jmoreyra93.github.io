@@ -1,0 +1,314 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+
+
+body {
+  background-color: #212529;
+}
+
+.container {
+  background-color: #F8F9FA;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+/***********************
+
+        ALBUM
+
+********************** */
+main .album {
+
+  width: 1400px;
+  margin: 0 auto;
+  background-color: #6C757D;
+  color: #F8F9FA;
+}
+
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/******************************
+
+    ACERCA DE MI Y SKILLS
+
+*******************************/
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.icon-link > .bi {
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+  fill: currentcolor;
+  transition: transform 0.25s ease-in-out;
+}
+.icon-link:hover > .bi {
+  transform: translate(0.25rem);
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.text-shadow-1 {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+.text-shadow-2 {
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+.text-shadow-3 {
+  text-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+/********************
+
+    CAROUSEL
+
+*******************/
+
+
+
+
+/********************
+
+      SKILLS
+
+*******************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.skillcountainer {
+  text-align: center;
+  justify-content: center;
+  width: 205px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-paralax {
+  transform: translateZ(30px);
+}
+
+
+.skillcountainer:hover {
+  transition: .3s;
+  border-radius: 1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+.skillcountainer:nth-child(1):hover {
+  transition: .5s;
+  color: #fe9141;
+  border-radius: 2px;
+}
+.skillcountainer:nth-child(2):hover {
+  transition: .5s;
+  color: #36bed9;
+  border-radius: 2px;
+
+}
+.skillcountainer:nth-child(3):hover {
+  transition: .5s;
+  color: #F0DB4F;
+  border-radius: 2px;
+
+}
+.skillcountainer:nth-child(4):hover {
+  transition: .5s;
+  color: #8EC74E;
+  border-radius: 2px;
+}
+.skillcountainer:nth-child(5):hover {
+  transition: .5s;
+  color: #7D3E6A;
+  border-radius: 2px;
+}
+.skillcountainer:nth-child(6):hover {
+  transition: .5s;
+  color: #CB4C9B;
+  border-radius: 2px;
+}
+.skillcountainer:nth-child(7):hover {
+  transition: .5s;
+  color: #58AA50;
+  border-radius: 2px;
+}
+
+.skillcountainer:nth-child(8):hover {
+  transition: .5s;
+  color: #17C1E3;
+  border-radius: 2px;
+}
+
+.skillcountainer img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+/* 
+.skillcountainer:hover {
+  transition: .5s ;
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
+  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px); 
+  transform: scale(1.1);
+}
+.skillcountainer img:hover {
+  transition: .5s ;
+  filter: blur(.5px);
+}
+
+.skill-orange:hover {
+  background-color: #fe9141;
+} 
+
+*/
+
+/********************
+
+    CARD PROYECTOS
+
+*********************/
+
+/* BOTONES */
+.btn {
+  border-radius: 3px;
+}
+
+.card {
+
+}
+
+
+/********************
+
+    PROYECTOS
+
+*******************/
+.container-proyectos {
+  box-sizing: content-box;
+
+}
+
+.proyecto {
+  color: #212529;
+  margin: -24px -12px 0px;
+  padding: 48px 0;
+}
+
+.container-proyectos h2{
+  padding-bottom: 0.5rem!important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
+.card-body {
+  background-color: beige;
+
+}
+
+.titulo-card {
+  transform: translateZ(20px)
+
+}
+
+.card-text {
+}
+.col {
+  transform-style: preserve-3d
+
+}
+
+/* FORMULARIO DE CONTACTO  */
+.formulario-de-contacto {
+  padding: 3rem 16rem!important;
+}
+.formulario-de-contacto {
+  margin-bottom: 62px;
+}
+.formulario-de-contacto h1 {
+  margin-bottom: 62px;
+}
+.formulario-de-contacto h3 {
+
+}
+
+@media (max-width: 920px) {
+  .formulario-de-contacto {
+    padding: 3rem!important;
+  }
+}
