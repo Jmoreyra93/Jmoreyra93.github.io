@@ -25,7 +25,7 @@ main .album {
 
   width: 1400px;
   margin: 0 auto;
-  background-color: #6C757D;
+  background-color: #212529;
   color: #F8F9FA;
 }
 
@@ -126,6 +126,102 @@ main .album {
   background-size: cover;
 }
 
+/*Cards*/
+.container-tarjeta{
+	width: 100%;
+	display: flex;
+	max-width: 1030px;
+  height: 560px;
+	margin: auto;
+}
+.title-tarjetas{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #7a7a7a;
+}
+.tarjeta{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.tarjeta:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%)scale(1.05);
+}
+.tarjeta img{
+	width: 100%;
+	height: 210px;
+}
+.tarjeta .contenido-tarjeta{
+	padding: 15px;
+	text-align: center;
+  height: 290px;
+  height: 295px;
+}
+.tarjeta .contenido-tarjeta h3{
+	margin-bottom: 15px;
+	color: #7a7a7a;
+}
+.tarjeta .contenido-tarjeta p{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+  
+}
+.tarjeta .contenido-tarjeta a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.tarjeta .contenido-tarjeta a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
+.contenido-tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.btn-repositorio {
+  margin-top: auto;
+
+}  
+/* REVISAR!!! */
+
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-tarjeta{
+		flex-wrap: wrap;
+	}
+	.tarjeta{
+		margin: 15px;
+	}
+}
+/*Fin-Cards*/
+
+/* BOTONES */
+
+
+
 
 /********************
 
@@ -149,12 +245,16 @@ main .album {
   transform-style: preserve-3d;
   perspective: 1000px;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .text-paralax {
   transform: translateZ(30px);
 }
-
+.text-skill {
+  font-size: 3vh;
+  color: #1E2125;
+}
 
 .skillcountainer:hover {
   transition: .3s;
@@ -216,11 +316,11 @@ main .album {
   border-radius: 4px;
 }
 
-/* 
+/*
 .skillcountainer:hover {
   transition: .5s ;
   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
-  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px); 
+  clip-path: polygon(0 0, 100% 0, 100% 200px, 0 200px);
   transform: scale(1.1);
 }
 .skillcountainer img:hover {
@@ -230,7 +330,7 @@ main .album {
 
 .skill-orange:hover {
   background-color: #fe9141;
-} 
+}
 
 */
 
@@ -241,12 +341,23 @@ main .album {
 *********************/
 
 /* BOTONES */
-.btn {
-  border-radius: 3px;
+.boton {
+  background-color: #212529;
+
+}
+.boton:hover {
+  background-color: #17C1E3;
+
+}
+.botonigual {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+
 }
 
 .card {
-
+  border: solid 1px #212529;
 }
 
 
@@ -255,9 +366,10 @@ main .album {
     PROYECTOS
 
 *******************/
-.container-proyectos {
-  box-sizing: content-box;
 
+.container-proyectos a{
+  text-decoration: none;
+  color: #F8F9FA;
 }
 
 .proyecto {
@@ -266,7 +378,7 @@ main .album {
   padding: 48px 0;
 }
 
-.container-proyectos h2{
+.title-tarjeta h2{
   padding-bottom: 0.5rem!important;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -274,22 +386,26 @@ main .album {
   line-height: 1.2;
   color: var(--bs-heading-color);
   border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+
 }
 
 .card-body {
-  background-color: beige;
+  background-color: #3e5c76;
 
 }
 
 .titulo-card {
-  transform: translateZ(20px)
+
 
 }
 
 .card-text {
 }
-.col {
-  transform-style: preserve-3d
+.card-project {
+  width: 25%;
+  height: 430px;
+  max-height: 430px;
 
 }
 
@@ -311,4 +427,52 @@ main .album {
   .formulario-de-contacto {
     padding: 3rem!important;
   }
+}
+
+
+/* FOOTER */
+
+footer {
+  padding-top: 5rem!important;
+}
+
+#twitter:hover {
+  color: #36bed9;
+}
+
+/* main h2 {
+  color: #17C1E3;
+} */
+
+.aboutme h2 {
+  color: #748cab;
+}
+.titulo-abaoutme {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
+}
+
+
+/* IMAGEN  */
+.contenedor-imagen {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.contenedor-imagen img {
+  width: 100%;
+}
+.texto-imagen {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* font-size: 140px; */
+}
+.texto-imagentresd {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 50px;
+  color: #17C1E3;
 }

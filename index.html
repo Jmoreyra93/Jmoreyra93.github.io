@@ -46,17 +46,20 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-1" role="button" aria-pressed="true">Acerca de mí</a>
+                            <a data-scroll class="nav-link" href="#sec-1" role="button" aria-pressed="true">Acerca de
+                                mí</a>
                         </li>
                         <li class="nav-item">
                             <a data-scroll class="nav-link" href="#sec-2" role="button" aria-pressed="true">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-3" role="button" aria-pressed="true">Proyectos</a>
+                            <a data-scroll class="nav-link" href="#sec-3" role="button"
+                                aria-pressed="true">Proyectos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-4" role="button" aria-pressed="true">Contactame</a>
+                            <a data-scroll class="nav-link" href="#sec-4" role="button"
+                                aria-pressed="true">Contactame</a>
                         </li>
                     </ul>
                 </div>
@@ -66,7 +69,11 @@
     </header>
     <main>
         <!-- CAROUSEL DE IMÁGENES -->
-        <img src="img/grovemade-RvPDe41lYBA-unsplash.jpg" class="d-block w-100" height="670px" alt="...">
+        <div class="contenedor-imagen">
+            <img src="img/grovemade-RvPDe41lYBA-unsplash.jpg" class="d-block w-100"  alt="...">
+            <div class="texto-imagen">Julian Moreyra</div>
+            <div class="texto-imagentresd">Web Developer</div>
+        </div>
         <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -97,8 +104,8 @@
         <!--  ACERCA DE MI -->
         <section id="sec-1">
             <div class="container px-4 py-5" id="hanging-icons">
-                <h2 class="pb-2 border-bottom">Acerca de mí</h2>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <h2 class="pb-2 border-bottom titulo-abaoutme">Acerca de mí</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 aboutme">
                     <div class="col d-flex align-items-start">
                         <div
                             class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -109,7 +116,7 @@
                         <div>
                             <h2>Web developer</h2>
                             <p>Desarollador full stack MERN.</p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#" class="btn boton btn-secondary">
                                 Leer más ...
                             </a>
                         </div>
@@ -124,7 +131,7 @@
                         <div>
                             <h2>UX/UI</h2>
                             <p>Diseñador UX/UI.</p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#" class="btn boton btn-secondary">
                                 Leer más ...
                             </a>
                         </div>
@@ -139,7 +146,7 @@
                         <div>
                             <h2>Data Scraping</h2>
                             <p>Automatización de extracción de datos.</p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="#" class="btn boton btn-secondary">
                                 Leer más ...
                             </a>
                         </div>
@@ -155,133 +162,133 @@
         <!-- SKILLS -->
 
         <div class="container px-4 py-5" id="icon-grid">
-            <h2 class="pb-2 border-bottom" id="sec-2">Skills</h2>
+            <h2 class="pb-2 border-bottom titulo-abaoutme" id="sec-2">Skills</h2>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 ">
 
                 <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0 tilt">HTML5</h4>
+                        <h4 class="mb-0 text-skill">HTML5</h4>
                         <img src="img/skills/html.svg" alt="">
                         <p></p>
                     </div>
                 </div>
 
                 <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
-                    data-tilt-max-glare="0.8">
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0 text-paralax">CSS3</h4>
+                        <h4 class="mb-0 text-skill">CSS3</h4>
                         <img src="img/skills/css.svg" alt="">
                         <p></p>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare=""
-                    data-tilt-max-glare="0.5">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0 text-paralax">JavaScript</h4>
+                        <h4 class="mb-0 text-skill">JavaScript</h4>
                         <img src="img/skills/js.svg" alt="">
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0 tilt">Node JS</h4>
-                        <img src="img/skills/skills.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill tilt">Node JS</h4>
+                        <img src="img/skills/skills.svg" alt="">
                     </div>
                 </div>
 
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">Boostrap</h4>
-                        <img src="img/skills/bootstrap.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">Boostrap</h4>
+                        <img src="img/skills/bootstrap.svg" alt="">
                     </div>
                 </div>
 
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">SASS</h4>
-                        <img src="img/skills/sass.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">SASS</h4>
+                        <img src="img/skills/sass.svg" alt="">
                     </div>
                 </div>
 
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">MongoDB</h4>
-                        <img src="img/skills/mongo.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">MongoDB</h4>
+                        <img src="img/skills/mongo.svg" alt="">
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">React</h4>
-                        <img src="img/skills/react.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-                    </div>
-                </div>
-
-
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
-                    <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">Python</h4>
-                        <img src="img/skills/" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">React</h4>
+                        <img src="img/skills/react.svg" alt="" >
                     </div>
                 </div>
 
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">MySQL</h4>
+                        <h4 class="mb-0 text-skill">Python</h4>
+                        <img src="img/skills/" alt="">
+                    </div>
+                </div>
+
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
+                    <div class="text-paralax">
+                        <h4 class="mb-0 text-skill">MySQL</h4>
                     </div>
                 </div>
 
 
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">DJango</h4>
+                        <h4 class="mb-0 text-skill">DJango</h4>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">Flask</h4>
+                        <h4 class="mb-0 text-skill">Flask</h4>
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">npm</h4>
-                        <img src="img/skills/npm.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">npm</h4>
+                        <img src="img/skills/npm.svg" alt="">
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">git</h4>
-                        <img src="img/skills/git.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">git</h4>
+                        <img src="img/skills/git.svg" alt="">
                     </div>
                 </div>
 
-                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-max="50"
-                    data-tilt-speed="300" data-tilt-perspective="500">
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="fw-bold mb-0">Jquery</h4>
-                        <img src="img/skills/jquery.svg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <h4 class="mb-0 text-skill">Jquery</h4>
+                        <img src="img/skills/jquery.svg" alt="">
                     </div>
                 </div>
 
@@ -293,133 +300,71 @@
 
         <div class="b-example-divider"></div>
 
-        <!-- PROYECTOS -->
-        <div class="album py-5 container container-proyectos" id="sec-3">
-            <h2 pb-2 border-bottom>Proyectos</h2>
+        <!--   Tarjetas-->
+
+        <div class="albun py-5 container container-proyectos" id="sec-3">
+            
+
+            <div class="title-tarjeta">
+                <h2 pb-2 border-bottom>Proyectos</h2>
+            </div>
+
             <div class="proyecto">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <h4 class="titulo-card">E-commerce</h4>
+                <div class="container-tarjeta">
+    
+                    <div class="tarjeta">
+                        <figure>
                             <img src="img/ecommerce.gif" alt="">
-
-                            <div class="card-body">
-                                <p class="card-text">Proyecto e-commerce echo con JavaScript Vanilla, HTML5 y SASS en la
-                                    parte front. Y para la parte Back-end utilice nodeJS (express) y Mongo Db (mongoose)
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-dark">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-dark">Repositorio</button>
-                                    </div>
-                                    <small class="text-muted d-flex justify-content-end align-items-center">2022</small>
-                                </div>
+                        </figure>
+                        <div class="contenido-tarjeta">
+                            <h3>E-commerce</h3>
+                            <p>Proyecto e-commerce echo con JavaScript Vanilla, HTML5 y SASS en la
+                                parte front. Y para la parte Back-end utilice nodeJS (express) y Mongo Db (mongoose)</p>
+                            <span><p>texto oculto.</p></span>
+                            <div class="btn-repositorio">
+                                <a href="#">Visitar</a>
+                                <a href="#">Repositorio</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col ">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Web Scrapping</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Web Scrapping</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">Programa de recopilación de datos, usando Scrapy y guardando en
-                                    base de datos SQL.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">2021</small>
-                                </div>
+        
+        
+                    <div class="tarjeta">
+                        <figure>
+                            <img src="https://colmayorbolivar.edu.co/blog/wp-content/uploads/2017/06/imagen-administracion.jpg">
+                        </figure>
+                        <div class="contenido-tarjeta">
+                            <h3>Web scrapping</h3>
+                            <p>Programa de recopilación de datos, usando Scrapy y guardando en
+                                base de datos SQL.</p>
+                            <div class="btn-repositorio">
+                                <a href="https://github.com/Jmoreyra93/WebScarping_Selenium" target="_blank">Repositorio</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col ">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Django</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Página Web con Django</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
+                    
+                    <div class="tarjeta">
+                        <figure>
+                            <img
+                                src="https://image.freepik.com/foto-gratis/desarrollo-programadores-desarrollo-tecnologias-diseno-codificacion-sitios-web_18497-1090.jpg">
+                        </figure>
+                        <div class="contenido-tarjeta">
+                            <h3>Página web con React/DJango</h3>
+                            <p>Creamos tu página web utilizando las últimas tecnologías disponibles. Una Web adaptativa a tu
+                                móvil o Tablet y con un gestor de contenido fácil.</p>
+                            <div class="btn-repositorio">
+                                <a href="https://github.com/Jmoreyra93/WebScarping_Selenium" target="_blank">Repositorio</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Nail me up</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Página web con React</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">Página web que ofrece productos usando la API de MercadoPago.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col ">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
+    
+                    
                 </div>
             </div>
+
+
         </div>
+        <!--Fin   Tarjetas-->
 
         <!-- CONTAINER DE CV Y CONTACTO -->
         <section class="py-5 p-3 text-center text-bg-dark">
@@ -432,7 +377,7 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlInput2" class="form-label">Nombre</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="Thomasito">
+                        <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="Elon Musk">
                     </div>
 
                     <div class="mb-3">
@@ -443,11 +388,11 @@
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Escribe tu comentario</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Escribe aqui tu comentario, crítica o pedido"></textarea>
                     </div>
 
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Enviar</button>
+                        <button type="button" class="btn btn-secondary boton botonigual my-2">Enviar</button>
                     </div>
                 </div>
 
@@ -457,12 +402,13 @@
 
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Descargá mi CV</h1>
-                    <p class="lead text-bg-dark">Something short and leading about the collection below—its contents,
-                        the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over
-                        it entirely.</p>
+                    <p class="lead text-bg-dark">Descarga mi Curriculum Vitae y comparte mi portafolio en tus redes sociales</p>
                     <p>
-                        <a href="img/CV-Julian_Moreyra.pdf" class="btn btn-secondary my-2"
+                        <a href="img/CV-Julian_Moreyra.pdf" type="button" class="btn btn-secondary boton botonigual my-2"
                             download="Curriculum Vitae Julian Moreyra">Descargar</a>
+                        <a href="#" type="button" class="btn btn-secondary boton botonigual my-2"
+                            download="Compartir en redes sociales.">Compartir</a>
+                            
                     </p>
                 </div>
 
@@ -590,7 +536,7 @@
         <div class="b-example-divider"></div>
         <!-- FOOTER -->
         <div class="container ">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 my-6 border-top">
                 <div class="col-md-4 d-flex align-items-center">
                     <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
 
@@ -600,7 +546,7 @@
 
                 <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                     <li class="ms-3"><a class="text-muted" href="https://twitter.com/MoreyraDev" target="_blank"><svg
-                                class="bi" width="24" height="24">
+                                class="bi" width="24" height="24" id="icon-twitter">
                                 <use xlink:href="#twitter" />
                             </svg></a></li>
                     <li class="ms-3"><a class="text-muted" href="https://github.com/Jmoreyra93" target="_blank"><svg
@@ -614,7 +560,6 @@
                 </ul>
             </footer>
         </div>
-        <div class="b-example-divider"></div>
 
     </footer>
 
