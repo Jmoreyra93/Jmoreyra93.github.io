@@ -126,6 +126,10 @@ main .album {
   background-size: cover;
 }
 
+.container-aboutme {
+  width: 20%;
+  margin-left: 20px;
+}
 /*Cards*/
 .container-tarjeta{
 	width: 100%;
@@ -455,24 +459,173 @@ footer {
 /* IMAGEN  */
 .contenedor-imagen {
   position: relative;
+  /* 
   display: inline-block;
-  text-align: center;
+  text-align: center; */
 }
 .contenedor-imagen img {
+  box-sizing: border-box;
   width: 100%;
-}
-.texto-imagen {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  /* font-size: 140px; */
-}
-.texto-imagentresd {
+  height: 700px;
   
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  font-size: 50px;
+}
+.hidden {
+  opacity: 0;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.console-container {
+
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:278px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  
+}
+.console-container span {
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+
+}
+.console-underscore {
+  display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+.containter-btn-oculto {
+  box-sizing: border-box;
+  background-color: transparent; 
+  border: none; 
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding-bottom: 20px;
+
+}
+.btn-oculto {
+  display: block;
+  box-sizing: border-box;
+  background-color: transparent; 
+  border: none; 
+  width: 10%;
+  height: 30px;
+}
+.btn-oculto img:hover {
   color: #17C1E3;
 }
+
+/* FOTO DE PERFIL */
+
+
+.carreaux_presentation_light
+{
+  display:table-cell;
+  width:250px; height:250px;
+  background-size:cover;
+  overflow: hidden;
+  position: relative;
+  clip-path: circle(50.1% at 50% 50%);
+
+
+}
+.carreaux_presentation_light .shadow_swhow_mini
+{
+  background-color:rgba(19,30,33,0.4);
+  position: absolute;
+  z-index: 1000;
+  top:0;left:0;right:0;bottom:0;
+  
+}
+.carreaux_presentation_light:hover .shadow_swhow_mini
+{
+  background-color:rgba(16,23,41,0);
+}
+.carreaux_presentation_light:hover
+{
+  clip-path: circle(58.8% at 50% 50%);
+
+  transition: 10;
+}
+
+
+
+
+.carreaux_presentation_light .deroul_titre
+{
+  position: absolute;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  padding: 7px;
+  z-index: 1000;
+  top:60%;left:-80%;
+  color:#ffffff;
+  font-weight: 300;
+  font-size: 13px; width: 80%;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+
+}
+.carreaux_presentation_light:hover .deroul_titre
+{
+  background-color:#1e4944; left:0px;
+}
+.carreaux_presentation_light .deroul_soustitre
+{
+  position: absolute;
+  font-family: 'Roboto';
+  padding: 5px;
+  z-index: 1000;
+  top:60%;right:-85%;
+  margin-top: 25px;
+  color:#ffffff;
+  font-weight: 300;
+  font-size: 11px; width: 80%;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.carreaux_presentation_light:hover .deroul_soustitre
+{
+  background-color:#417c74;right:0px;
+}
+.lista-item {
+  margin-left: auto;
+}
+
+.icon-arrow-down2 {
+  display: none;
+  justify-content: center;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  color: #7a7a7a;
+  padding-top: 200px;
+  height: 50px;
+  width: 50px;
+  text-shadow: 0 0.125rem 0.25rem rgba(247, 246, 246, 0.25);
+  cursor: pointer;
+}
+
+.icon-arrow-down:hover {
+  color: #212529;
+}
+
