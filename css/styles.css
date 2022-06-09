@@ -1,4 +1,4 @@
-* {margin:0;padding:0;box-sizing:border-box;}
+* {margin:0 ;padding:0;}
 
 
 body {
@@ -36,12 +36,6 @@ main .album {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
 }
 
 .b-example-divider {
@@ -215,9 +209,28 @@ main .album {
 @media only screen and (min-width:320px) and (max-width:768px){
 	.container-tarjeta{
 		flex-wrap: wrap;
+    height: 2000px;
+    justify-content: center;
 	}
+  .col {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .container-aboutme {
+    width: 80%;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin-bottom: 20px;
+    margin-left: 60px;
+  }
+
 	.tarjeta{
 		margin: 15px;
+    width: 50%;
+    height: 520px;
 	}
 }
 /*Fin-Cards*/
@@ -431,8 +444,16 @@ main .album {
   .formulario-de-contacto {
     padding: 3rem!important;
   }
-}
+  .container-aboutme {
+    flex: 1 auto;
+    margin-left: 60px;
+  }
 
+}
+/* nav */
+.nav a{
+  text-decoration: none;
+}
 
 /* FOOTER */
 
@@ -440,8 +461,11 @@ footer {
   padding-top: 5rem!important;
 }
 
-#twitter:hover {
+.icon-linkedin:hover {
   color: #36bed9;
+}
+.icon-github:hover {
+  color: rgb(180, 5, 5);
 }
 
 /* main h2 {
@@ -449,7 +473,7 @@ footer {
 } */
 
 .aboutme h2 {
-  color: #748cab;
+  
 }
 .titulo-abaoutme {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);
@@ -558,7 +582,7 @@ footer {
 {
   clip-path: circle(58.8% at 50% 50%);
 
-  transition: 10;
+  transition: all 2s;
 }
 
 
@@ -629,3 +653,30 @@ footer {
   color: #212529;
 }
 
+/* GRACIAS POR LA VISITA */
+
+
+.hero-visita {
+	background: #212529;
+	min-height: 52vh;
+	display: flex;
+	align-items: center;
+}
+
+.texto-visita {
+	width: 100%;
+	color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 150px;
+	font-weight: bold;
+
+	background-image: url('../img/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg');
+	background-size: cover;
+	background-position-y: 700px;
+	
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	-webkit-text-fill-color: transparent;
+}
