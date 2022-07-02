@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="iconos/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
 
 </head>
 
@@ -31,23 +33,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 lista-item">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" id="tab-index" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-1" role="button" aria-pressed="true">Acerca de
+                            <a data-scroll class="nav-link" id="tab-about" href="#sec-1" role="button" aria-pressed="true">Acerca de
                                 mí</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-2" role="button" aria-pressed="true">Skills</a>
+                            <a data-scroll class="nav-link" id="tab-skills" href="#sec-2" role="button" aria-pressed="true">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-3" role="button"
+                            <a data-scroll class="nav-link" id="tab-proyectos" href="#sec-3" role="button"
                                 aria-pressed="true">Proyectos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a data-scroll class="nav-link" href="#sec-4" role="button"
-                                aria-pressed="true">Contactame</a>
+                            <a data-scroll class="nav-link" id="tab-cv" href="#sec-4" role="button"
+                                aria-pressed="true">CV</a>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +61,7 @@
         <!-- CAROUSEL DE IMÁGENES -->
 
         <div class="contenedor-imagen">
-            <img src="img/jefferson-santos-9SoCnyQmkzI-unsplash.jpg" alt="...">
+            <img src="img/fondo.jpg" alt="...">
             <div class="console-container"><span id="text"></span>
                 <div class="console-underscore" id="console">&#95 </div>
                 <span class="icon-arrow-down2" id="boton-oculto"><a href="#sec-1"></a></span>
@@ -70,50 +72,135 @@
         <div class="b-example-divider"></div>
 
         <!--  ACERCA DE MI -->
-        <section  id="sec-1">
-            
-            
+        <section id="sec-1">
+
+
             <div class="container px-4 py-5" id="hanging-icons">
-                <h2 class="pb-2 border-bottom titulo-abaoutme">Acerca de mí</h2>
-                
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-4 aboutme">
-                    <div class="fond container-aboutme">
-                        <div class="carreaux_presentation_light"
-                            style="background-image:url(img/photoperfil.jpeg);">
+                <h1 class="pb-2 border-bottom titulo-abaoutme">Acerca de mí</h1>
+
+                <div class="row g-3 py-5 row-cols-1 row-cols-lg-4 aboutme">
+
+                    <div class="fond container-aboutme" id="imagen">
+                        <div class="carreaux_presentation_light" style="background-image:url(img/photoperfil.jpeg);">
                             <div class="shadow_swhow_mini">
                                 <div class="deroul_titre">WEB DEVELOPER</div>
                                 <div class="deroul_soustitre">Julián Leonardo Moreyra</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex align-items-center">
+
+                    <div class="col d-flex align-items-center" id="desarrolloWeb">
 
                         <div>
                             <h2>Desarrolador web</h2>
                             <p>Desarollador full stack MERN.</p>
-                            <!-- <a href="#" class="btn boton btn-secondary">
-                                Leer más ...
-                            </a> -->
+                            <button class="btn boton btn-secondary" onclick="desarrolloWeb()" id="leerMasWeb"> Leer más
+                                ... </button>
+                            <div class="overlay" id="overlayWeb">
+                                <div class="popup" id="popupWeb">
+                                    <a href="#" id="btn-cerrar-popup-web" class="btn-cerrar-popup"><i
+                                            class="fas fa-times"></i></a>
+                                    <div class="fondo-overlay">
+                                        <p>Programador web junior. Conocimiento fullstack. Diseño y creo aplicaciones web SAS(single page aplication).Preferentemente aplicaciones e-commerce.
+                                        </p>
+                                        <ul>
+                                            <li>HTML</li>
+                                            <li>CSS/Boostrap/SASS</li>
+                                            <li>JavaScript/React</li>
+                                        </ul>
+                                        <p>
+                                            Manejo de Base de datos no relaciones. Entorno de trabajo express. Manejo de patrones de diseño , como MVC . Desarrollo de APls REST. Creación de módulos/componentes reutilizables.
+                                        </p>
+                                        <ul>
+                                            <li>NodeJS/Express</li>
+                                            <li>MongoDB/mongoose</li>
+                                            <li>Manejo de Git</li>
+                                        </ul>
+                                        <p>
+                                            También manejo el lenguaje Python para diseñar e implementar soluciones. También creación de base de datos relacionales y el uso de librerias cómo: 
+                                        </p>
+                                        <ul>
+                                            <li>Django</li>
+                                            <li>Flask</li>
+                                            <li>MySQL, SQLite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col d-flex align-items-center">
 
-                        <div>
-                            <h2>Progranador</h2>
-                            <p>Diseño programas con python.</p>
-                            <!-- <a href="#" class="btn boton btn-secondary">
-                                Leer más ...
-                            </a> -->
-                        </div>
-                    </div>
-                    <div class="col d-flex align-items-center">
+                    <div class="col d-flex align-items-center" id="scraping">
 
-                        <div>
+                        <div >
                             <h2>Data Scraping</h2>
                             <p>Automatización de extracción de datos.</p>
-                            <!-- <a href="#" class="btn boton btn-secondary">
-                                Leer más ...
-                            </a> -->
+                            <button class="btn boton btn-secondary" onclick="desarolloScr()" id="leerMasScr"> Leer más
+                                ... </button>
+                            <div class="overlay" id="overlayScr">
+                                <div class="popup" id="popupScr">
+                                    <a href="#" id="btn-cerrar-popup-scr" class="btn-cerrar-popup"><i
+                                            class="fas fa-times"></i></a>
+                                            
+                                    <p>                                                                  
+                                        Hago web scraping de manera ética y segura. Protegiendo IPs y evitando baneos.
+                                        Tengo entendimiento del funcionamiento de las estructuras y protocolos de las páginas webs y los formatos de transmisión de información (XML y JSON).
+                                        Automatizo extracciones para que se ejecuten de manera periódica y realicen actualizaciones incrementales de los datos descargados.
+                                        Realizo extracción de imágenes y archivos
+                                        Extracción de datos de páginas webs que cargan dinámicamente, webs con paginación, webs con captchas y webs con autenticación.
+                                    </p>
+                                    <p> 5 librerías que utilizo:  </p>
+                                    <ul>
+                                        <li>LXML</li>
+                                        <li>Scrapy</li>
+                                        <li>Selenium</li>
+                                        <li>Scrapy</li>
+                                        <li>BeautifliSoup</li>
+
+                                    </ul>
+                                    <p>Otra librerías : Pillow, schedule, Twisted, time, json y pymongo</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex align-items-center"  id="programador">
+
+                        <div>
+                            <h2>Estudios</h2>
+                            <p>Estudiante de la Universidad Nacional de Quilmes.</p>
+                            <button class="btn boton btn-secondary" onclick="desarolloDev()" id="leerMasDev"> Leer más
+                                ... </button>
+                            <div class="overlay" id="overlayDev">
+                                <div class="popup" id="popupDev">
+                                    <a href="#" id="btn-cerrar-popup-dev" class="btn-cerrar-popup"><i
+                                            class="fas fa-times"></i></a>
+                                    <p>Materias aprobadas: </p>
+                                    <ul>
+                                        <li>Programación</li>
+                                        <li>Programación con objetos</li>
+                                        <li>Organización de Computadoras</li>
+                                        <li>Estructuras de Datos</li>
+                                        <li>Redes de Computadoras</li>
+                                        <li>Sistemas Operativos</li>
+                                        <li>Base de datos</li>
+                                    </ul>
+                                    <p>Inglés: </p>
+                                    <ul>
+                                        <li>Nivel intermedio B1</li>
+                                    </ul>
+                                    <p>Actualmente trabajando en proyecto con React. Con futura orientación: </p>
+                                    <ul>
+                                        <li>Data Science</li>
+                                        <li>Seguridad informática</li>
+                                    </ul>
+                                    <p>Persona proactiva en constante aprendizaje con ganas de crecer personalmente y descubrir nuevas tecnologías.</p>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -127,7 +214,7 @@
         <!-- SKILLS -->
 
         <div class="container px-4 py-5" id="icon-grid">
-            <h2 class="pb-2 border-bottom titulo-abaoutme" id="sec-2">Skills</h2>
+            <h1 class="pb-2 border-bottom titulo-abaoutme" id="sec-2">Skills</h1>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 skill">
 
@@ -205,7 +292,7 @@
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
                         <h4 class="mb-0 text-skill">Python</h4>
-                        <img src="img/skills/python.png" alt="">
+                        <img src="img/skills/python.svg" alt="">
                     </div>
                 </div>
 
@@ -214,7 +301,7 @@
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
                         <h4 class="mb-0 text-skill">MySQL</h4>
-                        <img src="img/skills/mysql.png" alt="">
+                        <img src="img/skills/mysql.svg" alt="">
                     </div>
                 </div>
 
@@ -224,7 +311,7 @@
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
                         <h4 class="mb-0 text-skill">DJango</h4>
-                        <img src="img/skills/django.png" alt="">
+                        <img src="img/skills/django.svg" alt="">
                     </div>
                 </div>
 
@@ -232,14 +319,14 @@
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
                         <h4 class="mb-0 text-skill">Flask</h4>
-                        <img src="img/skills/flask.png" alt="">
+                        <img src="img/skills/flask.svg" alt="">
                     </div>
                 </div>
 
                 <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="mb-0 text-skill">npm</h4>
+                        <h4 class="mb-0 text-skill">NPM</h4>
                         <img src="img/skills/npm.svg" alt="">
                     </div>
                 </div>
@@ -247,7 +334,7 @@
                 <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
                     data-tilt-max-glare="0.2" data-tilt-scale="1.1">
                     <div class="text-paralax">
-                        <h4 class="mb-0 text-skill">git</h4>
+                        <h4 class="mb-0 text-skill">GIT</h4>
                         <img src="img/skills/git.svg" alt="">
                     </div>
                 </div>
@@ -257,6 +344,22 @@
                     <div class="text-paralax">
                         <h4 class="mb-0 text-skill">Jquery</h4>
                         <img src="img/skills/jquery.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                    data-tilt-max-glare="0.2" data-tilt-scale="1.1">
+                    <div class="text-paralax">
+                        <h4 class="mb-0 text-skill">SVG</h4>
+                        <img src="img/skills/svg.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start skillcountainer" data-tilt data-tilt-glare
+                    data-tilt-max-glare="0.2" data-tilt-scale="1.1">
+                    <div class="text-paralax">
+                        <h4 class="mb-0 text-skill">Postman</h4>
+                        <img src="img/skills/postman.svg" alt="">
                     </div>
                 </div>
 
@@ -270,64 +373,253 @@
 
         <!--   Tarjetas-->
 
-        <div class="albun py-5 container container-proyectos" id="sec-3">
+        <div class="albun  container container-proyectos" id="sec-3">
+            <h1 border-bottom>Proyectos</h1>
 
-
-            <div class="title-tarjeta">
-                <h2 pb-2 border-bottom>Proyectos</h2>
-            </div>
 
             <div class="proyecto">
                 <div class="container-tarjeta">
 
-                    <div class="tarjeta">
-                        <figure>
-                            <img src="img/ecommerce.gif" alt="">
-                        </figure>
-                        <div class="contenido-tarjeta">
-                            <h3>E-commerce</h3>
-                            <p>Proyecto e-commerce echo con JavaScript Vanilla, HTML5 y SASS en la
-                                parte front. Y para la parte Back-end utilice nodeJS (express) y Mongo Db (mongoose)</p>
-                            <span>
-                                <p>texto oculto.</p>
-                            </span>
-                            <div class="btn-repositorio">
-                                <a href="#">Visitar</a>
-                                <a href="#">Repositorio</a>
+                    <div class="contenedor-tarjeta">
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="img/ecommerce.gif" alt="">
+                            </figure>
+                            <div class="contenido-tarjeta">
+                                <h4>E-commerce</h4>
+                                <p>Proyecto con pasarela de pago y alta de productos.
+                                </p>
+                                <button id="btn-abrir-popup" class="btn-abrir-popup"
+                                    onclick="ventanaSuscripcion()">Saber más...</button>
+                                <div class="btn-repositorio">
+                                    <a href="https://ecommerce-2022jlm.herokuapp.com/" target="_blank">Visitar</a>
+                                </div>
                             </div>
+                        </div>
+                        <div class="overlay" id="overlay">
+                            <a id="antes" class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
+                            <div class="popup" id="popup">
+                                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i
+                                        class="fas fa-times"></i></a>
+                                <h3>Ecommerce</h3>
+
+                                <div id="slider1" class="slider">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/ecommerce1.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Front end</h4>
+                                        <p>Patron de diseño : Modelo MVC, es SPA, tiene inyección de plantillas y formularios con validaciones. Metodología BEM.</p>
+                                        <p>tecnologías: </p>
+                                        <ul>
+                                            <li>html5</li>
+                                            <li>CSS/SASS</li>
+                                            <li>JavaScript</li>
+                                            <li>Handlebars</li>
+                                        </ul>
+                                        <p>Express como middleware del servidor. Con cógido escalable y reutilizable.</p>
+                                    </div>
+                                </div>
+
+                                <div id="slider2" class="slider">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/ecommerce2.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Back end</h4>
+                                        <ul>
+                                        </ul>
+                                        <p>Servidor creado con express. Con CRUD para productos y carritos. Para luego de ser validado por el servicio se almacene en base de datos.</p>
+                                        <p>Servidor basado en el Modelo MVC, separado en capas autónomas capas de ser reutilizable y escalable</p>
+                                        <p>MongoDB para la implementación de la capa de persistencia a treavés de mongoose como ODM </p>
+                                        <p>Implementación de la API de Mercado Pago como pasarela de pago </p>
+                                        <ul>
+                                            <li>nodeJS</li>
+                                            <ul>
+                                                <li>express</li>
+                                                <li>multer</li>
+                                                <li>drag & drop</li>
+                                                <li>JOI</li>
+                                            </ul>
+                                            <li>mongoDB</li>
+                                            <ul>
+                                                <li>mongoose</li>
+                                            </ul>
+                                        </ul>
+                                        <hr>
+                                        
+                                        <p>El servidor tiene las adaptaciones necesarias para trabajar de modo local y en la nube</p>
+                                        <ul>
+                                            <li>Heroku/Glitch</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <div id="slider3" class="slider">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/ecommerce3.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Características</h4>
+                                        <ul>
+                                            <li>Ecommerce</li>
+                                            <li>Controlador de alta de productos</li>
+                                            <li>SPA</li>
+                                            <li>Pasarela de pago</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <a id="despues" class="next" onclick="plusSlides(1)">&#10095;</a>
+
                         </div>
                     </div>
 
-
-                    <div class="tarjeta">
-                        <figure>
-                            <img src="img/web-django.jpg">
-                        </figure>
-                        <div class="contenido-tarjeta">
-                            <h3>Web con Django</h3>
-                            <p>Página web con Django, con creación de usuarios. Con app tipo blog, almacenada en base de datos SQL</p>
-                            <div class="btn-repositorio">
-                                <a href="https://github.com/Jmoreyra93/web_django"
-                                    target="_blank">Repositorio</a>
+                    <div class="contenedor-tarjeta">
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="img/web-django.gif" alt="">
+                            </figure>
+                            <div class="contenido-tarjeta">
+                                <h4>Web con Django</h4>
+                                <p>Web creada con la libreria de Python - Django </p>
+                                <button id="btn-abrir-popup2" class="btn-abrir-popup" onclick="ventanaDjango()">Saber
+                                    más...</button>
+                                <div class="btn-repositorio">
+                                    <a href="#">Repositorio</a>
+                                </div>
                             </div>
+                        </div>
+                        <div class="overlay" id="overlay2">
+                            <a id="antes3" class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
+                            <div class="popup" id="popup3">
+                                <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i
+                                        class="fas fa-times"></i></a>
+                                <h3>Web con Django</h3>
+
+                                <div id="sliderdjango" class="slider1">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/django4.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Sitio web con Django</h4>
+
+
+                                        <p>El sitio web contiene:</p>
+                                        <ul>
+                                            <li>Routing y vistas</li>
+                                            <li>Plantillas y template</li>
+                                            <li>Formulación y validación de formularios</li>
+                                            <li>Sitema de páginas</li>
+                                            <li>Menu dinámico</li>
+                                            <li>Registro y logeo de usuarios</li>
+                                            <li>Restricción de zonas en la web</li>
+                                        </ul>
+                                        
+                                        
+                                    </div>
+                                </div>
+
+                                <div id="sliderdjango2" class="slider1">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/django1.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Base de datos - MySQL </h4>
+                                        <p></p>
+                                        <ul>
+                                            <li>Modelos y relaciones para base de datos</li>
+                                            <li>Consultas en la base de datos</li>
+                                            <li>Sitema de categorias y articulos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="sliderdjango3" class="slider1">
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/django2.png" alt="">
+                                    </div>
+                                    <div class="cuerpo-slider">
+                                        <h4>Panel de administración</h4>
+                                        <p>Configurado para las diferentes funciones</p>
+                                        <ul>
+                                            <li>Creación de superusuario</li>
+                                            <li>Actualizar, borrar y agregar categorias y articulos</li>
+                                            <li>Limitar permisos: edición de página, visualización de contenido</li>
+                                        </ul>
+                                        
+
+                                        
+                                    </div>
+                                    <div class="img-slider">
+                                        <img src="img/tarjetas/django4.png" alt="">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <a id="despues2" class="next" onclick="plusSlides(1)">&#10095;</a>
+
                         </div>
                     </div>
 
-                    <div class="tarjeta">
-                        <figure>
-                            <img
-                                src="https://image.freepik.com/foto-gratis/desarrollo-programadores-desarrollo-tecnologias-diseno-codificacion-sitios-web_18497-1090.jpg">
-                        </figure>
-                        <div class="contenido-tarjeta">
-                            <h3>Programa Web-scrapping</h3>
-                            <p>Scrapping a OLX , descargando datos y almacenandola en base de datos SQL.</p>
-                            <div class="btn-repositorio">
-                                <a href="https://github.com/Jmoreyra93/WebScarping_Selenium"
-                                    target="_blank">Repositorio</a>
+                    <div class="contenedor-tarjeta">
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="img/scraping.gif" alt="">
+                            </figure>
+                            <div class="contenido-tarjeta">
+                                <h4>Web scraping</h4>
+                                <p>Programa para realizar descarga de contenidos.
+                                </p>
+                                <button id="btn-abrir-popup3" class="btn-abrir-popup" onclick="ventanaScraping()">Leer
+                                    más...</button>
+                                <div class="btn-repositorio">
+                                    <a href="#">Repositorio</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="overlay" id="overlay3">
+                            <div class="popup" id="popup4">
+                                <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i
+                                        class="fas fa-times"></i></a>
+                                <h3>Web Scraping</h3>
 
+                                <div class="cuerpo-overlay">
+                                    <div class="img-overlay">
+                                        <img src="img/scraping.gif" width="400px" height="600px"
+                                            alt="">
+                                    </div>
+                                    <div class="texto-overlay">
+                                        <h4>Librerias</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis ea
+                                            rem, ipsa ab perspiciatis error rerum non impedit corrupti totam incidunt
+                                            quam libero. Temporibus fugiat exercitationem
+                                        </p>
+                                            <ul>
+                                                <li>Scrapy</li>
+                                                <li>BeautifulSoup</li>
+                                                <li>Selenium</li>
+
+
+                                            </ul>
+                                            
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis ea
+                                            rem, ipsa ab perspiciatis error rerum non impedit corrupti totam incidunt
+                                            quam libero. Temporibus fugiat exercitationem
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -336,93 +628,83 @@
         </div>
         <!--Fin   Tarjetas-->
 
+
+
+        <div class="b-example-divider"></div>
         <!-- CONTAINER DE CV Y CONTACTO -->
         <section class="py-5 p-3 text-center text-bg-dark">
-            <div class="row py-lg-5">
+            <div class="row py-lg-5 container-redes-cv">
                 <!-- FORMULARIO DE CONTACTO -->
 
-                <div class="formulario-de-contacto py-5 p-3 text-center text-bg-dark" id="sec-4">
-
-                    <h1 class="fw-lighter">Envía tu comentario 😁</h1>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Nombre</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput2" placeholder="Elon Musk">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Escribe tu comentario</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
-                            placeholder="Escribe aqui tu comentario, crítica o pedido"></textarea>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-secondary boton botonigual my-2">Enviar</button>
-                    </div>
-                </div>
-
-                <!-- GRACIAS POR LA VISITA
-                <div class="hero-visita">
-                    <h1 class="texto-visita">GRACIAS POR VISITAR!</h1>
-                </div> -->
-
                 <!-- DESCARGAR CV -->
-
-                <div class="col-lg-6 col-md-8 mx-auto">
+                <div class="col-lg-6 col-md-8 mx-auto" id="sec-4">
                     <h1 class="fw-light">Descargá mi CV</h1>
-                    <p class="lead text-bg-dark">Descarga mi Curriculum Vitae y comparte mi portafolio en tus redes
-                        sociales</p>
-                    <p>
+                    
+                    <div class="descargar">
                         <a href="img/CV-Julian_Moreyra.pdf" type="button"
                             class="btn btn-secondary boton botonigual my-2"
                             download="Curriculum Vitae Julian Moreyra">Descargar</a>
-                    </p>
-                </div>
+                    </div>
 
+                </div>
+                <!-- REDES SOCIALES -->
+                
+                <div class="social-media">
+                    <h1 class="fw-light " id="redesSociales">Redes sociales</h1>
+                    <ul class="nav col-md-4 justify-content-between list-unstyled d-flex">
+                        <li class="ms-3">
+                            <a class="text-muted" href="https://twitter.com/MoreyraDev" target="_blank">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+
+                        <li class="ms-3">
+                            <a class="text-muted" href="https://github.com/Jmoreyra93" target="_blank">
+                                <span class="icon-github"></span>
+                            </a>
+                        </li>
+
+                        <li class="ms-3">
+                            <a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/" target="_blank">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                        </li>
+
+                        <li class="ms-3">
+                            <a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/" target="_blank">
+                                <span class="icon-google3"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-
-
-
-
-
     </main>
 
-
+    
     <footer>
-
         
-        <div class="b-example-divider"></div>
+
         <!-- FOOTER -->
-        <div class="container ">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 my-6 border-top">
+        <div class="container justify-content-center">
+            <footer class="d-flex flex-wrap  align-items-center py-5 my-6 ">
                 <div class="col-md-4 d-flex align-items-center">
                     <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                        
+
                     </a>
-                    <span class="mb-3 mb-md-0 text-muted">Portafolio Julián Moreyra 2022&copy; </span>
+                    <span class="mb-3 mb-md-0 text-muted">Portafolio Julián Moreyra 2022&copy; -</span><span id="fechaHora"></span>
                 </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-muted" href="https://twitter.com/MoreyraDev" target="_blank"><span class="icon-twitter"></span></a></li>
-                    <li class="ms-3"><a class="text-muted" href="https://github.com/Jmoreyra93" target="_blank"><span class="icon-github"></span></a></li>
-                    <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/" target="_blank"><span class="icon-linkedin"></span></a></li>
-                    <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/moreyra-julian/" target="_blank"><span class="icon-google3"></span></a></li>
-                </ul>
+
             </footer>
+
         </div>
 
     </footer>
     <!-- SVG - ICONOS  -->
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        
+
         <path
             d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
 
@@ -556,7 +838,10 @@
     </script>
     <!-- Scroll -->
     <script src="js/scroll/smooth-scroll.min.js"></script>
+    <!-- Slider -->
+    <script src="js/slider/slider.js"></script>
 
+    <!-- MAIN -->
     <script src="js/main.js"></script>
 
 
