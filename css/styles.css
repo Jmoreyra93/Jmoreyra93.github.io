@@ -2,7 +2,8 @@
 
 
 body {
-  background-image: url(../img/fondo2.svg);
+  background-image: url(../img/fondobinario.svg);
+  background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -1212,7 +1213,15 @@ footer {
 
 /* MOBLE SITE */
 
-@media only screen and (min-width:320px) and (max-width:700px){
+@media only screen and (min-width:280px) and (max-width:340px){
+  .container-aboutme {
+
+    margin-left: 30px;
+  }
+
+}
+
+@media only screen and (min-width:340px) and (max-width:700px){
   /* FOOTER */
 
   .container-redes-cv {
@@ -1274,7 +1283,7 @@ footer {
     left:0;
     right:0;
     margin-bottom: 20px;
-    margin-left: 75px;
+    margin-left: 50px;
   }
   .popup {
     width: 90%;
