@@ -2,7 +2,7 @@
 
 
 body {
-  background-image: url(../img/kjbjhbk.svg);
+  background-image: url(../img/fondo2.svg);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
@@ -605,9 +605,12 @@ main .album {
 }
 /* SEGUNDO SLIDER */
 
-
+.slider {
+  justify-content: center;
+}
 .slider1 {
   display: flex;
+  justify-content: center;
 } 
 
 
@@ -728,12 +731,19 @@ main .album {
 .skill > .skillcountainer:nth-child(7):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
+  color: #F47239;
+  border-radius: 2px;
+  background-color: #fbaf3dad;
+}
+.skill > .skillcountainer:nth-child(8):hover {
+  text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
+  transition: .5s;
   color: #58AA50;
   border-radius: 2px;
   background-color: #5e3922b3;
 }
 
-.skill > .skillcountainer:nth-child(8):hover {
+.skill > .skillcountainer:nth-child(9):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
   color: #18B5D4;
@@ -741,21 +751,21 @@ main .album {
   background-color: #535353d0;
 }
 
-.skill > .skillcountainer:nth-child(9):hover {
+.skill > .skillcountainer:nth-child(10):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
   color: #3778AE;
   border-radius: 2px;
   background-color: #ffeda492;
 }
-.skill > .skillcountainer:nth-child(10):hover {
+.skill > .skillcountainer:nth-child(11):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
   color: #4F7B99;
   border-radius: 2px;
   background-color: #568fcca4;
 }
-.skill > .skillcountainer:nth-child(11):hover {
+.skill > .skillcountainer:nth-child(12):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
   color: #092E20;
@@ -763,7 +773,7 @@ main .album {
   background-color: #19aa5f85;
 }
 
-.skill > .skillcountainer:nth-child(12):hover {
+.skill > .skillcountainer:nth-child(13):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
   color: #EF3F2F;
@@ -790,9 +800,25 @@ main .album {
 .skill > .skillcountainer:nth-child(15):hover {
   text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
   transition: .5s;
+  color: #FFFFFF;
+  border-radius: 2px;
+  background-color: #ff6c37b6;
+}
+
+.skill > .skillcountainer:nth-child(16):hover {
+  text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
+  transition: .5s;
+  color: #FFFFFF;
+  border-radius: 2px;
+  background-color: rgba(51, 51, 51, 0.644);
+}
+
+.skill > .skillcountainer:nth-child(17):hover {
+  text-shadow: 3px 5px 2px #474747, 0px 0px 0px rgba(206,89,55,0);
+  transition: .5s;
   color: #0765A6;
   border-radius: 2px;
-  background-color: #6ACEEF;
+  background-color: #6aceefba;
 }
 
 .skillcountainer img {
@@ -1016,7 +1042,7 @@ footer {
 .contenedor-imagen img {
   box-sizing: border-box;
   width: 100%;
-  height: 727px;
+  height: 785px;
   
 }
 .hidden {
@@ -1254,7 +1280,7 @@ footer {
     width: 90%;
   }
   .slider {
-    flex-direction: column;
+    justify-content: center;
     height: 600px;
   }
   #popupWeb, #popupScr, #popupDev {
