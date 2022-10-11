@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from "./Home";
-import heroVid from '../assets/video1.mp4';
+import heroVid from '../assets/video3.mp4';
 
 const Hero = () => {
     return (
