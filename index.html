@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Julián Moreyra — Especialista en automatización, integración de APIs, n8n, Node.js y Python. Freelance en automatización de procesos.">
+  <meta name="keywords" content="automatización, n8n, APIs, Node.js, Python, freelance, integración, webhooks">
+  <meta name="author" content="Julián Moreyra">
+  <meta property="og:title" content="Julián Moreyra | Automation Specialist">
+  <meta property="og:description" content="Automatización de procesos, integración de APIs y scripts con Node.js, Python y n8n.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jmoreyra93.github.io/">
+  <meta name="theme-color" content="#0f1419">
+  <link rel="canonical" href="https://jmoreyra93.github.io/">
+  <title>Julián Moreyra | Automation Specialist · APIs · n8n</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Julián Moreyra",
+    "url": "https://jmoreyra93.github.io/",
+    "email": "mailto:julianmoreyra.192@gmail.com",
+    "sameAs": [
+      "https://github.com/Jmoreyra93",
+      "https://www.linkedin.com/in/moreyra-julian/"
+    ],
+    "jobTitle": "Automation Specialist",
+    "knowsAbout": ["n8n", "Node.js", "Python", "REST APIs", "Webhooks", "Process automation"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">JM</a>
+      <nav class="nav" aria-label="Principal">
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+          <span class="sr-only">Abrir menú</span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" data-nav-menu>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" aria-label="Cambiar tema" data-theme-toggle title="Tema claro / oscuro">
+        <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
+        <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="inicio" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal" data-reveal>
+          <p class="hero-eyebrow">Disponible para proyectos freelance</p>
+          <h1 class="hero-title">Julián Moreyra</h1>
+          <p class="hero-subtitle">Automation Specialist · APIs · Node.js · Python · n8n</p>
+          <p class="hero-desc">
+            Diseño y construyo flujos que conectan sistemas: webhooks, APIs REST, scraping controlado y orquestación con n8n.
+            Background sólido en soporte técnico y operaciones; hoy me enfoco en automatizar lo repetible y documentar lo crítico.
+          </p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-ghost">Contacto</a>
+          </div>
+          <ul class="hero-trust" aria-label="Plataformas objetivo">
+            <li>Upwork</li>
+            <li>Freelancer.com</li>
+            <li>Workana</li>
+          </ul>
+        </div>
+        <div class="hero-visual reveal reveal-delay-1" data-reveal aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-glow"></div>
+            <pre class="hero-snippet"><code><span class="tok-k">async function</span> <span class="tok-f">syncTickets</span>() {
+  <span class="tok-k">const</span> res = <span class="tok-k">await</span> <span class="tok-f">fetch</span>(<span class="tok-s">/api/jira</span>);
+  <span class="tok-k">return</span> res.<span class="tok-f">json</span>();
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section section--alt">
+      <div class="container narrow">
+        <h2 class="section-title reveal" data-reveal>Sobre mí</h2>
+        <div class="prose reveal reveal-delay-1" data-reveal>
+          <p>
+            Soy desarrollador con experiencia en <strong>APIs en Node.js y Python</strong>, integraciones y páginas web con JavaScript y MongoDB.
+            Durante varios años trabajé en <strong>soporte técnico en Mercado Libre</strong>: tickets en Jira, logística de Mercado Envíos,
+            uso intensivo de <strong>Postman</strong>, scripts en <strong>Python y Groovy</strong>, y diagnóstico de procesos operativos.
+          </p>
+          <p>
+            En la etapa final pasamos de tareas manuales a <strong>automatización</strong>: eso consolidó mi enfoque actual —
+            <strong>n8n</strong>, webhooks, colas y APIs para reducir fricción operativa. Busco proyectos freelance donde el valor sea claro:
+            menos clicks, menos errores, más trazabilidad.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <header class="section-head reveal" data-reveal>
+          <h2 class="section-title">Proyectos</h2>
+          <p class="section-lead">
+            Ejemplos orientados a lo que suelen pedir en plataformas freelance. Descomentá <code class="inline-code">&lt;img&gt;</code> o <code class="inline-code">&lt;video&gt;</code> en cada tarjeta y apuntá a archivos en <code class="inline-code">assets/</code> (o URL externa).
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!--
+            MEDIA: Usa UNA de estas opciones por proyecto:
+            - Imagen: <img src="assets/tu-imagen.jpg" alt="..." loading="lazy">
+            - Video: <video src="assets/demo.mp4" muted loop playsinline autoplay></video>
+            - GIF: <img src="assets/demo.gif" alt="..." loading="lazy">
+            Placeholder: deja .project-media-placeholder (se muestra si .project-media está vacío)
+          -->
+          <article class="project-card reveal" data-reveal>
+            <div class="project-media">
+              <!-- Reemplazar: descomenta img o video y borra el placeholder -->
+              <!-- <img src="assets/project-n8n-tickets.jpg" alt="Flujo n8n tickets Jira" width="800" height="450" loading="lazy"> -->
+              <div class="project-media-placeholder" aria-hidden="true">
+                <span>n8n · Jira · Webhooks</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Automatización de tickets con n8n</h3>
+              <p class="project-problem"><strong>Problema:</strong> Creación manual de incidencias y seguimiento disperso entre herramientas.</p>
+              <p class="project-solution"><strong>Solución:</strong> Flujo en n8n que normaliza payloads, crea/actualiza tickets y notifica por canal acordado con reintentos y logs.</p>
+              <ul class="tag-list" aria-label="Tecnologías">
+                <li>n8n</li>
+                <li>Webhooks</li>
+                <li>REST API</li>
+                <li>Jira</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
+                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-media">
+              <!-- <video src="assets/project-api-alerts.mp4" muted loop playsinline autoplay poster="assets/project-api-alerts-poster.jpg"></video> -->
+              <div class="project-media-placeholder">
+                <span>Node.js · APIs · Alertas</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Integración de API con alertas</h3>
+              <p class="project-problem"><strong>Problema:</strong> Servicio externo sin visibilidad: fallos silenciosos y sin SLA interno.</p>
+              <p class="project-solution"><strong>Solución:</strong> Capa en Node.js con validación de esquemas, rate limiting básico y alertas (email/Slack) ante códigos anómalos o timeouts.</p>
+              <ul class="tag-list">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>APIs REST</li>
+                <li>Postman</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
+                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-media">
+              <!-- <img src="assets/project-python-script.gif" alt="Script Python automatizando tareas" width="800" height="450" loading="lazy"> -->
+              <div class="project-media-placeholder">
+                <span>Python · CLI · Scheduling</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Script de automatización de tareas</h3>
+              <p class="project-problem"><strong>Problema:</strong> Exportaciones periódicas y formateo manual para reporting.</p>
+              <p class="project-solution"><strong>Solución:</strong> Script Python idempotente con configuración por entorno, logs estructurados y salida lista para BI o carga en base de datos.</p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>CLI</li>
+                <li>CSV / JSON</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
+                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2 class="section-title reveal" data-reveal>Skills</h2>
+        <ul class="skills-grid reveal reveal-delay-1" data-reveal>
+          <li class="skill-pill">Node.js</li>
+          <li class="skill-pill">Python</li>
+          <li class="skill-pill">n8n</li>
+          <li class="skill-pill">REST APIs</li>
+          <li class="skill-pill">Webhooks</li>
+          <li class="skill-pill">Postman</li>
+          <li class="skill-pill">MongoDB</li>
+          <li class="skill-pill">JavaScript</li>
+          <li class="skill-pill">Docker</li>
+          <li class="skill-pill">Git</li>
+          <li class="skill-pill">Jira / tickets</li>
+          <li class="skill-pill">Groovy (básico)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact-section">
+      <div class="container narrow">
+        <h2 class="section-title reveal" data-reveal>Contacto</h2>
+        <p class="section-lead reveal reveal-delay-1" data-reveal>
+          Propuestas freelance, integraciones puntuales o auditoría rápida de flujos. Respondo con alcance estimado y siguientes pasos.
+        </p>
+        <ul class="contact-list reveal reveal-delay-2" data-reveal>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:julianmoreyra.192@gmail.com">julianmoreyra.192@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/moreyra-julian/" target="_blank" rel="noopener noreferrer">linkedin.com/in/moreyra-julian</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener noreferrer">github.com/Jmoreyra93</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year></span> Julián Moreyra. Hecho para GitHub Pages.</p>
+      <a href="#inicio" class="footer-top">Volver arriba</a>
+    </div>
+  </footer>
+
+  <!-- Modal demo placeholder -->
+  <div class="modal" id="demo-modal" hidden data-modal>
+    <div class="modal-backdrop" data-modal-close tabindex="-1"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+      <button type="button" class="modal-close" data-modal-close aria-label="Cerrar">×</button>
+      <h3 id="demo-modal-title">Demo próximamente</h3>
+      <p>Reemplazá el enlace <strong>Ver demo</strong> en cada tarjeta con la URL de tu deploy (Vercel, Railway, video en Loom, etc.). Este modal solo aparece mientras los demos usan el marcador <code class="inline-code">data-placeholder-demo</code>.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
