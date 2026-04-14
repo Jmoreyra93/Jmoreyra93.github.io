@@ -3,272 +3,480 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Julián Moreyra — Especialista en automatización, integración de APIs, n8n, Node.js y Python. Freelance en automatización de procesos.">
-  <meta name="keywords" content="automatización, n8n, APIs, Node.js, Python, freelance, integración, webhooks">
+  <title>Julián Moreyra | Automation Specialist · APIs · Node.js · n8n</title>
+  <meta
+    name="description"
+    content="Portfolio profesional de Julián Moreyra. Automatización de procesos, integraciones con APIs, soporte IT avanzado y proyectos orientados a eficiencia operativa."
+  >
+  <meta
+    name="keywords"
+    content="Julián Moreyra, automation specialist, n8n, Node.js, APIs, soporte IT, help desk, Jira, incident management, portfolio"
+  >
   <meta name="author" content="Julián Moreyra">
+  <meta name="theme-color" content="#0b1020">
   <meta property="og:title" content="Julián Moreyra | Automation Specialist">
-  <meta property="og:description" content="Automatización de procesos, integración de APIs y scripts con Node.js, Python y n8n.">
+  <meta
+    property="og:description"
+    content="Portfolio orientado a automatización, integraciones, soporte IT avanzado e iniciativas de mejora operativa."
+  >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jmoreyra93.github.io/">
-  <meta name="theme-color" content="#0f1419">
-  <link rel="canonical" href="https://jmoreyra93.github.io/">
-  <title>Julián Moreyra | Automation Specialist · APIs · n8n</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Julián Moreyra",
-    "url": "https://jmoreyra93.github.io/",
-    "email": "mailto:julianmoreyra.192@gmail.com",
-    "sameAs": [
-      "https://github.com/Jmoreyra93",
-      "https://www.linkedin.com/in/moreyra-julian/"
-    ],
-    "jobTitle": "Automation Specialist",
-    "knowsAbout": ["n8n", "Node.js", "Python", "REST APIs", "Webhooks", "Process automation"]
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta property="og:image" content="assets/og-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Julián Moreyra | Automation Specialist">
+  <meta
+    name="twitter:description"
+    content="Portfolio profesional enfocado en automatización, APIs, soporte IT e impacto operativo."
+  >
+  <meta name="twitter:image" content="assets/og-preview.svg">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">JM</span>
+        <span class="brand-copy">
+          <strong>Julián Moreyra</strong>
+          <span>Automation & IT Operations</span>
+        </span>
+      </a>
 
-  <header class="site-header" data-header>
-    <div class="container header-inner">
-      <a href="#inicio" class="logo">JM</a>
       <nav class="nav" aria-label="Principal">
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
-          <span class="sr-only">Abrir menú</span>
-          <span class="nav-toggle-bar"></span>
-        </button>
-        <ul id="nav-menu" class="nav-list" data-nav-menu>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#skills">Skills</a>
+        <a href="#contacto">Contacto</a>
       </nav>
-      <button type="button" class="theme-toggle" aria-label="Cambiar tema" data-theme-toggle title="Tema claro / oscuro">
-        <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
-        <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
-      </button>
-    </div>
-  </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section id="inicio" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-content reveal" data-reveal>
-          <p class="hero-eyebrow">Disponible para proyectos freelance</p>
-          <h1 class="hero-title">Julián Moreyra</h1>
-          <p class="hero-subtitle">Automation Specialist · APIs · Node.js · Python · n8n</p>
-          <p class="hero-desc">
-            Diseño y construyo flujos que conectan sistemas: webhooks, APIs REST, scraping controlado y orquestación con n8n.
-            Background sólido en soporte técnico y operaciones; hoy me enfoco en automatizar lo repetible y documentar lo crítico.
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema">
+          <span class="theme-toggle__icon">◐</span>
+        </button>
+        <a class="button button--ghost button--small" href="#contacto">Hablemos</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="inicio">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Disponible para oportunidades freelance y roles IT / automation</p>
+          <h1>Automatizo operaciones, conecto sistemas y convierto procesos manuales en flujos confiables.</h1>
+          <p class="hero-lead">
+            Soy <strong>Julián Moreyra</strong>, especialista en automatización con background sólido en soporte técnico,
+            incident management y operaciones. Trabajo con <strong>n8n, APIs, Node.js, Python</strong> y procesos guiados por trazabilidad,
+            reducción de errores y eficiencia real.
           </p>
-          <div class="hero-actions">
-            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-            <a href="#contacto" class="btn btn-ghost">Contacto</a>
+
+          <div class="hero-cta">
+            <a class="button" href="#proyectos">Ver proyectos</a>
+            <a class="button button--ghost" href="#contacto">Contacto</a>
           </div>
-          <ul class="hero-trust" aria-label="Plataformas objetivo">
-            <li>Upwork</li>
-            <li>Freelancer.com</li>
-            <li>Workana</li>
+
+          <ul class="hero-metrics" aria-label="Indicadores de perfil">
+            <li>
+              <strong>Soporte + automatización</strong>
+              <span>Perfil híbrido entre operación crítica y mejora continua</span>
+            </li>
+            <li>
+              <strong>Integraciones orientadas a negocio</strong>
+              <span>APIs, webhooks, alertas y flujos reproducibles</span>
+            </li>
+            <li>
+              <strong>Comunicación clara con equipos</strong>
+              <span>Contexto técnico útil para recruiters, clientes y operaciones</span>
+            </li>
           </ul>
         </div>
-        <div class="hero-visual reveal reveal-delay-1" data-reveal aria-hidden="true">
+
+        <aside class="hero-panel reveal reveal-delay">
           <div class="hero-card">
-            <div class="hero-card-glow"></div>
-            <pre class="hero-snippet"><code><span class="tok-k">async function</span> <span class="tok-f">syncTickets</span>() {
-  <span class="tok-k">const</span> res = <span class="tok-k">await</span> <span class="tok-f">fetch</span>(<span class="tok-s">/api/jira</span>);
-  <span class="tok-k">return</span> res.<span class="tok-f">json</span>();
-}</code></pre>
+            <p class="hero-card__label">Posicionamiento profesional</p>
+            <h2>Automation Specialist | APIs | Node.js | n8n</h2>
+            <p>
+              Orientado a roles de soporte avanzado, automatización, SPOC, incident response y proyectos
+              freelance donde la prioridad sea mejorar tiempos, visibilidad y control operativo.
+            </p>
+
+            <div class="hero-card__stack">
+              <span>n8n</span>
+              <span>Node.js</span>
+              <span>Python</span>
+              <span>REST APIs</span>
+              <span>Jira</span>
+              <span>Postman</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section section--split" id="sobre-mi">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Sobre mí</p>
+          <h2>Experiencia operativa real + enfoque técnico orientado a automatización.</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="surface reveal">
+            <p>
+              Vengo de entornos de <strong>soporte IT y operaciones</strong>, trabajando con tickets,
+              seguimiento de incidentes, herramientas como <strong>Jira</strong> y dinámicas de coordinación en
+              escenarios críticos. Ese recorrido me dio criterio para detectar fricción, entender prioridades
+              del negocio y documentar procesos con claridad.
+            </p>
+            <p>
+              Hoy enfoco ese background en <strong>automatización de procesos, integraciones y scripting</strong>.
+              Me interesa construir soluciones que reduzcan tareas manuales, mejoren la trazabilidad y hagan
+              más predecibles los flujos entre personas, sistemas y operaciones.
+            </p>
+          </article>
+
+          <article class="surface surface--accent reveal reveal-delay">
+            <ul class="bullet-list">
+              <li>Background en help desk, logística, gestión de tickets e incidentes.</li>
+              <li>Interés profesional en roles de automation, soporte avanzado, data y mejora operativa.</li>
+              <li>Capacidad para traducir problemas operativos en soluciones concretas con APIs y scripts.</li>
+              <li>Perfil especialmente atractivo para Workana, Upwork, Freelancer y búsquedas IT junior/intermediate.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experiencia">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experiencia</p>
+          <h2>No solo ejecuto tareas: optimizo procesos, reduzco ruido operativo y ordeno información crítica.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__tag">Help Desk / IT Operations</span>
+              <span class="timeline-item__period">Experiencia reciente</span>
+            </div>
+            <h3>Soporte técnico en entorno logístico y de alta demanda operativa</h3>
+            <p>
+              Gestión de tickets, diagnóstico de incidentes, seguimiento en Jira y coordinación sobre procesos
+              con impacto directo en operación y continuidad del servicio.
+            </p>
+            <ul class="bullet-list">
+              <li>Participación en war rooms y seguimiento de incidentes críticos con foco en resolución y visibilidad.</li>
+              <li>Priorización de tickets y análisis de causa operativa para acelerar tiempos de respuesta.</li>
+              <li>Uso de herramientas y documentación para reducir ambiguedad entre soporte, operación y stakeholders.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal reveal-delay">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__tag">Automation / Continuous Improvement</span>
+              <span class="timeline-item__period">En evolución</span>
+            </div>
+            <h3>Transición de trabajo manual a soluciones automatizadas</h3>
+            <p>
+              Evolución natural hacia integraciones, scripting y automatización de tareas repetitivas para reducir
+              errores, unificar datos y liberar tiempo operativo.
+            </p>
+            <ul class="bullet-list">
+              <li>Diseño de flujos con webhooks, APIs y n8n para conectar herramientas sin fricción.</li>
+              <li>Creación de scripts para exportaciones, validaciones y procesamiento recurrente de información.</li>
+              <li>Enfoque en soluciones simples, mantenibles y listas para escalar según necesidad del cliente o equipo.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="proyectos">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Proyectos</p>
+          <h2>Casos orientados a automatización, integración y eficiencia operativa.</h2>
+          <p>
+            Cada card está preparada para que reemplaces fácilmente la imagen por un <strong>GIF, MP4 o WebM</strong>
+            manteniendo el contenedor `.project-media`.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img
+                src="assets/project-ticket-automation.svg"
+                alt="Preview del proyecto Automatización de tickets con n8n"
+                loading="lazy"
+                width="720"
+                height="480"
+              >
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <span class="project-card__label">n8n · Jira · Webhooks</span>
+                <h3>Automatización de tickets con n8n</h3>
+              </div>
+              <p>
+                <strong>Problema:</strong> creación manual de incidencias, seguimiento fragmentado y pérdida de contexto
+                entre herramientas. <strong>Solución:</strong> flujo en n8n que recibe eventos, normaliza payloads,
+                crea o actualiza tickets y notifica al canal correcto con reintentos y registro de errores.
+              </p>
+              <ul class="impact-list">
+                <li>Impacto estimado: menos carga manual y mayor consistencia en la gestión de tickets.</li>
+                <li>Ideal para equipos con alto volumen de soporte o múltiples puntos de entrada.</li>
+              </ul>
+              <div class="tag-list" aria-label="Tecnologías usadas">
+                <span>n8n</span>
+                <span>Jira</span>
+                <span>REST API</span>
+                <span>Webhooks</span>
+                <span>Retry logic</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Automatización de tickets con n8n">Ver demo</a>
+                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay">
+            <div class="project-media">
+              <img
+                src="assets/project-api-alerts.svg"
+                alt="Preview del proyecto Integración de API con alertas"
+                loading="lazy"
+                width="720"
+                height="480"
+              >
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <span class="project-card__label">Node.js · APIs · Alerting</span>
+                <h3>Integración de API con alertas</h3>
+              </div>
+              <p>
+                <strong>Problema:</strong> dependencia de un servicio externo sin visibilidad sobre fallos, tiempos
+                de respuesta o anomalías. <strong>Solución:</strong> capa de integración con Node.js para validar
+                respuestas, controlar errores frecuentes y disparar alertas operativas por eventos críticos.
+              </p>
+              <ul class="impact-list">
+                <li>Impacto estimado: detección más rápida de fallos y menor tiempo hasta la respuesta.</li>
+                <li>Útil para operaciones que necesitan SLA interno o monitoreo liviano sin stack complejo.</li>
+              </ul>
+              <div class="tag-list" aria-label="Tecnologías usadas">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>REST APIs</span>
+                <span>Postman</span>
+                <span>Slack / Email</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Integración de API con alertas">Ver demo</a>
+                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img
+                src="assets/project-task-script.svg"
+                alt="Preview del proyecto Script de automatización de tareas"
+                loading="lazy"
+                width="720"
+                height="480"
+              >
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <span class="project-card__label">Python · CLI · Reporting</span>
+                <h3>Script de automatización de tareas</h3>
+              </div>
+              <p>
+                <strong>Problema:</strong> exportaciones repetitivas y procesamiento manual antes de reportar o cargar datos.
+                <strong>Solución:</strong> script reproducible con configuración por entorno, logs estructurados y salida limpia
+                para reporting, análisis o ingestión posterior.
+              </p>
+              <ul class="impact-list">
+                <li>Impacto estimado: ahorro de tiempo en tareas recurrentes y menor margen de error humano.</li>
+                <li>Fácil de adaptar a pipelines simples o cron jobs operativos.</li>
+              </ul>
+              <div class="tag-list" aria-label="Tecnologías usadas">
+                <span>Python</span>
+                <span>CLI</span>
+                <span>CSV / JSON</span>
+                <span>Docker</span>
+                <span>Scheduling</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Script de automatización de tareas">Ver demo</a>
+                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay">
+            <div class="project-media">
+              <img
+                src="assets/project-incident-dashboard.svg"
+                alt="Preview del proyecto Tablero de incidentes y prioridad operativa"
+                loading="lazy"
+                width="720"
+                height="480"
+              >
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <span class="project-card__label">Operations · Support · Visibility</span>
+                <h3>Tablero de incidentes y prioridad operativa</h3>
+              </div>
+              <p>
+                <strong>Problema:</strong> incidentes dispersos, prioridades poco claras y mucha dependencia del seguimiento manual.
+                <strong>Solución:</strong> dashboard conceptual para centralizar estado, criticidad y responsables, facilitando
+                war rooms y seguimiento ejecutivo.
+              </p>
+              <ul class="impact-list">
+                <li>Impacto estimado: mejor visibilidad transversal y menos tiempo invertido en pedir contexto.</li>
+                <li>Propuesta muy alineada a roles SPOC, soporte crítico y operaciones.</li>
+              </ul>
+              <div class="tag-list" aria-label="Tecnologías usadas">
+                <span>Dashboards</span>
+                <span>Jira</span>
+                <span>Incident Mgmt</span>
+                <span>Operations</span>
+                <span>SLA</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button--ghost button--small" href="#" aria-label="Ver demo del tablero de incidentes">Ver demo</a>
+                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img
+                src="assets/project-data-cleanup.svg"
+                alt="Preview del proyecto Limpieza y validación de datos operativos"
+                loading="lazy"
+                width="720"
+                height="480"
+              >
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__header">
+                <span class="project-card__label">Data · Validation · Automation</span>
+                <h3>Limpieza y validación de datos operativos</h3>
+              </div>
+              <p>
+                <strong>Problema:</strong> datasets con formatos inconsistentes, duplicados o campos incompletos que ralentizan
+                análisis y seguimiento. <strong>Solución:</strong> flujo de limpieza con reglas de validación, normalización y
+                salida lista para reporting o carga posterior.
+              </p>
+              <ul class="impact-list">
+                <li>Impacto estimado: información más confiable para análisis y menor reproceso manual.</li>
+                <li>Proyecto atractivo para búsquedas relacionadas con data entry técnico o data analyst junior.</li>
+              </ul>
+              <div class="tag-list" aria-label="Tecnologías usadas">
+                <span>Python</span>
+                <span>Data Cleaning</span>
+                <span>Validation</span>
+                <span>CSV</span>
+                <span>Automation</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Limpieza y validación de datos">Ver demo</a>
+                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Stack organizado por capacidad real de trabajo.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="surface skill-card reveal">
+            <p class="skill-card__kicker">Core</p>
+            <h3>Automatización e integraciones</h3>
+            <div class="tag-list">
+              <span>n8n</span>
+              <span>Webhooks</span>
+              <span>REST APIs</span>
+              <span>Node.js</span>
+              <span>Python</span>
+              <span>Postman</span>
+            </div>
+          </article>
+
+          <article class="surface skill-card reveal reveal-delay">
+            <p class="skill-card__kicker">Operations</p>
+            <h3>Soporte IT y operaciones</h3>
+            <div class="tag-list">
+              <span>Jira</span>
+              <span>Incident Management</span>
+              <span>Help Desk</span>
+              <span>War Rooms</span>
+              <span>Documentation</span>
+              <span>Triage</span>
+            </div>
+          </article>
+
+          <article class="surface skill-card reveal">
+            <p class="skill-card__kicker">Data Layer</p>
+            <h3>Datos e infraestructura</h3>
+            <div class="tag-list">
+              <span>MongoDB</span>
+              <span>CSV / JSON</span>
+              <span>Docker</span>
+              <span>CLI scripting</span>
+              <span>Logs</span>
+              <span>Validation</span>
+            </div>
+          </article>
+
+          <article class="surface skill-card reveal reveal-delay">
+            <p class="skill-card__kicker">Soft Skills</p>
+            <h3>Trabajo profesional</h3>
+            <div class="tag-list">
+              <span>Análisis de procesos</span>
+              <span>Resolución de incidentes</span>
+              <span>Comunicación técnica</span>
+              <span>Priorización</span>
+              <span>Mejora continua</span>
+              <span>Freelance mindset</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contacto">
+        <div class="contact-card reveal">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h2>Busco oportunidades donde pueda aportar orden, automatización y criterio operativo.</h2>
+            <p>
+              Si necesitás alguien que entienda soporte, incidentes, procesos y además pueda automatizar lo repetible,
+              estoy abierto a propuestas freelance y búsquedas laborales.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a>
+            <a href="https://www.linkedin.com/in/julian-moreyra/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="#inicio">Listo para publicar también en Workana, Upwork y Freelancer</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="section section--alt">
-      <div class="container narrow">
-        <h2 class="section-title reveal" data-reveal>Sobre mí</h2>
-        <div class="prose reveal reveal-delay-1" data-reveal>
-          <p>
-            Soy desarrollador con experiencia en <strong>APIs en Node.js y Python</strong>, integraciones y páginas web con JavaScript y MongoDB.
-            Durante varios años trabajé en <strong>soporte técnico en Mercado Libre</strong>: tickets en Jira, logística de Mercado Envíos,
-            uso intensivo de <strong>Postman</strong>, scripts en <strong>Python y Groovy</strong>, y diagnóstico de procesos operativos.
-          </p>
-          <p>
-            En la etapa final pasamos de tareas manuales a <strong>automatización</strong>: eso consolidó mi enfoque actual —
-            <strong>n8n</strong>, webhooks, colas y APIs para reducir fricción operativa. Busco proyectos freelance donde el valor sea claro:
-            menos clicks, menos errores, más trazabilidad.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="section">
-      <div class="container">
-        <header class="section-head reveal" data-reveal>
-          <h2 class="section-title">Proyectos</h2>
-          <p class="section-lead">
-            Ejemplos orientados a lo que suelen pedir en plataformas freelance. Descomentá <code class="inline-code">&lt;img&gt;</code> o <code class="inline-code">&lt;video&gt;</code> en cada tarjeta y apuntá a archivos en <code class="inline-code">assets/</code> (o URL externa).
-          </p>
-        </header>
-
-        <div class="projects-grid">
-          <!--
-            MEDIA: Usa UNA de estas opciones por proyecto:
-            - Imagen: <img src="assets/tu-imagen.jpg" alt="..." loading="lazy">
-            - Video: <video src="assets/demo.mp4" muted loop playsinline autoplay></video>
-            - GIF: <img src="assets/demo.gif" alt="..." loading="lazy">
-            Placeholder: deja .project-media-placeholder (se muestra si .project-media está vacío)
-          -->
-          <article class="project-card reveal" data-reveal>
-            <div class="project-media">
-              <!-- Reemplazar: descomenta img o video y borra el placeholder -->
-              <!-- <img src="assets/project-n8n-tickets.jpg" alt="Flujo n8n tickets Jira" width="800" height="450" loading="lazy"> -->
-              <div class="project-media-placeholder" aria-hidden="true">
-                <span>n8n · Jira · Webhooks</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Automatización de tickets con n8n</h3>
-              <p class="project-problem"><strong>Problema:</strong> Creación manual de incidencias y seguimiento disperso entre herramientas.</p>
-              <p class="project-solution"><strong>Solución:</strong> Flujo en n8n que normaliza payloads, crea/actualiza tickets y notifica por canal acordado con reintentos y logs.</p>
-              <ul class="tag-list" aria-label="Tecnologías">
-                <li>n8n</li>
-                <li>Webhooks</li>
-                <li>REST API</li>
-                <li>Jira</li>
-              </ul>
-              <div class="project-actions">
-                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
-                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-reveal>
-            <div class="project-media">
-              <!-- <video src="assets/project-api-alerts.mp4" muted loop playsinline autoplay poster="assets/project-api-alerts-poster.jpg"></video> -->
-              <div class="project-media-placeholder">
-                <span>Node.js · APIs · Alertas</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Integración de API con alertas</h3>
-              <p class="project-problem"><strong>Problema:</strong> Servicio externo sin visibilidad: fallos silenciosos y sin SLA interno.</p>
-              <p class="project-solution"><strong>Solución:</strong> Capa en Node.js con validación de esquemas, rate limiting básico y alertas (email/Slack) ante códigos anómalos o timeouts.</p>
-              <ul class="tag-list">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>APIs REST</li>
-                <li>Postman</li>
-              </ul>
-              <div class="project-actions">
-                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
-                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-reveal>
-            <div class="project-media">
-              <!-- <img src="assets/project-python-script.gif" alt="Script Python automatizando tareas" width="800" height="450" loading="lazy"> -->
-              <div class="project-media-placeholder">
-                <span>Python · CLI · Scheduling</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Script de automatización de tareas</h3>
-              <p class="project-problem"><strong>Problema:</strong> Exportaciones periódicas y formateo manual para reporting.</p>
-              <p class="project-solution"><strong>Solución:</strong> Script Python idempotente con configuración por entorno, logs estructurados y salida lista para BI o carga en base de datos.</p>
-              <ul class="tag-list">
-                <li>Python</li>
-                <li>CLI</li>
-                <li>CSV / JSON</li>
-                <li>Docker</li>
-              </ul>
-              <div class="project-actions">
-                <a href="#" class="btn btn-sm btn-primary project-demo" data-placeholder-demo>Ver demo</a>
-                <a href="https://github.com/Jmoreyra93" class="btn btn-sm btn-ghost" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section section--alt">
-      <div class="container">
-        <h2 class="section-title reveal" data-reveal>Skills</h2>
-        <ul class="skills-grid reveal reveal-delay-1" data-reveal>
-          <li class="skill-pill">Node.js</li>
-          <li class="skill-pill">Python</li>
-          <li class="skill-pill">n8n</li>
-          <li class="skill-pill">REST APIs</li>
-          <li class="skill-pill">Webhooks</li>
-          <li class="skill-pill">Postman</li>
-          <li class="skill-pill">MongoDB</li>
-          <li class="skill-pill">JavaScript</li>
-          <li class="skill-pill">Docker</li>
-          <li class="skill-pill">Git</li>
-          <li class="skill-pill">Jira / tickets</li>
-          <li class="skill-pill">Groovy (básico)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="section contact-section">
-      <div class="container narrow">
-        <h2 class="section-title reveal" data-reveal>Contacto</h2>
-        <p class="section-lead reveal reveal-delay-1" data-reveal>
-          Propuestas freelance, integraciones puntuales o auditoría rápida de flujos. Respondo con alcance estimado y siguientes pasos.
-        </p>
-        <ul class="contact-list reveal reveal-delay-2" data-reveal>
-          <li>
-            <span class="contact-label">Email</span>
-            <a href="mailto:julianmoreyra.192@gmail.com">julianmoreyra.192@gmail.com</a>
-          </li>
-          <li>
-            <span class="contact-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/moreyra-julian/" target="_blank" rel="noopener noreferrer">linkedin.com/in/moreyra-julian</a>
-          </li>
-          <li>
-            <span class="contact-label">GitHub</span>
-            <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener noreferrer">github.com/Jmoreyra93</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span data-year></span> Julián Moreyra. Hecho para GitHub Pages.</p>
-      <a href="#inicio" class="footer-top">Volver arriba</a>
-    </div>
-  </footer>
-
-  <!-- Modal demo placeholder -->
-  <div class="modal" id="demo-modal" hidden data-modal>
-    <div class="modal-backdrop" data-modal-close tabindex="-1"></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
-      <button type="button" class="modal-close" data-modal-close aria-label="Cerrar">×</button>
-      <h3 id="demo-modal-title">Demo próximamente</h3>
-      <p>Reemplazá el enlace <strong>Ver demo</strong> en cada tarjeta con la URL de tu deploy (Vercel, Railway, video en Loom, etc.). Este modal solo aparece mientras los demos usan el marcador <code class="inline-code">data-placeholder-demo</code>.</p>
-    </div>
+    <footer class="footer">
+      <p>© <span id="year"></span> Julián Moreyra. Portfolio enfocado en automatización, soporte IT y mejora operativa.</p>
+    </footer>
   </div>
 
-  <script src="js/main.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
