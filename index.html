@@ -1,482 +1,855 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Julián Moreyra | Automation Specialist · APIs · Node.js · n8n</title>
-  <meta
-    name="description"
-    content="Portfolio profesional de Julián Moreyra. Automatización de procesos, integraciones con APIs, soporte IT avanzado y proyectos orientados a eficiencia operativa."
-  >
-  <meta
-    name="keywords"
-    content="Julián Moreyra, automation specialist, n8n, Node.js, APIs, soporte IT, help desk, Jira, incident management, portfolio"
-  >
-  <meta name="author" content="Julián Moreyra">
-  <meta name="theme-color" content="#0b1020">
-  <meta property="og:title" content="Julián Moreyra | Automation Specialist">
-  <meta
-    property="og:description"
-    content="Portfolio orientado a automatización, integraciones, soporte IT avanzado e iniciativas de mejora operativa."
-  >
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jmoreyra93.github.io/">
-  <meta property="og:image" content="assets/og-preview.svg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Julián Moreyra | Automation Specialist">
-  <meta
-    name="twitter:description"
-    content="Portfolio profesional enfocado en automatización, APIs, soporte IT e impacto operativo."
-  >
-  <meta name="twitter:image" content="assets/og-preview.svg">
-  <link rel="preload" href="style.css" as="style">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julián Moreyra · IT Support & Automation Specialist</title>
+  <meta name="description" content="IT Support & Automation Specialist con experiencia en Mercado Libre / Mercado Envíos. Especializado en resolución de incidentes, APIs REST y automatizaciones con Python y n8n." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts: Space Grotesk + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50:  '#edfcf4',
+              100: '#d0f7e4',
+              200: '#a3edca',
+              300: '#6adcac',
+              400: '#32c388',
+              500: '#0fa96d',
+              600: '#068558',
+              700: '#066a48',
+              800: '#07543a',
+              900: '#074530',
+            },
+            dark: {
+              900: '#080c10',
+              800: '#0d1117',
+              700: '#161b22',
+              600: '#21262d',
+              500: '#30363d',
+              400: '#484f58',
+              300: '#6e7681',
+              200: '#8b949e',
+              100: '#c9d1d9',
+              50:  '#f0f6fc',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease forwards',
+            'slide-up': 'slideUp 0.5s ease forwards',
+            'blink': 'blink 1s step-end infinite',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: { from: { opacity: '0' }, to: { opacity: '1' } },
+            slideUp: { from: { opacity: '0', transform: 'translateY(20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+            blink: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0' } },
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { font-family: 'Space Grotesk', sans-serif; }
+    body { background-color: #080c10; color: #c9d1d9; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0d1117; }
+    ::-webkit-scrollbar-thumb { background: #068558; border-radius: 3px; }
+
+    /* Gradient glow effect */
+    .glow-green { text-shadow: 0 0 30px rgba(10, 169, 109, 0.4); }
+
+    /* Grid background */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(10,169,109,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10,169,109,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Terminal cursor */
+    .cursor::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+      color: #0fa96d;
+      margin-left: 2px;
+    }
+
+    /* Skill badge hover */
+    .skill-badge {
+      transition: all 0.2s ease;
+      border: 1px solid #21262d;
+    }
+    .skill-badge:hover {
+      border-color: #0fa96d;
+      background-color: rgba(10, 169, 109, 0.08);
+      transform: translateY(-1px);
+    }
+
+    /* Project card */
+    .project-card {
+      transition: all 0.3s ease;
+      border: 1px solid #21262d;
+    }
+    .project-card:hover {
+      border-color: #0fa96d;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10, 169, 109, 0.1);
+    }
+
+    /* Nav link */
+    .nav-link {
+      position: relative;
+      color: #8b949e;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #0fa96d;
+      transition: width 0.3s;
+    }
+    .nav-link:hover { color: #c9d1d9; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Section fade-in on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Timeline connector */
+    .timeline-line {
+      position: absolute;
+      left: 7px;
+      top: 24px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #068558, transparent);
+    }
+
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark">JM</span>
-        <span class="brand-copy">
-          <strong>Julián Moreyra</strong>
-          <span>Automation & IT Operations</span>
-        </span>
+
+<body class="dark antialiased">
+
+  <!-- ═══════════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════════ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="font-mono text-brand-500 font-medium tracking-tight text-sm">
+        <span class="text-dark-200">&gt;</span> jmoreyra<span class="text-brand-500">_</span>
       </a>
 
-      <nav class="nav" aria-label="Principal">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#skills">Skills</a>
-        <a href="#contacto">Contacto</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#about"      class="nav-link">Sobre mí</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experiencia</a>
+        <a href="#projects"   class="nav-link">Proyectos</a>
+        <a href="#contact"    class="nav-link">Contacto</a>
       </nav>
 
-      <div class="topbar-actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar tema">
-          <span class="theme-toggle__icon">◐</span>
-        </button>
-        <a class="button button--ghost button--small" href="#contacto">Hablemos</a>
+      <!-- CTA -->
+      <a href="#contact"
+         class="hidden md:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-sm px-4 py-2 rounded-md transition-colors font-medium">
+        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+        Hablemos
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menu-toggle" class="md:hidden text-dark-200 hover:text-white transition-colors" aria-label="Menú">
+        <i data-lucide="menu" class="w-5 h-5" id="icon-menu"></i>
+        <i data-lucide="x"    class="w-5 h-5 hidden" id="icon-close"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-dark-800 border-t border-dark-600 px-6 py-4">
+      <nav class="flex flex-col gap-4 text-sm text-dark-100">
+        <a href="#about"      class="hover:text-brand-400 transition-colors" onclick="closeMobileMenu()">Sobre mí</a>
+        <a href="#skills"     class="hover:text-brand-400 transition-colors" onclick="closeMobileMenu()">Skills</a>
+        <a href="#experience" class="hover:text-brand-400 transition-colors" onclick="closeMobileMenu()">Experiencia</a>
+        <a href="#projects"   class="hover:text-brand-400 transition-colors" onclick="closeMobileMenu()">Proyectos</a>
+        <a href="#contact"    class="hover:text-brand-400 transition-colors" onclick="closeMobileMenu()">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex items-center grid-bg overflow-hidden">
+
+    <!-- Radial gradient blob -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+         style="background: radial-gradient(circle, rgba(6,133,88,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-32 md:py-40">
+
+      <!-- Terminal line -->
+      <div class="font-mono text-xs text-brand-500 mb-6 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse-slow inline-block"></span>
+        ~/portfolio — bash — 80×24
       </div>
-    </header>
 
-    <main>
-      <section class="hero section" id="inicio">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Disponible para oportunidades freelance y roles IT / automation</p>
-          <h1>Automatizo operaciones, conecto sistemas y convierto procesos manuales en flujos confiables.</h1>
-          <p class="hero-lead">
-            Soy <strong>Julián Moreyra</strong>, especialista en automatización con background sólido en soporte técnico,
-            incident management y operaciones. Trabajo con <strong>n8n, APIs, Node.js, Python</strong> y procesos guiados por trazabilidad,
-            reducción de errores y eficiencia real.
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-dark-50 leading-none mb-4">
+        Julián<br/>
+        <span class="text-brand-400 glow-green">Moreyra</span>
+      </h1>
+
+      <!-- Typewriter subtitle -->
+      <p class="font-mono text-lg md:text-xl text-dark-200 mb-8 h-8">
+        <span id="typewriter" class="cursor"></span>
+      </p>
+
+      <!-- Short pitch -->
+      <p class="text-dark-200 text-base md:text-lg max-w-xl leading-relaxed mb-10">
+        Analista IT con 3+ años en operaciones críticas de
+        <span class="text-dark-50 font-medium">Mercado Libre</span>.
+        Especializado en resolución de incidentes, APIs REST, scripting Python
+        y automatización de flujos de trabajo.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects"
+           class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-md transition-all font-medium text-sm">
+          <i data-lucide="folder-open" class="w-4 h-4"></i>
+          Ver proyectos
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 border border-dark-500 hover:border-brand-500 text-dark-100 hover:text-white px-6 py-3 rounded-md transition-all font-medium text-sm">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          Contactame
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div class="flex items-center gap-5 mt-10">
+        <a href="https://linkedin.com/in/moreyra-julian" target="_blank" rel="noopener"
+           class="text-dark-300 hover:text-brand-400 transition-colors" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener"
+           class="text-dark-300 hover:text-brand-400 transition-colors" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="mailto:julianmoreyra.192@gmail.com"
+           class="text-dark-300 hover:text-brand-400 transition-colors" aria-label="Email">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-dark-400">
+      <span class="text-xs font-mono text-dark-400">scroll</span>
+      <i data-lucide="chevrons-down" class="w-4 h-4 animate-bounce"></i>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════════════ -->
+  <section id="about" class="py-24 bg-dark-800">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- Text -->
+        <div>
+          <p class="font-mono text-brand-500 text-xs mb-3">// sobre mí</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark-50 mb-6">
+            Donde el soporte<br/>
+            <span class="text-brand-400">se vuelve automatización</span>
+          </h2>
+          <div class="space-y-4 text-dark-200 leading-relaxed">
+            <p>
+              Durante 3 años y medio trabajé en turnos nocturnos en el corazón operativo de
+              <strong class="text-dark-50">Mercado Envíos</strong>, ejecutando scripts en Python sobre
+              <strong class="text-dark-50">Fury</strong> (la plataforma interna de ML), gestionando
+              war rooms en incidentes críticos y cumpliendo SLAs estrictos.
+            </p>
+            <p>
+              Fui el puente entre los equipos de planta y los equipos técnicos: capturaba el problema,
+              ejecutaba la solución y documentaba todo en <strong class="text-dark-50">Jira</strong>.
+            </p>
+            <p>
+              Hoy expando ese expertise hacia la <strong class="text-dark-400 text-brand-400">automatización de flujos</strong>
+              con n8n, integraciones de API y web scraping — siempre con ojo en el impacto real del negocio.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stats grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-5 hover:border-brand-600 transition-colors">
+            <div class="text-3xl font-bold text-brand-400 mb-1">3.5+</div>
+            <div class="text-dark-200 text-sm">años en operaciones Mercado Libre</div>
+          </div>
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-5 hover:border-brand-600 transition-colors">
+            <div class="text-3xl font-bold text-brand-400 mb-1">24/7</div>
+            <div class="text-dark-200 text-sm">disponibilidad en turno nocturno</div>
+          </div>
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-5 hover:border-brand-600 transition-colors">
+            <div class="text-3xl font-bold text-brand-400 mb-1">100%</div>
+            <div class="text-dark-200 text-sm">cumplimiento de SLAs críticos</div>
+          </div>
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-5 hover:border-brand-600 transition-colors">
+            <div class="text-3xl font-bold text-brand-400 mb-1">n8n</div>
+            <div class="text-dark-200 text-sm">automatización de flujos activa</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════════════ -->
+  <section id="skills" class="py-24 bg-dark-900 grid-bg">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal mb-14">
+        <p class="font-mono text-brand-500 text-xs mb-3">// stack técnico</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50">Skills &amp; Herramientas</h2>
+      </div>
+
+      <!-- Categories -->
+      <div class="reveal grid md:grid-cols-3 gap-6">
+
+        <!-- Soporte & Operaciones -->
+        <div class="bg-dark-800 rounded-xl p-6 border border-dark-600 hover:border-brand-600 transition-colors">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 bg-brand-900 rounded-lg flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-4 h-4 text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-dark-50">Soporte &amp; Operaciones</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Jira</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">JiraCrawler</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">SLA Management</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">War Rooms</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Help Desk</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Incident Management</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Dashboards Ops</span>
+          </div>
+        </div>
+
+        <!-- Dev & APIs -->
+        <div class="bg-dark-800 rounded-xl p-6 border border-dark-600 hover:border-brand-600 transition-colors">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 bg-brand-900 rounded-lg flex items-center justify-center">
+              <i data-lucide="terminal" class="w-4 h-4 text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-dark-50">Dev &amp; APIs</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Python</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">JavaScript</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Node.js</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">REST APIs</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Postman</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Web Scraping</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">MySQL</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Automatización -->
+        <div class="bg-dark-800 rounded-xl p-6 border border-dark-600 hover:border-brand-600 transition-colors">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 bg-brand-900 rounded-lg flex items-center justify-center">
+              <i data-lucide="zap" class="w-4 h-4 text-brand-400"></i>
+            </div>
+            <h3 class="font-semibold text-dark-50">Automatización</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">n8n</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Telegram Bot</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Google Calendar API</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Google Sheets API</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Webhooks</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Groovy Scripts</span>
+            <span class="skill-badge bg-dark-700 text-dark-100 text-xs px-3 py-1.5 rounded-md font-mono">Fury (ML)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Architecture mini-diagram: API flow -->
+      <div class="reveal mt-10 bg-dark-800 border border-dark-600 rounded-xl p-6">
+        <p class="font-mono text-xs text-brand-500 mb-4">// flujo típico de trabajo</p>
+        <div class="flex flex-wrap items-center gap-2 md:gap-0">
+
+          <div class="flex flex-col items-center gap-1 min-w-[80px]">
+            <div class="w-10 h-10 bg-dark-700 border border-dark-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-yellow-400"></i>
+            </div>
+            <span class="text-xs text-dark-300 text-center">Incidente<br/>reportado</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-4 h-4 text-dark-500 mx-1 flex-shrink-0 hidden md:block"></i>
+
+          <div class="flex flex-col items-center gap-1 min-w-[80px]">
+            <div class="w-10 h-10 bg-dark-700 border border-dark-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="search" class="w-4 h-4 text-blue-400"></i>
+            </div>
+            <span class="text-xs text-dark-300 text-center">Análisis<br/>Jira/logs</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-4 h-4 text-dark-500 mx-1 flex-shrink-0 hidden md:block"></i>
+
+          <div class="flex flex-col items-center gap-1 min-w-[80px]">
+            <div class="w-10 h-10 bg-brand-900 border border-brand-700 rounded-lg flex items-center justify-center">
+              <i data-lucide="terminal" class="w-4 h-4 text-brand-400"></i>
+            </div>
+            <span class="text-xs text-brand-400 text-center font-medium">Script Python<br/>en Fury</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-4 h-4 text-dark-500 mx-1 flex-shrink-0 hidden md:block"></i>
+
+          <div class="flex flex-col items-center gap-1 min-w-[80px]">
+            <div class="w-10 h-10 bg-dark-700 border border-dark-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="git-branch" class="w-4 h-4 text-purple-400"></i>
+            </div>
+            <span class="text-xs text-dark-300 text-center">Derivación<br/>si escala</span>
+          </div>
+
+          <i data-lucide="arrow-right" class="w-4 h-4 text-dark-500 mx-1 flex-shrink-0 hidden md:block"></i>
+
+          <div class="flex flex-col items-center gap-1 min-w-[80px]">
+            <div class="w-10 h-10 bg-dark-700 border border-dark-500 rounded-lg flex items-center justify-center">
+              <i data-lucide="check-circle" class="w-4 h-4 text-brand-400"></i>
+            </div>
+            <span class="text-xs text-dark-300 text-center">Cierre &amp;<br/>documentación</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════════════ -->
+  <section id="experience" class="py-24 bg-dark-800">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal mb-14">
+        <p class="font-mono text-brand-500 text-xs mb-3">// historial</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50">Experiencia</h2>
+      </div>
+
+      <div class="reveal max-w-3xl space-y-10">
+
+        <!-- Voolkia / ML -->
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-brand-600 border-2 border-brand-400 flex-shrink-0"></div>
+          <div class="timeline-line"></div>
+
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-6 hover:border-brand-600 transition-colors">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-dark-50 font-semibold text-lg">Analista de Soporte IT / Help Desk</h3>
+                <p class="text-brand-400 text-sm font-medium">Voolkia → Mercado Libre (Mercado Envíos)</p>
+              </div>
+              <span class="font-mono text-xs text-dark-300 bg-dark-600 px-3 py-1 rounded-full">2022 – 2025</span>
+            </div>
+
+            <ul class="space-y-2 text-dark-200 text-sm">
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Gestión diaria de tickets operativos en Jira para el área de logística de Mercado Envíos.
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Ejecución de scripts Python en <strong class="text-dark-100">Fury</strong> (plataforma interna de ML) para resolución de incidentes en planta.
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Participación activa en <strong class="text-dark-100">war rooms</strong> para incidentes críticos con alta prioridad.
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Monitoreo de métricas operativas, cumplimiento de SLAs y derivación documentada a equipos especializados.
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Trabajo autónomo en <strong class="text-dark-100">turno nocturno</strong>, colaborando con equipos técnicos y de planta.
+              </li>
+              <li class="flex gap-2">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                Participación en mejoras de flujos y primeras automatizaciones del área.
+              </li>
+            </ul>
+
+            <!-- Tech tags -->
+            <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-dark-600">
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">Python</span>
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">Jira</span>
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">Fury (ML)</span>
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">Groovy</span>
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">REST APIs</span>
+              <span class="text-xs bg-dark-600 text-dark-200 px-2 py-1 rounded font-mono">SLA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Freelance -->
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-dark-500 border-2 border-dark-400 flex-shrink-0"></div>
+
+          <div class="bg-dark-700 border border-dark-600 rounded-xl p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <h3 class="text-dark-50 font-semibold">Soporte Técnico Freelance</h3>
+                <p class="text-dark-300 text-sm">Reparador de PC / Soporte a usuarios</p>
+              </div>
+              <span class="font-mono text-xs text-dark-300 bg-dark-600 px-3 py-1 rounded-full">2014 – 2018</span>
+            </div>
+            <p class="text-dark-300 text-sm">Diagnóstico y resolución de problemas de hardware/software, instalación de sistemas operativos y soporte a usuarios finales.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════════ -->
+  <section id="projects" class="py-24 bg-dark-900 grid-bg">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal mb-14">
+        <p class="font-mono text-brand-500 text-xs mb-3">// proyectos</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50">Proyectos &amp; Automatizaciones</h2>
+        <p class="text-dark-300 mt-2 text-sm">Trabajo en progreso — cada uno documentado con flujo, stack y resultado.</p>
+      </div>
+
+      <div class="reveal grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: n8n booking bot -->
+        <div class="project-card bg-dark-800 rounded-xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-brand-900 rounded-lg flex items-center justify-center">
+              <i data-lucide="calendar-check" class="w-5 h-5 text-brand-400"></i>
+            </div>
+            <span class="text-xs font-mono text-brand-500 bg-brand-900 px-2 py-1 rounded">n8n · Automation</span>
+          </div>
+          <h3 class="text-dark-50 font-semibold mb-2">Booking Bot vía Telegram</h3>
+          <p class="text-dark-300 text-sm leading-relaxed flex-1 mb-4">
+            Flujo automático que toma reservas por Telegram, agenda en Google Calendar y guarda los datos en Google Sheets. Ideal para negocios pequeños sin necesidad de CRM.
           </p>
-
-          <div class="hero-cta">
-            <a class="button" href="#proyectos">Ver proyectos</a>
-            <a class="button button--ghost" href="#contacto">Contacto</a>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">n8n</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Telegram API</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Google Calendar</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Sheets</span>
           </div>
-
-          <ul class="hero-metrics" aria-label="Indicadores de perfil">
-            <li>
-              <strong>Soporte + automatización</strong>
-              <span>Perfil híbrido entre operación crítica y mejora continua</span>
-            </li>
-            <li>
-              <strong>Integraciones orientadas a negocio</strong>
-              <span>APIs, webhooks, alertas y flujos reproducibles</span>
-            </li>
-            <li>
-              <strong>Comunicación clara con equipos</strong>
-              <span>Contexto técnico útil para recruiters, clientes y operaciones</span>
-            </li>
-          </ul>
-        </div>
-
-        <aside class="hero-panel reveal reveal-delay">
-          <div class="hero-card">
-            <p class="hero-card__label">Posicionamiento profesional</p>
-            <h2>Automation Specialist | APIs | Node.js | n8n</h2>
-            <p>
-              Orientado a roles de soporte avanzado, automatización, SPOC, incident response y proyectos
-              freelance donde la prioridad sea mejorar tiempos, visibilidad y control operativo.
-            </p>
-
-            <div class="hero-card__stack">
-              <span>n8n</span>
-              <span>Node.js</span>
-              <span>Python</span>
-              <span>REST APIs</span>
-              <span>Jira</span>
-              <span>Postman</span>
-            </div>
+          <div class="flex items-center gap-2 text-xs text-dark-400">
+            <i data-lucide="git-commit" class="w-3.5 h-3.5 text-brand-500"></i>
+            En desarrollo activo
           </div>
-        </aside>
-      </section>
-
-      <section class="section section--split" id="sobre-mi">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Sobre mí</p>
-          <h2>Experiencia operativa real + enfoque técnico orientado a automatización.</h2>
         </div>
 
-        <div class="about-grid">
-          <article class="surface reveal">
-            <p>
-              Vengo de entornos de <strong>soporte IT y operaciones</strong>, trabajando con tickets,
-              seguimiento de incidentes, herramientas como <strong>Jira</strong> y dinámicas de coordinación en
-              escenarios críticos. Ese recorrido me dio criterio para detectar fricción, entender prioridades
-              del negocio y documentar procesos con claridad.
-            </p>
-            <p>
-              Hoy enfoco ese background en <strong>automatización de procesos, integraciones y scripting</strong>.
-              Me interesa construir soluciones que reduzcan tareas manuales, mejoren la trazabilidad y hagan
-              más predecibles los flujos entre personas, sistemas y operaciones.
-            </p>
-          </article>
-
-          <article class="surface surface--accent reveal reveal-delay">
-            <ul class="bullet-list">
-              <li>Background en help desk, logística, gestión de tickets e incidentes.</li>
-              <li>Interés profesional en roles de automation, soporte avanzado, data y mejora operativa.</li>
-              <li>Capacidad para traducir problemas operativos en soluciones concretas con APIs y scripts.</li>
-              <li>Perfil especialmente atractivo para Workana, Upwork, Freelancer y búsquedas IT junior/intermediate.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="experiencia">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Experiencia</p>
-          <h2>No solo ejecuto tareas: optimizo procesos, reduzco ruido operativo y ordeno información crítica.</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-item__meta">
-              <span class="timeline-item__tag">Help Desk / IT Operations</span>
-              <span class="timeline-item__period">Experiencia reciente</span>
+        <!-- Project 2: Web Scraper -->
+        <div class="project-card bg-dark-800 rounded-xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-blue-900/40 rounded-lg flex items-center justify-center">
+              <i data-lucide="code-2" class="w-5 h-5 text-blue-400"></i>
             </div>
-            <h3>Soporte técnico en entorno logístico y de alta demanda operativa</h3>
-            <p>
-              Gestión de tickets, diagnóstico de incidentes, seguimiento en Jira y coordinación sobre procesos
-              con impacto directo en operación y continuidad del servicio.
-            </p>
-            <ul class="bullet-list">
-              <li>Participación en war rooms y seguimiento de incidentes críticos con foco en resolución y visibilidad.</li>
-              <li>Priorización de tickets y análisis de causa operativa para acelerar tiempos de respuesta.</li>
-              <li>Uso de herramientas y documentación para reducir ambiguedad entre soporte, operación y stakeholders.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item reveal reveal-delay">
-            <div class="timeline-item__meta">
-              <span class="timeline-item__tag">Automation / Continuous Improvement</span>
-              <span class="timeline-item__period">En evolución</span>
-            </div>
-            <h3>Transición de trabajo manual a soluciones automatizadas</h3>
-            <p>
-              Evolución natural hacia integraciones, scripting y automatización de tareas repetitivas para reducir
-              errores, unificar datos y liberar tiempo operativo.
-            </p>
-            <ul class="bullet-list">
-              <li>Diseño de flujos con webhooks, APIs y n8n para conectar herramientas sin fricción.</li>
-              <li>Creación de scripts para exportaciones, validaciones y procesamiento recurrente de información.</li>
-              <li>Enfoque en soluciones simples, mantenibles y listas para escalar según necesidad del cliente o equipo.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="proyectos">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Proyectos</p>
-          <h2>Casos orientados a automatización, integración y eficiencia operativa.</h2>
-          <p>
-            Cada card está preparada para que reemplaces fácilmente la imagen por un <strong>GIF, MP4 o WebM</strong>
-            manteniendo el contenedor `.project-media`.
+            <span class="text-xs font-mono text-blue-400 bg-blue-900/30 px-2 py-1 rounded">Python · Scraping</span>
+          </div>
+          <h3 class="text-dark-50 font-semibold mb-2">Web Scraper con Python</h3>
+          <p class="text-dark-300 text-sm leading-relaxed flex-1 mb-4">
+            Scripts de extracción de datos con BeautifulSoup y Scrapy. Exportación a CSV/JSON para análisis posterior. Incluye manejo de rate limits y rotación de user agents.
           </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img
-                src="assets/project-ticket-automation.svg"
-                alt="Preview del proyecto Automatización de tickets con n8n"
-                loading="lazy"
-                width="720"
-                height="480"
-              >
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__header">
-                <span class="project-card__label">n8n · Jira · Webhooks</span>
-                <h3>Automatización de tickets con n8n</h3>
-              </div>
-              <p>
-                <strong>Problema:</strong> creación manual de incidencias, seguimiento fragmentado y pérdida de contexto
-                entre herramientas. <strong>Solución:</strong> flujo en n8n que recibe eventos, normaliza payloads,
-                crea o actualiza tickets y notifica al canal correcto con reintentos y registro de errores.
-              </p>
-              <ul class="impact-list">
-                <li>Impacto estimado: menos carga manual y mayor consistencia en la gestión de tickets.</li>
-                <li>Ideal para equipos con alto volumen de soporte o múltiples puntos de entrada.</li>
-              </ul>
-              <div class="tag-list" aria-label="Tecnologías usadas">
-                <span>n8n</span>
-                <span>Jira</span>
-                <span>REST API</span>
-                <span>Webhooks</span>
-                <span>Retry logic</span>
-              </div>
-              <div class="project-actions">
-                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Automatización de tickets con n8n">Ver demo</a>
-                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal reveal-delay">
-            <div class="project-media">
-              <img
-                src="assets/project-api-alerts.svg"
-                alt="Preview del proyecto Integración de API con alertas"
-                loading="lazy"
-                width="720"
-                height="480"
-              >
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__header">
-                <span class="project-card__label">Node.js · APIs · Alerting</span>
-                <h3>Integración de API con alertas</h3>
-              </div>
-              <p>
-                <strong>Problema:</strong> dependencia de un servicio externo sin visibilidad sobre fallos, tiempos
-                de respuesta o anomalías. <strong>Solución:</strong> capa de integración con Node.js para validar
-                respuestas, controlar errores frecuentes y disparar alertas operativas por eventos críticos.
-              </p>
-              <ul class="impact-list">
-                <li>Impacto estimado: detección más rápida de fallos y menor tiempo hasta la respuesta.</li>
-                <li>Útil para operaciones que necesitan SLA interno o monitoreo liviano sin stack complejo.</li>
-              </ul>
-              <div class="tag-list" aria-label="Tecnologías usadas">
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>REST APIs</span>
-                <span>Postman</span>
-                <span>Slack / Email</span>
-              </div>
-              <div class="project-actions">
-                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Integración de API con alertas">Ver demo</a>
-                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img
-                src="assets/project-task-script.svg"
-                alt="Preview del proyecto Script de automatización de tareas"
-                loading="lazy"
-                width="720"
-                height="480"
-              >
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__header">
-                <span class="project-card__label">Python · CLI · Reporting</span>
-                <h3>Script de automatización de tareas</h3>
-              </div>
-              <p>
-                <strong>Problema:</strong> exportaciones repetitivas y procesamiento manual antes de reportar o cargar datos.
-                <strong>Solución:</strong> script reproducible con configuración por entorno, logs estructurados y salida limpia
-                para reporting, análisis o ingestión posterior.
-              </p>
-              <ul class="impact-list">
-                <li>Impacto estimado: ahorro de tiempo en tareas recurrentes y menor margen de error humano.</li>
-                <li>Fácil de adaptar a pipelines simples o cron jobs operativos.</li>
-              </ul>
-              <div class="tag-list" aria-label="Tecnologías usadas">
-                <span>Python</span>
-                <span>CLI</span>
-                <span>CSV / JSON</span>
-                <span>Docker</span>
-                <span>Scheduling</span>
-              </div>
-              <div class="project-actions">
-                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Script de automatización de tareas">Ver demo</a>
-                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal reveal-delay">
-            <div class="project-media">
-              <img
-                src="assets/project-incident-dashboard.svg"
-                alt="Preview del proyecto Tablero de incidentes y prioridad operativa"
-                loading="lazy"
-                width="720"
-                height="480"
-              >
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__header">
-                <span class="project-card__label">Operations · Support · Visibility</span>
-                <h3>Tablero de incidentes y prioridad operativa</h3>
-              </div>
-              <p>
-                <strong>Problema:</strong> incidentes dispersos, prioridades poco claras y mucha dependencia del seguimiento manual.
-                <strong>Solución:</strong> dashboard conceptual para centralizar estado, criticidad y responsables, facilitando
-                war rooms y seguimiento ejecutivo.
-              </p>
-              <ul class="impact-list">
-                <li>Impacto estimado: mejor visibilidad transversal y menos tiempo invertido en pedir contexto.</li>
-                <li>Propuesta muy alineada a roles SPOC, soporte crítico y operaciones.</li>
-              </ul>
-              <div class="tag-list" aria-label="Tecnologías usadas">
-                <span>Dashboards</span>
-                <span>Jira</span>
-                <span>Incident Mgmt</span>
-                <span>Operations</span>
-                <span>SLA</span>
-              </div>
-              <div class="project-actions">
-                <a class="button button--ghost button--small" href="#" aria-label="Ver demo del tablero de incidentes">Ver demo</a>
-                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-media">
-              <img
-                src="assets/project-data-cleanup.svg"
-                alt="Preview del proyecto Limpieza y validación de datos operativos"
-                loading="lazy"
-                width="720"
-                height="480"
-              >
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__header">
-                <span class="project-card__label">Data · Validation · Automation</span>
-                <h3>Limpieza y validación de datos operativos</h3>
-              </div>
-              <p>
-                <strong>Problema:</strong> datasets con formatos inconsistentes, duplicados o campos incompletos que ralentizan
-                análisis y seguimiento. <strong>Solución:</strong> flujo de limpieza con reglas de validación, normalización y
-                salida lista para reporting o carga posterior.
-              </p>
-              <ul class="impact-list">
-                <li>Impacto estimado: información más confiable para análisis y menor reproceso manual.</li>
-                <li>Proyecto atractivo para búsquedas relacionadas con data entry técnico o data analyst junior.</li>
-              </ul>
-              <div class="tag-list" aria-label="Tecnologías usadas">
-                <span>Python</span>
-                <span>Data Cleaning</span>
-                <span>Validation</span>
-                <span>CSV</span>
-                <span>Automation</span>
-              </div>
-              <div class="project-actions">
-                <a class="button button--ghost button--small" href="#" aria-label="Ver demo de Limpieza y validación de datos">Ver demo</a>
-                <a class="button button--small" href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="skills">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>Stack organizado por capacidad real de trabajo.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="surface skill-card reveal">
-            <p class="skill-card__kicker">Core</p>
-            <h3>Automatización e integraciones</h3>
-            <div class="tag-list">
-              <span>n8n</span>
-              <span>Webhooks</span>
-              <span>REST APIs</span>
-              <span>Node.js</span>
-              <span>Python</span>
-              <span>Postman</span>
-            </div>
-          </article>
-
-          <article class="surface skill-card reveal reveal-delay">
-            <p class="skill-card__kicker">Operations</p>
-            <h3>Soporte IT y operaciones</h3>
-            <div class="tag-list">
-              <span>Jira</span>
-              <span>Incident Management</span>
-              <span>Help Desk</span>
-              <span>War Rooms</span>
-              <span>Documentation</span>
-              <span>Triage</span>
-            </div>
-          </article>
-
-          <article class="surface skill-card reveal">
-            <p class="skill-card__kicker">Data Layer</p>
-            <h3>Datos e infraestructura</h3>
-            <div class="tag-list">
-              <span>MongoDB</span>
-              <span>CSV / JSON</span>
-              <span>Docker</span>
-              <span>CLI scripting</span>
-              <span>Logs</span>
-              <span>Validation</span>
-            </div>
-          </article>
-
-          <article class="surface skill-card reveal reveal-delay">
-            <p class="skill-card__kicker">Soft Skills</p>
-            <h3>Trabajo profesional</h3>
-            <div class="tag-list">
-              <span>Análisis de procesos</span>
-              <span>Resolución de incidentes</span>
-              <span>Comunicación técnica</span>
-              <span>Priorización</span>
-              <span>Mejora continua</span>
-              <span>Freelance mindset</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="contacto">
-        <div class="contact-card reveal">
-          <div>
-            <p class="eyebrow">Contacto</p>
-            <h2>Busco oportunidades donde pueda aportar orden, automatización y criterio operativo.</h2>
-            <p>
-              Si necesitás alguien que entienda soporte, incidentes, procesos y además pueda automatizar lo repetible,
-              estoy abierto a propuestas freelance y búsquedas laborales.
-            </p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Python</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">BeautifulSoup</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Requests</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">CSV/JSON</span>
           </div>
+          <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener"
+             class="flex items-center gap-1.5 text-xs text-brand-400 hover:text-brand-300 transition-colors mt-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            Ver en GitHub
+          </a>
+        </div>
 
-          <div class="contact-links">
-            <a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a>
-            <a href="https://www.linkedin.com/in/julian-moreyra/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/Jmoreyra93" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#inicio">Listo para publicar también en Workana, Upwork y Freelancer</a>
+        <!-- Project 3: REST API consumer -->
+        <div class="project-card bg-dark-800 rounded-xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-purple-900/40 rounded-lg flex items-center justify-center">
+              <i data-lucide="webhook" class="w-5 h-5 text-purple-400"></i>
+            </div>
+            <span class="text-xs font-mono text-purple-400 bg-purple-900/30 px-2 py-1 rounded">REST · Postman</span>
+          </div>
+          <h3 class="text-dark-50 font-semibold mb-2">Integración &amp; Testing de APIs</h3>
+          <p class="text-dark-300 text-sm leading-relaxed flex-1 mb-4">
+            Colecciones Postman para testing de endpoints REST. Automatización de pruebas con scripts pre/post-request y variables de entorno para distintos stages.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Postman</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">REST APIs</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">JavaScript</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">JSON</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-dark-400">
+            <i data-lucide="git-commit" class="w-3.5 h-3.5 text-purple-400"></i>
+            Portfolio en construcción
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Julián Moreyra. Portfolio enfocado en automatización, soporte IT y mejora operativa.</p>
-    </footer>
-  </div>
+        <!-- Project 4: Portafolio web -->
+        <div class="project-card bg-dark-800 rounded-xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 bg-dark-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="layout-dashboard" class="w-5 h-5 text-dark-200"></i>
+            </div>
+            <span class="text-xs font-mono text-dark-300 bg-dark-700 px-2 py-1 rounded">HTML · Tailwind</span>
+          </div>
+          <h3 class="text-dark-50 font-semibold mb-2">Este portafolio</h3>
+          <p class="text-dark-300 text-sm leading-relaxed flex-1 mb-4">
+            Diseñado y construido desde cero con HTML semántico, Tailwind CSS y JS vanilla. Dark mode, responsive, optimizado para GitHub Pages sin build tools.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">HTML5</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Tailwind CDN</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">Lucide Icons</span>
+            <span class="text-xs bg-dark-700 text-dark-200 px-2 py-0.5 rounded font-mono">JS vanilla</span>
+          </div>
+          <a href="https://github.com/Jmoreyra93/Jmoreyra93.github.io" target="_blank" rel="noopener"
+             class="flex items-center gap-1.5 text-xs text-brand-400 hover:text-brand-300 transition-colors mt-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            Ver código fuente
+          </a>
+        </div>
 
-  <script src="script.js" defer></script>
+        <!-- CTA card: más proyectos pronto -->
+        <div class="project-card bg-dark-800 rounded-xl p-6 flex flex-col items-center justify-center text-center border-dashed">
+          <i data-lucide="plus-circle" class="w-8 h-8 text-dark-500 mb-3"></i>
+          <p class="text-dark-400 text-sm mb-2">Más proyectos en camino</p>
+          <p class="text-dark-500 text-xs">Django API · Agente n8n con IA · Dashboard de métricas</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════ -->
+  <section id="contact" class="py-24 bg-dark-800">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal max-w-2xl mx-auto text-center">
+        <p class="font-mono text-brand-500 text-xs mb-3">// contacto</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-50 mb-4">¿Hablamos?</h2>
+        <p class="text-dark-300 leading-relaxed mb-10">
+          Estoy disponible para posiciones de IT Support SSR, roles de automatización
+          o proyectos freelance de integración, scraping y flujos con n8n.
+        </p>
+
+        <!-- Contact options -->
+        <div class="grid sm:grid-cols-3 gap-4 mb-10">
+          <a href="mailto:julianmoreyra.192@gmail.com"
+             class="flex flex-col items-center gap-2 bg-dark-700 border border-dark-600 hover:border-brand-500 rounded-xl p-5 transition-all group">
+            <i data-lucide="mail" class="w-6 h-6 text-dark-300 group-hover:text-brand-400 transition-colors"></i>
+            <span class="text-xs text-dark-300 group-hover:text-dark-100 transition-colors">Email</span>
+          </a>
+          <a href="https://linkedin.com/in/moreyra-julian" target="_blank" rel="noopener"
+             class="flex flex-col items-center gap-2 bg-dark-700 border border-dark-600 hover:border-brand-500 rounded-xl p-5 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-dark-300 group-hover:text-brand-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect width="4" height="12" x="2" y="9"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            <span class="text-xs text-dark-300 group-hover:text-dark-100 transition-colors">LinkedIn</span>
+          </a>
+          <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener"
+             class="flex flex-col items-center gap-2 bg-dark-700 border border-dark-600 hover:border-brand-500 rounded-xl p-5 transition-all group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-dark-300 group-hover:text-brand-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+              <path d="M9 18c-4.51 2-5-2-7-2"/>
+            </svg>
+            <span class="text-xs text-dark-300 group-hover:text-dark-100 transition-colors">GitHub</span>
+          </a>
+        </div>
+
+        <!-- Availability badge -->
+        <div class="inline-flex items-center gap-2 bg-brand-900 border border-brand-700 text-brand-300 text-sm px-4 py-2 rounded-full">
+          <span class="w-2 h-2 bg-brand-400 rounded-full animate-pulse-slow"></span>
+          Disponible para trabajar · Buenos Aires, AR
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-mono text-xs text-dark-400">
+        © 2025 Julián Moreyra · Hecho con ♥ y Tailwind
+      </span>
+      <div class="flex items-center gap-4">
+        <a href="https://linkedin.com/in/moreyra-julian" target="_blank" rel="noopener"
+           class="text-dark-500 hover:text-brand-400 transition-colors" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Jmoreyra93" target="_blank" rel="noopener"
+           class="text-dark-500 hover:text-brand-400 transition-colors" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="mailto:julianmoreyra.192@gmail.com"
+           class="text-dark-500 hover:text-brand-400 transition-colors" aria-label="Email">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════════════ -->
+  <script>
+    // Init Lucide icons
+    lucide.createIcons();
+
+    // ── Typewriter effect ──────────────────────────────
+    const phrases = [
+      'IT Support & Automation Specialist',
+      'Python Scripter en Mercado Libre',
+      'Automatizaciones con n8n',
+      'REST API Integrations',
+      'Resolución de incidentes críticos',
+    ];
+    let phraseIdx = 0, charIdx = 0, deleting = false;
+    const tw = document.getElementById('typewriter');
+
+    function typeEffect() {
+      const current = phrases[phraseIdx];
+      if (!deleting) {
+        tw.textContent = current.slice(0, ++charIdx);
+        if (charIdx === current.length) {
+          deleting = true;
+          setTimeout(typeEffect, 1800);
+          return;
+        }
+      } else {
+        tw.textContent = current.slice(0, --charIdx);
+        if (charIdx === 0) {
+          deleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+        }
+      }
+      setTimeout(typeEffect, deleting ? 40 : 70);
+    }
+    typeEffect();
+
+    // ── Navbar background on scroll ───────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.style.background = 'rgba(13,17,23,0.95)';
+        navbar.style.backdropFilter = 'blur(12px)';
+        navbar.style.borderBottom = '1px solid #21262d';
+      } else {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.borderBottom = 'none';
+      }
+    });
+
+    // ── Mobile menu toggle ────────────────────────────
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconMenu   = document.getElementById('icon-menu');
+    const iconClose  = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      iconMenu.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    // ── Scroll reveal ─────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Re-run icons after DOM changes (just in case)
+    setTimeout(() => lucide.createIcons(), 100);
+  </script>
+
 </body>
 </html>
